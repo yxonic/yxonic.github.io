@@ -1,0 +1,10 @@
+{
+  "liu2019ekt": {
+    "abbrev": "IEEE TKDE",
+    "codeLink": "https://github.com/bigdata-ustc/ekt"
+  },
+  "yin2019quesnet": {
+    "abbrev": "KDD '19",
+    "codeLink": "https://github.com/yxonic/quesnet"
+  }
+}
