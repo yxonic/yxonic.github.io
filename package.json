@@ -5,10 +5,10 @@
     "dev": "vite"
   },
   "dependencies": {
-    "bibtex": "^0.9.0",
-    "latex-to-unicode": "^0.1.0"
+    "bibtex": "^0.9.0"
   },
   "devDependencies": {
+    "@rollup/plugin-yaml": "^4.0.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vmark/vite-plugin": "^0.1.4",
     "@vue/server-renderer": "^3.2.47",
