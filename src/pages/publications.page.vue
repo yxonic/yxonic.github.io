@@ -6,8 +6,12 @@
         >, </span
       ><span class="font-bold">{{ entry.title }}</span
       >, {{ entry.bookname
-      }}<span v-if="entry.abbrev"> ({{ entry.abbrev }})</span>,
-      {{ entry.pages }}, {{ entry.year }}.
+      }}<span v-if="entry.note || entry.specialNote"> (</span
+      ><span v-if="entry.note"> {{ entry.note }}</span
+      ><span v-if="entry.note && entry.specialNote">, </span
+      ><span v-if="entry.specialNote" class="font-bold">
+        {{ entry.specialNote }}</span
+      ><span v-if="entry.note || entry.specialNote">)</span>.
       <span v-if="entry.codeLink"
         >[<a :href="entry.codeLink" target="_blank" rel="noopener">CODE</a
         >]</span

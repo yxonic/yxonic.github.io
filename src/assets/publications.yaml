@@ -1,6 +1,7 @@
 - id: liu2019ekt
-  abbrev: IEEE TKDE
   codeLink: https://github.com/bigdata-ustc/ekt
+  note: IEEE TKDE, CCF A
+  specialNote: ESI highly cited paper
   bibtex: |
     @article{liu2019ekt,
       title     = {EKT: Exercise-aware Knowledge Tracing for Student Performance Prediction},
@@ -13,8 +14,8 @@
       publisher = {IEEE}
     }
 - id: yin2019quesnet
-  abbrev: KDD '19
   codeLink: https://github.com/yxonic/quesnet
+  note: KDD '19, CCF A
   bibtex: |
     @inproceedings{yin2019quesnet,
       title     = {QuesNet: A Unified Representation for Heterogeneous Test Questions},
@@ -22,4 +23,15 @@
       booktitle = {Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
       pages     = {1328--1336},
       year      = {2019}
+    }
+- id: yin2018transcribing
+  codeLink: https://github.com/yxonic/spotlight
+  note: KDD '18, CCF A
+  bibtex: |
+    @inproceedings{yin2018transcribing,
+      title={Transcribing content from structural images with spotlight mechanism},
+      author={Yin, Yu and Huang, Zhenya and Chen, Enhong and Liu, Qi and Zhang, Fuzheng and Xie, Xing and Hu, Guoping},
+      booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+      pages={2643--2652},
+      year={2018}
     }
