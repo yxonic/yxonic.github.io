@@ -1,4 +1,4 @@
-import { parseBibFile } from "bibtex";
+import bibtex from "bibtex";
 
 export function latexToUnicode(text: string) {
   return text
@@ -16,8 +16,8 @@ export interface Publication {
 
 export function useCitation(publications: Publication[]) {
   return publications.map((pub) => {
-    const bibtex = parseBibFile(pub.bibtex);
-    const entry = bibtex.getEntry(pub.id);
+    const bib = bibtex.parseBibFile(pub.bibtex);
+    const entry = bib.getEntry(pub.id);
     if (!entry) return pub;
     return {
       ...pub,
@@ -25,7 +25,7 @@ export function useCitation(publications: Publication[]) {
       specialNote: latexToUnicode(pub.specialNote || ''),
       title: entry.getFieldAsString("TITLE"),
       authors: (entry.getField("author") as any).authors$.map(
-        (author) => author.firstNames + " " + author.lastNames
+        (author: any) => author.firstNames + " " + author.lastNames
       ),
       bookname: latexToUnicode(
         (entry.getFieldAsString("journal") ||

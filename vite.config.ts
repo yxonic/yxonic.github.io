@@ -5,5 +5,13 @@ import vmark from '@vmark/vite-plugin'
 import yaml from '@rollup/plugin-yaml'
 
 export default {
-  plugins: [vue(), ssr(), uno(), vmark(), yaml()]
+  plugins: [
+    vue(),
+    ssr({
+      prerender: true,
+    }),
+    uno(),
+    vmark(),
+    yaml(),
+  ]
 }
