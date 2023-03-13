@@ -32,4 +32,4 @@ import{h as n}from"../../chunks/6432436b.js";const i=n("div",{},[n("h2",{},["Pro
 `,n("ul",{},[`
 `,n("li",{},["ycc1"]),`
 `,n("li",{},["ychat"]),`
-`])]),l={},e={render(){return i}};e.__hmrId="66b17dce";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/pages/projects.page.md";typeof __VUE_HMR_RUNTIME__<"u"&&(__VUE_HMR_RUNTIME__.createRecord(e.__hmrId,e),(void 0).accept(({default:r})=>{__VUE_HMR_RUNTIME__.rerender(r.__hmrId,r.render)}));export{e as default,l as frontmatter,i as nodes};
+`])]),r={title:"Projects @yxonic"},e={render(){return i}};e.__hmrId="66b17dce";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/pages/projects.page.md";typeof __VUE_HMR_RUNTIME__<"u"&&__VUE_HMR_RUNTIME__.createRecord(e.__hmrId,e);export{e as default,r as frontmatter,i as nodes};

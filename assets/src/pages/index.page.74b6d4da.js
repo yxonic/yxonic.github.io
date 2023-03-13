@@ -1,4 +1,4 @@
-import{h as e}from"../../chunks/6432436b.js";const a=e("div",{},[e("h1",{},["Yu Yin",e("span",{class:"text-2xl"},["（阴钰）"])]),`
+import{h as e}from"../../chunks/6432436b.js";const t=e("div",{},[e("h1",{},["Yu Yin",e("span",{class:"text-2xl"},["（阴钰）"])]),`
 `,e("img",{src:"/avatar.jpg",alt:"avatar",class:"h-20 w-20 rounded-full shadow-inner float-right -mt-16"},[void 0]),`
 `,e("h2",{},["Introduction"]),`
 `,e("ul",{},[`
@@ -47,4 +47,4 @@ import{h as e}from"../../chunks/6432436b.js";const a=e("div",{},[e("h1",{},["Yu 
 `,e("li",{},["C++11"]),`
 `,e("li",{},[e("a",{href:"http://ustc-lambda.github.io/files/scala-slides-0416.pdf"},["SCAlable LAnguage Scala"]),", ",e("em",{},["Apr 2016"]),"."]),`
 `,e("li",{},[e("a",{href:"https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2014.09.20_SFD/%E5%B9%BB%E7%81%AF%E7%89%87/sage.pdf"},["What is Sage"]),", Software Freedom Day, ",e("em",{},["Sept 2014"]),"."]),`
-`])]),i={},n={render(){return a}};n.__hmrId="ad8e9c64";n.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/pages/index.page.md";typeof __VUE_HMR_RUNTIME__<"u"&&(__VUE_HMR_RUNTIME__.createRecord(n.__hmrId,n),(void 0).accept(({default:t})=>{__VUE_HMR_RUNTIME__.rerender(t.__hmrId,t.render)}));export{n as default,i as frontmatter,a as nodes};
+`])]),a={title:"Yu Yin @yxonic"},n={render(){return t}};n.__hmrId="ad8e9c64";n.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/pages/index.page.md";typeof __VUE_HMR_RUNTIME__<"u"&&__VUE_HMR_RUNTIME__.createRecord(n.__hmrId,n);export{n as default,a as frontmatter,t as nodes};
