@@ -1,4 +1,4 @@
-import * as bibtex from "bibtex";
+import bibtex, * as _bibtex from "bibtex";
 
 export function latexToUnicode(text: string) {
   return text
@@ -16,7 +16,7 @@ export interface Publication {
 
 export function useCitation(publications: Publication[]) {
   return publications.map((pub) => {
-    const bib = bibtex.parseBibFile(pub.bibtex);
+    const bib = (bibtex || _bibtex).parseBibFile(pub.bibtex);
     const entry = bib.getEntry(pub.id);
     if (!entry) return pub;
     return {
