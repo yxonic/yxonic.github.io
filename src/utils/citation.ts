@@ -1,12 +1,17 @@
 import { parseBibFile } from "bibtex";
 
 export function latexToUnicode(text: string) {
-  return text.replace("\\", "").replace("--", "–");
+  return text
+    .replaceAll("\\", "")
+    .replaceAll("--", "–")
+    .replaceAll("~", "\u00A0");
 }
 
 export interface Publication {
   id: string
   bibtex: string
+  note: string
+  specialNote?: string
 }
 
 export function useCitation(publications: Publication[]) {
@@ -16,6 +21,8 @@ export function useCitation(publications: Publication[]) {
     if (!entry) return pub;
     return {
       ...pub,
+      note: latexToUnicode(pub.note),
+      specialNote: latexToUnicode(pub.specialNote || ''),
       title: entry.getFieldAsString("TITLE"),
       authors: (entry.getField("author") as any).authors$.map(
         (author) => author.firstNames + " " + author.lastNames

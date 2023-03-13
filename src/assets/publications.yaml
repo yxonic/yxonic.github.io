@@ -1,6 +1,8 @@
 - id: liu2019ekt
+  pdfLink: http://staff.ustc.edu.cn/~huangzhy/files/papers/ZhenyaHuang-TKDE2021.pdf
   codeLink: https://github.com/bigdata-ustc/ekt
-  note: IEEE TKDE, CCF A
+  slidesLink: http://staff.ustc.edu.cn/~huangzhy/files/slides/ZhenyaHuang-TKDE-slide.pdf
+  note: IEEE~TKDE, CCF~A
   specialNote: ESI highly cited paper
   bibtex: |
     @article{liu2019ekt,
@@ -15,7 +17,7 @@
     }
 - id: yin2019quesnet
   codeLink: https://github.com/yxonic/quesnet
-  note: KDD '19, CCF A
+  note: KDD~'19, CCF~A
   bibtex: |
     @inproceedings{yin2019quesnet,
       title     = {QuesNet: A Unified Representation for Heterogeneous Test Questions},
@@ -26,7 +28,7 @@
     }
 - id: yin2018transcribing
   codeLink: https://github.com/yxonic/spotlight
-  note: KDD '18, CCF A
+  note: KDD~'18, CCF~A
   bibtex: |
     @inproceedings{yin2018transcribing,
       title={Transcribing content from structural images with spotlight mechanism},
