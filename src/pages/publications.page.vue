@@ -40,3 +40,8 @@ async function clipboard(text) {
   alert("BibTeX entry copied to clipboard!");
 }
 </script>
+<script>
+export const frontmatter = {
+  title: "Publications @yxonic",
+};
+</script>

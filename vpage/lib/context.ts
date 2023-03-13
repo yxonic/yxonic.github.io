@@ -17,7 +17,11 @@ export type PageContextCustom = {
     documentProps?: {
       title?: string
       description?: string
-    }
+    },
+    frontmatter?: {
+      title?: string
+      description?: string
+    },
   }
 }
 

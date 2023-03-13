@@ -1,3 +1,7 @@
+---
+title: Projects @yxonic
+---
+
 ## Projects
 
 ### Machine Learning

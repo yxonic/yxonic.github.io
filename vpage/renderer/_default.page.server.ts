@@ -12,9 +12,9 @@ async function render(pageContext: PageContextServer) {
   const appHtml = await renderToString(app)
 
   // See https://vite-plugin-ssr.com/head
-  const { documentProps } = pageContext.exports
-  const title = (documentProps && documentProps.title) || 'Vite SSR app'
-  const desc = (documentProps && documentProps.description) || 'App using Vite + vite-plugin-ssr'
+  const { documentProps, frontmatter } = pageContext.exports
+  const title = documentProps?.title || frontmatter?.title || 'VPages App'
+  const desc = documentProps?.description || frontmatter?.description || 'App using VPages'
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">

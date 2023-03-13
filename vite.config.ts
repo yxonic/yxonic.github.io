@@ -13,5 +13,5 @@ export default {
     uno(),
     vmark(),
     yaml(),
-  ]
+  ],
 }

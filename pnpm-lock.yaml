@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@rollup/plugin-yaml': ^4.0.1
   '@vitejs/plugin-vue': ^4.0.0
-  '@vmark/vite-plugin': ^0.1.6
+  '@vmark/vite-plugin': ^0.1.7
   '@vue/server-renderer': ^3.2.47
   bibtex: ^0.9.0
   linkedom: ^0.14.24
@@ -19,7 +19,7 @@ dependencies:
 devDependencies:
   '@rollup/plugin-yaml': 4.0.1
   '@vitejs/plugin-vue': 4.0.0_vite@4.1.4+vue@3.2.47
-  '@vmark/vite-plugin': 0.1.6_vite@4.1.4+vue@3.2.47
+  '@vmark/vite-plugin': 0.1.7_vite@4.1.4+vue@3.2.47
   '@vue/server-renderer': 3.2.47_vue@3.2.47
   linkedom: 0.14.24
   rimraf: 4.4.0
@@ -830,8 +830,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vmark/vite-plugin/0.1.6_vite@4.1.4+vue@3.2.47:
-    resolution: {integrity: sha512-MauK4xSUteZjjBxP9Xr5j3hReo2aLRpe1sCrNvj5Eet1WylciR1buC1OsO4Rtcytfsmobvy4Baen+YW5+BXhiQ==}
+  /@vmark/vite-plugin/0.1.7_vite@4.1.4+vue@3.2.47:
+    resolution: {integrity: sha512-XFao+ql76O3aeMH8IltXec68xyl4m8sQ432y9InrME6EX3U65mF5Gkh8k6SAKPihWVB016A1MIAwbAgwaw2adg==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0 || ^4.0.0
       vue: ^3.0.0

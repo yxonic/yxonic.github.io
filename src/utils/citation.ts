@@ -1,4 +1,4 @@
-import bibtex from "bibtex";
+import * as bibtex from "bibtex";
 
 export function latexToUnicode(text: string) {
   return text

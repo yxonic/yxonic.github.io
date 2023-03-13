@@ -11,7 +11,7 @@
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.0.1",
     "@vitejs/plugin-vue": "^4.0.0",
-    "@vmark/vite-plugin": "^0.1.6",
+    "@vmark/vite-plugin": "^0.1.7",
     "@vue/server-renderer": "^3.2.47",
     "linkedom": "^0.14.24",
     "rimraf": "^4.4.0",
