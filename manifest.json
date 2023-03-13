@@ -13,7 +13,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-server-routing.c580bf52.js",
+    "file": "assets/entry-server-routing.c929cf7e.js",
     "imports": [
       "_556e4de3.js"
     ],
@@ -28,7 +28,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-client-routing.e3e50c84.js",
+    "file": "assets/entry-client-routing.9ba0fc27.js",
     "imports": [
       "_556e4de3.js"
     ],
@@ -36,7 +36,7 @@
     "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.93_vite@4.1.4/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js"
   },
   "src/pages/index.page.md": {
-    "file": "assets/src/pages/index.page.74b6d4da.js",
+    "file": "assets/src/pages/index.page.be36bb35.js",
     "imports": [
       "_6432436b.js"
     ],
@@ -45,7 +45,7 @@
     "src": "src/pages/index.page.md"
   },
   "src/pages/projects.page.md": {
-    "file": "assets/src/pages/projects.page.f54d6f46.js",
+    "file": "assets/src/pages/projects.page.7732d03a.js",
     "imports": [
       "_6432436b.js"
     ],
