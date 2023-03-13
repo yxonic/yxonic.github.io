@@ -45,12 +45,15 @@ See [full list](/projects).
 
 ## Talks
 
-- [JAX: Compile the Future of Deep Learning to Present](http://202.38.75.5/shares/大分享/2022-12-02-阴钰-JAX.pdf), _Dec 2022_.
-- [How to be Logical](http://202.38.75.5/shares/小分享/2020-09-17-阴钰-如何有逻辑.pdf), _Sept 2020_.
-- [Computers: Past, Present and Future](), _Nov 2019_.
-- [Continuous Control: Basics and Beyond](http://202.38.75.5/shares/大分享/2019-11-12-阴钰-Continuous%20Control%20Basics%20and%20Beyond.pptx), _Nov 2019_.
-- [fret: Framework for Reproducible ExperimenTs](http://202.38.75.5/shares/小分享/2019-04-02-阴钰-fret_slides.pdf), _Apr 2019_.
-- [Reinforcement Learning: Basics](http://202.38.75.5/shares/小分享/2017-10-31-rl-阴钰.pdf), _Oct 2017_.
-- C++11
-- [SCAlable LAnguage Scala](http://ustc-lambda.github.io/files/scala-slides-0416.pdf), _Apr 2016_.
-- [What is Sage](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/幻灯片/sage.pdf), Software Freedom Day, _Sept 2014_.
+- [JAX: Compile the Future of Deep Learning to Present](/talks/2022-12-02-JAX.pdf), _Dec 2022_.
+- [How to be Logical](/talks/2020-09-17-如何有逻辑.pdf), _Sept 2020_.
+- [Computers: Past, Present and Future](/talks/2019-11-00-计算机_过去现在和未来.pdf), _Nov 2019_.
+- [Continuous Control: Basics and Beyond](/talks/2019-11-12-阴钰-Continuous-Control.pdf), _Nov 2019_.
+- [Some New Ideas in RL](/talks/2019-04-29-some-new-ideas-in-rl.pdf), _Apr 2019_.
+- [fret: Framework for Reproducible ExperimenTs](/talks/2019-04-02-fret_slides.pdf), _Apr 2019_.
+- [Git Workflow](/talks/2019-03-19-git-workflow.pdf), _Mar 2019_.
+- [Reinforcement Learning: Basics](/talks/2017-10-31-rl.pdf), _Oct 2017_.
+- [Coding Deep (Introduction to DL Frameworks)](/talks/2017-05-17-dl_slides.pdf), _May 2017_.
+- [Introduction to Modern C++](/talks/2017-04-21-introduction-to-modern-cpp.pdf), _Apr 2017_.
+- [SCAlable LAnguage Scala](/talks/2016-04-00-scala-slides.pdf), _Apr 2016_.
+- [What is Sage](/talks/2014-09-20-sage.pdf), Software Freedom Day, _Sept 2014_.
