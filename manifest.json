@@ -13,7 +13,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-server-routing.a8d2f322.js",
+    "file": "assets/entry-server-routing.db630dec.js",
     "imports": [
       "_556e4de3.js"
     ],
@@ -28,7 +28,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-client-routing.324f122f.js",
+    "file": "assets/entry-client-routing.dcde010b.js",
     "imports": [
       "_556e4de3.js"
     ],
@@ -45,7 +45,7 @@
     "src": "src/pages/index.page.md"
   },
   "src/pages/projects.page.md": {
-    "file": "assets/src/pages/projects.page.5633c369.js",
+    "file": "assets/src/pages/projects.page.6606dc22.js",
     "imports": [
       "_2758c2bd.js"
     ],
@@ -54,7 +54,7 @@
     "src": "src/pages/projects.page.md"
   },
   "src/pages/publications.page.vue": {
-    "file": "assets/src/pages/publications.page.39e8e726.js",
+    "file": "assets/src/pages/publications.page.80cbf1b3.js",
     "imports": [
       "_2758c2bd.js"
     ],
