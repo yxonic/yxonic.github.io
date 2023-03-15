@@ -12,6 +12,60 @@
           booktitle = {Proceedings of the ACM Web Conference 2023},
           year = {2023}
         }
+- year: 2022
+  list:
+    - id: wang2022neuralcd
+      note: IEEE~TKDE, CCF~A
+      bibtex: |
+        @article{wang2022neuralcd,
+          title={NeuralCD: A General Framework for Cognitive Diagnosis},
+          author={Wang, Fei and Liu, Qi and Chen, Enhong and Huang, Zhenya and Yin, Yu and Wang, Shijin and Su, Yu},
+          journal={IEEE Transactions on Knowledge and Data Engineering},
+          year={2022},
+          publisher={IEEE}
+        }
+    - id: shen2022monitoring
+      note: IEEE~TKDE, CCF~A
+      bibtex: |
+        @article{shen2022monitoring,
+          title={Monitoring Student Progress for Learning Process-Consistent Knowledge Tracing},
+          author={Shen, Shuanghong and Chen, Enhong and Liu, Qi and Huang, Zhenya and Huang, Wei and Yin, Yu and Su, Yu and Wang, Shijin},
+          journal={IEEE Transactions on Knowledge and Data Engineering},
+          year={2022},
+          publisher={IEEE}
+        }
+    - id: li2022pst
+      note: SIGIR~'22, CCF~A
+      bibtex: |
+        @inproceedings{li2022pst,
+          title={PST: Measuring Skill Proficiency in Programming Exercise Process via Programming Skill Tracing},
+          author={Li, Ruixin and Yin, Yu and Dai, Le and Shen, Shuanghong and Lin, Xin and Su, Yu and Chen, Enhong},
+          booktitle={Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+          pages={2601--2606},
+          year={2022}
+        }
+- year: 2021
+  list:
+    - id: shen2021learning
+      note: KDD~'21, CCF~A
+      bibtex: |
+        @inproceedings{shen2021learning,
+          title={Learning Process-Consistent Knowledge Tracing},
+          author={Shen, Shuanghong and Liu, Qi and Chen, Enhong and Huang, Zhenya and Huang, Wei and Yin, Yu and Su, Yu and Wang, Shijin},
+          booktitle={Proceedings of the 27th ACM SIGKDD conference on knowledge discovery \& data mining},
+          pages={1452--1460},
+          year={2021}
+        }
+    - id: gao2021rcd
+      note: SIGIR~'21, CCF~A
+      bibtex: |
+        @inproceedings{gao2021rcd,
+          title={RCD: Relation Map Driven Cognitive Diagnosis for Intelligent Education Systems},
+          author={Gao, Weibo and Liu, Qi and Huang, Zhenya and Yin, Yu and Bi, Haoyang and Wang, Mu-Chun and Ma, Jianhui and Wang, Shijin and Su, Yu},
+          booktitle={Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+          pages={501--510},
+          year={2021}
+        }
 - year: 2019
   list:
     - id: liu2019ekt
@@ -49,7 +103,7 @@
       note: KDD~'18, CCF~A
       bibtex: |
         @inproceedings{yin2018transcribing,
-          title={Transcribing content from structural images with spotlight mechanism},
+          title={Transcribing Content from Structural Images with Spotlight Mechanism},
           author={Yin, Yu and Huang, Zhenya and Chen, Enhong and Liu, Qi and Zhang, Fuzheng and Xie, Xing and Hu, Guoping},
           booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
           pages={2643--2652},

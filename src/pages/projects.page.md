@@ -2,6 +2,8 @@
 title: Projects @yxonic
 ---
 
+[home](/)
+
 ## Projects
 
 ### Machine Learning
