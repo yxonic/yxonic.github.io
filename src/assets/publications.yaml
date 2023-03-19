@@ -12,6 +12,17 @@
           booktitle = {Proceedings of the ACM Web Conference 2023},
           year = {2023}
         }
+    - id: wang2023dynamic
+      note: IEEE~TLS
+      specialNote: Accepted
+      bibtex: |
+        @article{wang2023dynamic,
+          title={Dynamic Cognitive Diagnosis: An Educational Priors-Enhanced Deep Knowledge Tracing Perspective},
+          author={Wang, Fei and Huang, Zhenya and Liu, Qi and Chen, Enhong and Yin, Yu and Ma, Jianhui and Wang, Shijin},
+          journal={IEEE Transactions on Learning Technologies},
+          year={2023},
+          publisher={IEEE}
+        }
 - year: 2022
   list:
     - id: wang2022neuralcd
@@ -44,6 +55,62 @@
           pages={2601--2606},
           year={2022}
         }
+    - id: dai2022decomposing
+      note: ICDM~'22, CCF~B
+      bibtex: |
+        @inproceedings{dai2022decomposing,
+          title={Decomposing Complementary and Substitutable Relations for Intercorporate Investment Recommendation},
+          author={Dai, Le and Yin, Yu and Qin, Chuan and Chen, Enhong and Xiong, Hui},
+          booktitle={2022 IEEE International Conference on Data Mining (ICDM)},
+          pages={909--914},
+          year={2022},
+          organization={IEEE}
+        }
+    - id: cheng2022adaptkt
+      note: WSDM~'22, CCF~B
+      bibtex: |
+        @inproceedings{cheng2022adaptkt,
+          title={AdaptKT: A Domain Adaptable Method for Knowledge Tracing},
+          author={Cheng, Song and Liu, Qi and Chen, Enhong and Zhang, Kai and Huang, Zhenya and Yin, Yu and Huang, Xiaoqing and Su, Yu},
+          booktitle={Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining},
+          pages={123--131},
+          year={2022}
+        }
+    - id: zhu2022towards
+      bibtex: |
+        @article{zhu2022towards,
+          title={Towards Exploring Large Molecular Space: An Efficient Chemical Genetic Algorithm},
+          author={Zhu, Jianfu and Hao, Zhongkai and Liu, Qi and Yin, Yu and Lu, Chengqiang and Huang, Zhenya and Chen, Enhong},
+          journal={Journal of Computer Science and Technology},
+          volume={37},
+          number={6},
+          pages={1464--1477},
+          year={2022},
+          publisher={Springer}
+        }
+    - id: wu2022clause
+      bibtex: |
+        @article{wu2022clause,
+          title={Clause-level Relationship-aware Math Word Problems Solver},
+          author={Wu, Changyang and Lin, Xin and Huang, Zhenya and Yin, Yu and Liu, Jiayu and Liu, Qi and Zhou, Gang},
+          journal={Machine Intelligence Research},
+          volume={19},
+          number={5},
+          pages={425--438},
+          year={2022},
+          publisher={Springer}
+        }
+    - id: chen2022dynamic
+      bibtex: |
+        @inproceedings{chen2022dynamic,
+          title={Dynamic Clustering Federated Learning for Non-IID Data},
+          author={Chen, Ming and Wu, Jinze and Yin, Yu and Huang, Zhenya and Liu, Qi and Chen, Enhong},
+          booktitle={Artificial Intelligence: Second CAAI International Conference, CICAI 2022, Beijing, China, August 27--28, 2022, Revised Selected Papers, Part III},
+          pages={119--131},
+          year={2022},
+          organization={Springer}
+        }
+
 - year: 2021
   list:
     - id: shen2021learning
@@ -66,6 +133,73 @@
           pages={501--510},
           year={2021}
         }
+
+- year: 2020
+  list:
+    - id: dai2020enterprise
+      note: KDD~'20, CCF~A
+      bibtex: |
+        @inproceedings{dai2020enterprise,
+          title={Enterprise Cooperation and Competition Analysis with a Sign-Oriented Preference Network},
+          author={Dai, Le and Yin, Yu and Qin, Chuan and Xu, Tong and He, Xiangnan and Chen, Enhong and Xiong, Hui},
+          booktitle={Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+          pages={774--782},
+          year={2020}
+        }
+    - id: huang2020neural
+      slidesLink: https://staff.ustc.edu.cn/~huangzhy/files/slides/ZhenyaHuang-SIGIR2020s-slide.pdf
+      note: SIGIR~'20, CCF~A
+      bibtex: |
+        @inproceedings{huang2020neural,
+          title={Neural Mathematical Solver with Enhanced Formula Structure},
+          author={Huang, Zhenya and Liu, Qi and Gao, Weibo and Wu, Jinze and Yin, Yu and Wang, Hao and Chen, Enhong},
+          booktitle={Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval},
+          pages={1729--1732},
+          year={2020}
+        }
+    - id: wang2020neural
+      codeLink: https://github.com/bigdata-ustc/NeuralCD
+      note: AAAI~'20, CCF~A
+      bibtex: |
+        @inproceedings{wang2020neural,
+          title={Neural Cognitive Diagnosis for Intelligent Education Systems},
+          author={Wang, Fei and Liu, Qi and Chen, Enhong and Huang, Zhenya and Chen, Yuying and Yin, Yu and Huang, Zai and Wang, Shijin},
+          booktitle={Proceedings of the AAAI conference on artificial intelligence},
+          volume={34},
+          number={04},
+          pages={6153--6161},
+          year={2020}
+        }
+    - id: wang2020fine
+      note: ACM~MM~'20, CCF~A
+      bibtex: |
+        @inproceedings{wang2020fine,
+          title={Fine-grained Similarity Measurement between Educational Videos and Exercises},
+          author={Wang, Xin and Huang, Wei and Liu, Qi and Yin, Yu and Huang, Zhenya and Wu, Le and Ma, Jianhui and Wang, Xue},
+          booktitle={Proceedings of the 28th ACM International Conference on Multimedia},
+          pages={331--339},
+          year={2020}
+        }
+    - id: bi2020quality
+      note: ICDM~'20, CCF~B
+      bibtex: |
+        @inproceedings{bi2020quality,
+          title={Quality Meets Diversity: A Model-Agnostic Framework for Computerized Adaptive Testing},
+          author={Bi, Haoyang and Ma, Haiping and Huang, Zhenya and Yin, Yu and Liu, Qi and Chen, Enhong and Su, Yu and Wang, Shijin},
+          booktitle={2020 IEEE International Conference on Data Mining (ICDM)},
+          pages={42--51},
+          year={2020},
+          organization={IEEE}
+        }
+    - id: chen2020
+      bibtex: |
+        @article{chen2020,
+          title={基于深度卷积神经网络的公式重复检测方法},
+          author={陈昂 and 佟威 and 周宇强 and 阴钰 and 刘淇},
+          journal={计算机科学},
+          year={2020}
+        }
+
 - year: 2019
   list:
     - id: liu2019ekt
@@ -95,6 +229,16 @@
           pages     = {1328--1336},
           year      = {2019}
         }
+    - id: huang2019exploring
+      note: CIKM~'19, CCF~B
+      bibtex: |
+        @inproceedings{huang2019exploring,
+          title={Exploring Multi-Objective Exercise Recommendations in Online Education Systems},
+          author={Huang, Zhenya and Liu, Qi and Zhai, Chengxiang and Yin, Yu and Chen, Enhong and Gao, Weibo and Hu, Guoping},
+          booktitle={Proceedings of the 28th ACM International Conference on Information and Knowledge Management},
+          pages={1261--1270},
+          year={2019}
+        }
 
 - year: 2018
   list:
@@ -107,5 +251,16 @@
           author={Yin, Yu and Huang, Zhenya and Chen, Enhong and Liu, Qi and Zhang, Fuzheng and Xie, Xing and Hu, Guoping},
           booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
           pages={2643--2652},
+          year={2018}
+        }
+    - id: su2018exercise
+      note: AAAI~'18, CCF~A
+      bibtex: |
+        @inproceedings{su2018exercise,
+          title={Exercise-Enhanced Sequential Modeling for Student Performance Prediction},
+          author={Su, Yu and Liu, Qingwen and Liu, Qi and Huang, Zhenya and Yin, Yu and Chen, Enhong and Ding, Chris and Wei, Si and Hu, Guoping},
+          booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+          volume={32},
+          number={1},
           year={2018}
         }

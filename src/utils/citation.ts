@@ -27,7 +27,7 @@ export function useCitation(
       if (!entry) return pub;
       return {
         ...pub,
-        note: latexToUnicode(pub.note),
+        note: latexToUnicode(pub.note || ""),
         specialNote: latexToUnicode(pub.specialNote || ""),
         title: entry.getFieldAsString("TITLE"),
         authors: (entry.getField("author") as any).authors$.map(
