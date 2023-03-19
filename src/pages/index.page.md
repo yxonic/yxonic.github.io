@@ -17,13 +17,18 @@ title: "Yu Yin @yxonic"
 
 - _Sept 2017 – July 2023 (estimated)_
 
-  School of Computer Science, USTC
+  PhD Student, School of Computer Science, USTC
 
 - _Sept 2013 – July 2017_
 
-  School of Computer Science, USTC
+  Bachelor, School of Computer Science, USTC
 
 ## Experiences
+
+- [BASE Group](https://base.ustc.edu.cn), Group Leader, _Sept 2018 – Present_.
+- [CODIA](https://code.bdaa.pro), Team Leader, Architect, _May 2019 – Present_.
+- National Education Examinations Authority, Research Intern, _Apr 2018 – Aug 2018_.
+- iFLYTEK Co. Ltd., Research Intern, _Aug 2016 – Aug 2017_
 
 ## Publications
 
