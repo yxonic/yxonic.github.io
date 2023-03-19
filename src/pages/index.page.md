@@ -4,6 +4,8 @@ title: "Yu Yin @yxonic"
 
 # Yu Yin<span class="text-2xl">（阴钰）</span>
 
+[GitHub](https://github.com/yxonic/) | [Google Scholar](https://scholar.google.com/citations?user=hzIdvWwAAAAJ&hl=zh-CN)
+
 <img src="/avatar.jpg" alt="avatar" class="h-20 w-20 rounded-full shadow-inner float-right -mt-16" />
 
 ## Introduction
