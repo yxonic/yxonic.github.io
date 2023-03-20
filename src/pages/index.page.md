@@ -10,7 +10,7 @@ title: "Yu Yin @yxonic"
 
 ## Introduction
 
-- I am an AI researcher that is good at:
+- I am an AI researcher that enjoys:
   - **Learning, thinking and sharing**. Driven by curiosity. Care about innovative and impactful ideas. Love to share what I learn and think.
   - **Put thoughts into reality**. Solid systems and engineering background. Open-source practitioner.
 - My research interests include: natural language processing, user modeling and personalization, code intelligence, and educational applications.
