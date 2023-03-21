@@ -52,6 +52,7 @@ See [full list](/projects).
 
 ## Talks
 
+- [Open-Source LLMs](/slides/open-source-llms/), _TODO_.
 - [JAX: Compile the Future of Deep Learning to Present](/talks/2022-12-02-JAX.pdf), _Dec 2022_.
 - [From Programming Assessment to CODIA](/talks/2021-12-08-CODIA.pdf), _Oct 2021_.
 - [GraphQL API Design](/talks/2021-04-10-GraphQL.pdf), _Apr 2021_.
