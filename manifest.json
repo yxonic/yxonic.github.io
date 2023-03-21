@@ -1,87 +1,105 @@
 {
-  "_2758c2bd.js": {
-    "file": "assets/chunks/2758c2bd.js"
+  "_7903a469.js": {
+    "file": "assets/chunks/7903a469.js"
   },
-  "_556e4de3.js": {
-    "file": "assets/chunks/556e4de3.js"
+  "_e3421036.js": {
+    "file": "assets/chunks/e3421036.js"
   },
-  "node_modules/.pnpm/vite-plugin-ssr@0.4.93_vite@4.1.4/node_modules/vite-plugin-ssr/dist/esm/client/entry.js": {
+  "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/entry.js": {
     "dynamicImports": [
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
       "src/pages/publications.page.vue",
+      "src/pages/slides/open-source-llms.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-server-routing.7e843f69.js",
+    "file": "assets/entry-server-routing.834eb46a.js",
     "imports": [
-      "_556e4de3.js"
+      "_e3421036.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.93_vite@4.1.4/node_modules/vite-plugin-ssr/dist/esm/client/entry.js"
+    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/entry.js"
   },
-  "node_modules/.pnpm/vite-plugin-ssr@0.4.93_vite@4.1.4/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js": {
+  "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js": {
     "dynamicImports": [
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
       "src/pages/publications.page.vue",
+      "src/pages/slides/open-source-llms.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-client-routing.6118fe1b.js",
+    "file": "assets/entry-client-routing.b38b5c16.js",
     "imports": [
-      "_556e4de3.js"
+      "_e3421036.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.93_vite@4.1.4/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js"
+    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js"
   },
   "src/pages/index.page.md": {
-    "file": "assets/src/pages/index.page.2355c23d.js",
+    "file": "assets/src/pages/index.page.f1b5bdee.js",
     "imports": [
-      "_2758c2bd.js"
+      "_7903a469.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "src/pages/index.page.md"
   },
   "src/pages/projects.page.md": {
-    "file": "assets/src/pages/projects.page.de96252b.js",
+    "file": "assets/src/pages/projects.page.b3566928.js",
     "imports": [
-      "_2758c2bd.js"
+      "_7903a469.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "src/pages/projects.page.md"
   },
   "src/pages/publications.page.vue": {
-    "file": "assets/src/pages/publications.page.710326f1.js",
+    "file": "assets/src/pages/publications.page.e296bdab.js",
     "imports": [
-      "_2758c2bd.js"
+      "_7903a469.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "src/pages/publications.page.vue"
   },
+  "src/pages/slides/open-source-llms.page.css": {
+    "file": "assets/static/open-source-llms.page.c6b54c46.css",
+    "src": "src/pages/slides/open-source-llms.page.css"
+  },
+  "src/pages/slides/open-source-llms.page.mdx": {
+    "css": [
+      "assets/static/open-source-llms.page.c6b54c46.css"
+    ],
+    "file": "assets/src/pages/slides/open-source-llms.page.05e84f1e.js",
+    "imports": [
+      "_7903a469.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/pages/slides/open-source-llms.page.mdx"
+  },
   "vpage/renderer/_default.page.client.css": {
-    "file": "assets/static/default.page.client.75a489ff.css",
+    "file": "assets/static/default.page.client.67f42419.css",
     "src": "vpage/renderer/_default.page.client.css"
   },
   "vpage/renderer/_default.page.client.ts": {
     "css": [
-      "assets/static/default.page.client.75a489ff.css"
+      "assets/static/default.page.client.67f42419.css"
     ],
-    "file": "assets/vpage/renderer/default.page.client.9557fb5d.js",
+    "file": "assets/vpage/renderer/default.page.client.b556ebde.js",
     "imports": [
-      "_2758c2bd.js"
+      "_7903a469.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "vpage/renderer/_default.page.client.ts"
   },
   "vpage/renderer/_error.page.vue": {
-    "file": "assets/vpage/renderer/error.page.dc9bb6be.js",
+    "file": "assets/vpage/renderer/error.page.b47d8ef5.js",
     "imports": [
-      "_2758c2bd.js"
+      "_7903a469.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
