@@ -4,11 +4,12 @@ specifiers:
   '@rollup/plugin-yaml': ^4.0.1
   '@vitejs/plugin-vue': ^4.1.0
   '@vmark/vite-plugin': ^0.1.8
-  '@vslides/core': ^0.0.5
-  '@vslides/vite-plugin': ^0.0.9
+  '@vslides/core': ^0.0.6
+  '@vslides/vite-plugin': ^0.0.10
   '@vue/server-renderer': ^3.2.47
   '@vueuse/core': ^9.13.0
   bibtex: ^0.9.0
+  katex: ^0.16.4
   linkedom: ^0.14.25
   rimraf: ^4.4.0
   unocss: ^0.50.6
@@ -18,10 +19,11 @@ specifiers:
   vue-router: ^4.1.6
 
 dependencies:
-  '@vslides/core': 0.0.5_zdof4di533n7s6jutt56wntiee
-  '@vslides/vite-plugin': 0.0.9_gs2rjuwjfkkd3afos252rypxn4
+  '@vslides/core': 0.0.6_zdof4di533n7s6jutt56wntiee
+  '@vslides/vite-plugin': 0.0.10_m267s5rvyfzpybz5sgaaxnivmm
   '@vueuse/core': 9.13.0_vue@3.2.47
   bibtex: 0.9.0
+  katex: 0.16.4
   vue-router: 4.1.6_vue@3.2.47
 
 devDependencies:
@@ -585,8 +587,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vslides/core/0.0.5_zdof4di533n7s6jutt56wntiee:
-    resolution: {integrity: sha512-wK6UPrpiPXSX739vgJOgMcexsosokLFRcqCWCZ0YQHgBLmKWtLSZu2EVr1Un3aCyMFvPKgBM5KaGgstT4CWMig==}
+  /@vslides/core/0.0.6_zdof4di533n7s6jutt56wntiee:
+    resolution: {integrity: sha512-cBT3zTjx4FrLC0YaH/bPoESCS5B+GbWjTPlsQ78fFJoLDV6pvXJHlBzJRYMY46OPgX6iLUPAaSAnzfPGLlJ3Zg==}
     peerDependencies:
       '@vueuse/core': ^9.0.0
       vue: ^3.0.0
@@ -606,17 +608,18 @@ packages:
       - supports-color
     dev: false
 
-  /@vslides/vite-plugin/0.0.9_gs2rjuwjfkkd3afos252rypxn4:
-    resolution: {integrity: sha512-GKCtAwJdL4/ZFbCczxuTCHCdvtRrABt6TKSYPaDdEsmrEQP1xrKEeDcxvWC4GDin3Kv4H+jc2FMrTEsXkis7xg==}
+  /@vslides/vite-plugin/0.0.10_m267s5rvyfzpybz5sgaaxnivmm:
+    resolution: {integrity: sha512-62W36mwaUTn35SdIQZuqi4exA7g1c+lYWYix+UQoO2M1YpJWqU/idc4OILE7nhn4WvI2kjWbMjfhFLHnHfch+Q==}
     peerDependencies:
       '@vitejs/plugin-vue': ^3.0.0 || ^4.0.0
+      '@vslides/core': ^0.0.6
       unocss: ^0.50.0
       vite: ^3.0.0 || ^4.0.0
       vue: ^3.0.0
     dependencies:
       '@vitejs/plugin-vue': 4.1.0_vite@4.2.1+vue@3.2.47
       '@vmark/core': 1.1.1
-      '@vslides/core': 0.0.5_zdof4di533n7s6jutt56wntiee
+      '@vslides/core': 0.0.6_zdof4di533n7s6jutt56wntiee
       '@vslides/parser': 0.0.2
       hash-sum: 2.0.0
       unocss: 0.50.6_vite@4.2.1
@@ -624,9 +627,7 @@ packages:
       vue: 3.2.47
       yaml: 2.2.1
     transitivePeerDependencies:
-      - '@vueuse/core'
       - supports-color
-      - vue-router
     dev: false
 
   /@vue/compiler-core/3.2.47:
@@ -1219,6 +1220,13 @@ packages:
     hasBin: true
     dependencies:
       commander: 8.3.0
+
+  /katex/0.16.4:
+    resolution: {integrity: sha512-WudRKUj8yyBeVDI4aYMNxhx5Vhh2PjpzQw1GRu/LVGqL4m1AxwD1GcUp0IMbdJaf5zsjtj8ghP0DOQRYhroNkw==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
+    dev: false
 
   /kleur/4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}

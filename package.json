@@ -6,10 +6,11 @@
     "build": "rimraf dist && vite build"
   },
   "dependencies": {
-    "@vslides/core": "^0.0.5",
-    "@vslides/vite-plugin": "^0.0.9",
+    "@vslides/core": "^0.0.6",
+    "@vslides/vite-plugin": "^0.0.10",
     "@vueuse/core": "^9.13.0",
     "bibtex": "^0.9.0",
+    "katex": "^0.16.4",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
