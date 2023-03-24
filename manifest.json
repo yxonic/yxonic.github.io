@@ -1,9 +1,22 @@
 {
-  "_91574419.js": {
-    "file": "assets/chunks/91574419.js"
+  "_afcc8c88.js": {
+    "css": [
+      "assets/static/index.d4416a03.css"
+    ],
+    "file": "assets/chunks/afcc8c88.js",
+    "imports": [
+      "_ded0b38f.js"
+    ]
+  },
+  "_ded0b38f.js": {
+    "file": "assets/chunks/ded0b38f.js"
   },
   "_e3421036.js": {
     "file": "assets/chunks/e3421036.js"
+  },
+  "index.css": {
+    "file": "assets/static/index.d4416a03.css",
+    "src": "index.css"
   },
   "node_modules/.pnpm/katex@0.16.4/node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf": {
     "file": "assets/static/KaTeXAMS-Regular.68534840.ttf",
@@ -246,11 +259,12 @@
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
       "src/pages/publications.page.vue",
-      "src/pages/slides/open-source-llms.page.mdx",
+      "src/slides/career.page.mdx",
+      "src/slides/open-source-llms.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-server-routing.a44dd62d.js",
+    "file": "assets/entry-server-routing.95b1af41.js",
     "imports": [
       "_e3421036.js"
     ],
@@ -262,11 +276,12 @@
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
       "src/pages/publications.page.vue",
-      "src/pages/slides/open-source-llms.page.mdx",
+      "src/slides/career.page.mdx",
+      "src/slides/open-source-llms.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-client-routing.2be2eb29.js",
+    "file": "assets/entry-client-routing.26e1d3cf.js",
     "imports": [
       "_e3421036.js"
     ],
@@ -274,47 +289,51 @@
     "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js"
   },
   "src/pages/index.page.md": {
-    "file": "assets/src/pages/index.page.c1c3e212.js",
+    "file": "assets/src/pages/index.page.1f6808a4.js",
     "imports": [
-      "_91574419.js"
+      "_ded0b38f.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "src/pages/index.page.md"
   },
   "src/pages/projects.page.md": {
-    "file": "assets/src/pages/projects.page.09673a4b.js",
+    "file": "assets/src/pages/projects.page.4d23ef0a.js",
     "imports": [
-      "_91574419.js"
+      "_ded0b38f.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "src/pages/projects.page.md"
   },
   "src/pages/publications.page.vue": {
-    "file": "assets/src/pages/publications.page.afa09e98.js",
+    "file": "assets/src/pages/publications.page.40be1869.js",
     "imports": [
-      "_91574419.js"
+      "_ded0b38f.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "src/pages/publications.page.vue"
   },
-  "src/pages/slides/open-source-llms.page.css": {
-    "file": "assets/static/open-source-llms.page.d4416a03.css",
-    "src": "src/pages/slides/open-source-llms.page.css"
-  },
-  "src/pages/slides/open-source-llms.page.mdx": {
-    "css": [
-      "assets/static/open-source-llms.page.d4416a03.css"
-    ],
-    "file": "assets/src/pages/slides/open-source-llms.page.deff82c3.js",
+  "src/slides/career.page.mdx": {
+    "file": "assets/src/slides/career.page.08e7cc65.js",
     "imports": [
-      "_91574419.js"
+      "_afcc8c88.js",
+      "_ded0b38f.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
-    "src": "src/pages/slides/open-source-llms.page.mdx"
+    "src": "src/slides/career.page.mdx"
+  },
+  "src/slides/open-source-llms.page.mdx": {
+    "file": "assets/src/slides/open-source-llms.page.91a2ddc1.js",
+    "imports": [
+      "_afcc8c88.js",
+      "_ded0b38f.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/slides/open-source-llms.page.mdx"
   },
   "vpage/renderer/_default.page.client.css": {
     "file": "assets/static/default.page.client.4d3fb78e.css",
@@ -385,18 +404,18 @@
     "css": [
       "assets/static/default.page.client.4d3fb78e.css"
     ],
-    "file": "assets/vpage/renderer/default.page.client.da8139cd.js",
+    "file": "assets/vpage/renderer/default.page.client.944c12b0.js",
     "imports": [
-      "_91574419.js"
+      "_ded0b38f.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "vpage/renderer/_default.page.client.ts"
   },
   "vpage/renderer/_error.page.vue": {
-    "file": "assets/vpage/renderer/error.page.80a18a4b.js",
+    "file": "assets/vpage/renderer/error.page.657e53d1.js",
     "imports": [
-      "_91574419.js"
+      "_ded0b38f.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
