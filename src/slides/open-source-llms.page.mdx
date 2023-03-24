@@ -1,10 +1,10 @@
 ---
-title: Open-Source LLMs
+title: Open-Source PLMs
 theme: ./theme/basic
 layout: cover
 ---
 
-# Open-Source LLMs
+# Open-Source PLMs
 
 @yxonic & @lem0nle
 
@@ -12,16 +12,81 @@ layout: cover
 
 # Contents
 
-- What is LLM?
-  - GPT family
-  - ChatGPT
-- Open-source LLMs
-  - LLaMA
-  - Alpaca
-- The source code
+- What is PLM?
+- Open-source PLMs
+- Learn from code
   - model architecture
   - training
   - running
     - run LLaMA locally with `llama.cpp`
-    - wrapping as API
-    - cool projects based on OpenAI API
+    - projects based on OpenAI API
+
+---
+
+# What is PLM?
+
+- recent AI advances: http://dustintran.com/blog/ai-advances
+- PLMs pre GPT-3: [blog](https://towardsdatascience.com/pre-trained-language-models-simplified-b8ec80c62217)
+- [10 Leading Language Models For NLP In 2022](https://www.topbots.com/leading-nlp-language-models-2020/)
+- [Why did all of the public reproduction of GPT-3 fail?](https://jingfengyang.github.io/gpt)
+- using PLMs: [Prompt Engineering](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
+
+---
+
+# ChatGPT
+
+- ChatGPT history review: [ChatGPT 的前世今生](https://baijiahao.baidu.com/s?id=1758688291629341140)
+- [拆解追溯 GPT-3.5 各项能力的起源](https://yaofu.notion.site/GPT-3-5-360081d91ec245f29029d37b54573756)
+
+---
+
+# Open-Source LLMs
+
+- [T5X](https://github.com/google-research/t5x), [Flan-T5](https://huggingface.co/google/flan-t5-base)
+- [LLaMA](https://github.com/facebookresearch/llama)
+- [alpaca](https://github.com/tatsu-lab/stanford_alpaca), [website](https://crfm.stanford.edu/2023/03/13/alpaca.html)
+- [GLM](https://github.com/THUDM/GLM)
+- [ChatGLM](https://github.com/THUDM/ChatGLM-6B)
+
+---
+
+# Model Architecture
+
+- [T5](https://github.com/google-research/t5x)
+- [LLaMA](https://github.com/facebookresearch/llama)
+- [GLM](https://github.com/THUDM/GLM)
+
+---
+
+# Training
+
+- [T5 training](https://github.com/google-research/t5x)
+- [fine-tuning flan-t5](https://github.com/philschmid/deep-learning-pytorch-huggingface)
+- fine-tuning LLaMA: [alpaca](https://github.com/tatsu-lab/stanford_alpaca)
+
+---
+
+# Fine-tuning efficiency
+
+- https://www.philschmid.de/fine-tune-flan-t5-peft
+- [OpenDelta](https://github.com/thunlp/OpenDelta), [news](https://mp.weixin.qq.com/s/R4pJORJ4H2DbWcHHt40YOA)
+
+---
+
+# Multi-modal?
+
+- https://shikun.io/projects/prismer
+
+---
+
+# Efficient running
+
+- [llama.cpp](https://github.com/ggerganov/llama.cpp)
+
+---
+
+# Projects based on API
+
+- https://github.com/sigoden/aichat
+- https://github.com/zurawiki/gptcommit
+- https://github.com/keijiro/AICommand
