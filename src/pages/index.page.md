@@ -19,7 +19,7 @@ title: "Yu Yin @yxonic"
 
 - _Sept 2017 – July 2023 (estimated)_
 
-  PhD Student, School of Computer Science, USTC
+  PhD Student, School of Computer Science, USTC. (_Advisor: Prof. [Enhong Chen](http://staff.ustc.edu.cn/~cheneh)_).
 
 - _Sept 2013 – July 2017_
 
