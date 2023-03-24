@@ -250,7 +250,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-server-routing.6e012883.js",
+    "file": "assets/entry-server-routing.a44dd62d.js",
     "imports": [
       "_e3421036.js"
     ],
@@ -266,7 +266,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-client-routing.0b4859e6.js",
+    "file": "assets/entry-client-routing.2be2eb29.js",
     "imports": [
       "_e3421036.js"
     ],
@@ -274,7 +274,7 @@
     "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js"
   },
   "src/pages/index.page.md": {
-    "file": "assets/src/pages/index.page.cd5abafc.js",
+    "file": "assets/src/pages/index.page.c1c3e212.js",
     "imports": [
       "_91574419.js"
     ],
@@ -308,7 +308,7 @@
     "css": [
       "assets/static/open-source-llms.page.d4416a03.css"
     ],
-    "file": "assets/src/pages/slides/open-source-llms.page.26a1e4ef.js",
+    "file": "assets/src/pages/slides/open-source-llms.page.deff82c3.js",
     "imports": [
       "_91574419.js"
     ],
