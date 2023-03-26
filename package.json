@@ -19,10 +19,10 @@
     "@vmark/vite-plugin": "^0.1.8",
     "@vue/server-renderer": "^3.2.47",
     "linkedom": "^0.14.25",
-    "rimraf": "^4.4.0",
+    "rimraf": "^4.4.1",
     "unocss": "^0.50.6",
     "vite": "^4.2.1",
-    "vite-plugin-ssr": "^0.4.99",
+    "vite-plugin-ssr": "^0.4.103",
     "vue": "^3.2.47"
   }
 }
