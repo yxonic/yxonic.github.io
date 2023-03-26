@@ -1,4 +1,7 @@
 {
+  "_4f808778.js": {
+    "file": "assets/chunks/4f808778.js"
+  },
   "_afcc8c88.js": {
     "css": [
       "assets/static/index.d4416a03.css"
@@ -10,9 +13,6 @@
   },
   "_ded0b38f.js": {
     "file": "assets/chunks/ded0b38f.js"
-  },
-  "_e3421036.js": {
-    "file": "assets/chunks/e3421036.js"
   },
   "index.css": {
     "file": "assets/static/index.d4416a03.css",
@@ -254,7 +254,7 @@
     "file": "assets/static/KaTeXTypewriter-Regular.71d517d6.woff2",
     "src": "node_modules/.pnpm/katex@0.16.4/node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2"
   },
-  "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/entry.js": {
+  "node_modules/.pnpm/vite-plugin-ssr@0.4.103_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/entry.js": {
     "dynamicImports": [
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
@@ -264,14 +264,14 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-server-routing.95b1af41.js",
+    "file": "assets/entry-server-routing.df66092a.js",
     "imports": [
-      "_e3421036.js"
+      "_4f808778.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/entry.js"
+    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.103_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/entry.js"
   },
-  "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js": {
+  "node_modules/.pnpm/vite-plugin-ssr@0.4.103_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js": {
     "dynamicImports": [
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
@@ -281,12 +281,12 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-client-routing.26e1d3cf.js",
+    "file": "assets/entry-client-routing.78311fd7.js",
     "imports": [
-      "_e3421036.js"
+      "_4f808778.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.99_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js"
+    "src": "node_modules/.pnpm/vite-plugin-ssr@0.4.103_vite@4.2.1/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js"
   },
   "src/pages/index.page.md": {
     "file": "assets/src/pages/index.page.1f6808a4.js",
@@ -326,7 +326,7 @@
     "src": "src/slides/career.page.mdx"
   },
   "src/slides/open-source-llms.page.mdx": {
-    "file": "assets/src/slides/open-source-llms.page.91a2ddc1.js",
+    "file": "assets/src/slides/open-source-llms.page.c29c7c9b.js",
     "imports": [
       "_afcc8c88.js",
       "_ded0b38f.js"

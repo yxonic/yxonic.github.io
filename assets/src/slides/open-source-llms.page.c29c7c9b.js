@@ -1,8 +1,8 @@
-import{t as i,_ as a}from"../../chunks/afcc8c88.js";import{h as n}from"../../chunks/ded0b38f.js";const c={title:"Open-Source PLMs",theme:"./theme/basic",layout:"cover"},e=[];e.push({component:()=>n("div",{},[n("h1",{},["Open-Source PLMs"]),`
-`,n("p",{},["@yxonic & @lem0nle"])]),config:{title:"Open-Source PLMs",theme:"./theme/basic",layout:"cover"}});e.push({component:()=>n("div",{},[n("h1",{},["Contents"]),`
+import{t as i,_ as o}from"../../chunks/afcc8c88.js";import{h as n}from"../../chunks/ded0b38f.js";const l={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},e=[];e.push({component:()=>n("div",{},[n("h1",{},["Open-Source LLMs"]),`
+`,n("p",{},["@yxonic & @lem0nle"])]),config:{title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"}});e.push({component:()=>n("div",{},[n("h1",{},["Contents"]),`
 `,n("ul",{},[`
-`,n("li",{},["What is PLM?"]),`
-`,n("li",{},["Open-source PLMs"]),`
+`,n("li",{},["What is LLM?"]),`
+`,n("li",{},["Open-source LLMs"]),`
 `,n("li",{},[`Learn from code
 `,n("ul",{},[`
 `,n("li",{},["model architecture"]),`
@@ -15,13 +15,13 @@ import{t as i,_ as a}from"../../chunks/afcc8c88.js";import{h as n}from"../../chu
 `]),`
 `]),`
 `]),`
-`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["What is PLM?"]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["What is LLM?"]),`
 `,n("ul",{},[`
 `,n("li",{},["recent AI advances: ",n("a",{href:"http://dustintran.com/blog/ai-advances"},["http://dustintran.com/blog/ai-advances"])]),`
-`,n("li",{},["PLMs pre GPT-3: ",n("a",{href:"https://towardsdatascience.com/pre-trained-language-models-simplified-b8ec80c62217"},["blog"])]),`
+`,n("li",{},["LLMs pre GPT-3: ",n("a",{href:"https://towardsdatascience.com/pre-trained-language-models-simplified-b8ec80c62217"},["blog"])]),`
 `,n("li",{},[n("a",{href:"https://www.topbots.com/leading-nlp-language-models-2020/"},["10 Leading Language Models For NLP In 2022"])]),`
 `,n("li",{},[n("a",{href:"https://jingfengyang.github.io/gpt"},["Why did all of the public reproduction of GPT-3 fail?"])]),`
-`,n("li",{},["using PLMs: ",n("a",{href:"https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/"},["Prompt Engineering"])]),`
+`,n("li",{},["using LLMs: ",n("a",{href:"https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/"},["Prompt Engineering"])]),`
 `])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["ChatGPT"]),`
 `,n("ul",{},[`
 `,n("li",{},["ChatGPT history review: ",n("a",{href:"https://baijiahao.baidu.com/s?id=1758688291629341140"},["ChatGPT 的前世今生"])]),`
@@ -33,7 +33,8 @@ import{t as i,_ as a}from"../../chunks/afcc8c88.js";import{h as n}from"../../chu
 `,n("li",{},[n("a",{href:"https://github.com/tatsu-lab/stanford_alpaca"},["alpaca"]),", ",n("a",{href:"https://crfm.stanford.edu/2023/03/13/alpaca.html"},["website"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/THUDM/GLM"},["GLM"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/THUDM/ChatGLM-6B"},["ChatGLM"])]),`
-`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["Model Architecture"]),`
+`,n("li",{},[n("a",{href:"https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html"},["Dolly"])]),`
+`])]),config:void 0});e.push({component:()=>n("p",{},[n("img",{src:"/imgs/llm_family.png",alt:"LLM Family"},[])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["Model Architecture"]),`
 `,n("ul",{},[`
 `,n("li",{},[n("a",{href:"https://github.com/google-research/t5x"},["T5"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/facebookresearch/llama"},["LLaMA"])]),`
@@ -58,4 +59,4 @@ import{t as i,_ as a}from"../../chunks/afcc8c88.js";import{h as n}from"../../chu
 `,n("li",{},[n("a",{href:"https://github.com/sigoden/aichat"},["https://github.com/sigoden/aichat"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/zurawiki/gptcommit"},["https://github.com/zurawiki/gptcommit"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/keijiro/AICommand"},["https://github.com/keijiro/AICommand"])]),`
-`])]),config:void 0});const t={setup(){return()=>n(a,{pages:e,theme:i})}};t.__hmrId="2f1e2fef";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/open-source-llms.page.mdx";export{t as default,c as frontmatter,e as pages};
+`])]),config:void 0});const t={setup(){return()=>n(o,{pages:e,theme:i})}};t.__hmrId="2f1e2fef";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/open-source-llms.page.mdx";export{t as default,l as frontmatter,e as pages};
