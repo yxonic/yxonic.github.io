@@ -55,6 +55,7 @@ See [full list](/projects).
 <!-- - [Open-Source LLMs](/slides/open-source-llms/), _TODO_. -->
 
 - [JAX: Compile the Future of Deep Learning to Present](/talks/2022-12-02-JAX.pdf), _Dec 2022_.
+- [How to Organize Related Work](/talks/2022-04-28-如何写相关工作.pdf), _Apr 2022_.
 - [From Programming Assessment to CODIA](/talks/2021-12-08-CODIA.pdf), _Oct 2021_.
 - [GraphQL API Design](/talks/2021-04-10-GraphQL.pdf), _Apr 2021_.
 - [How to Write Good Front-End](/talks/2021-03-24-如何写好前端.pdf), _Mar 2021_.
