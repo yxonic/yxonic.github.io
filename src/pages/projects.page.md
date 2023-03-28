@@ -1,5 +1,5 @@
 ---
-title: Projects @yxonic
+title: Projects
 ---
 
 [home](/)

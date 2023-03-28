@@ -104,6 +104,6 @@ async function clipboard(text) {
 </script>
 <script>
 export const frontmatter = {
-  title: "Publications @yxonic",
+  title: "Publications",
 };
 </script>

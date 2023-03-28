@@ -1,5 +1,5 @@
 ---
-title: "Yu Yin @yxonic"
+title: Yu Yin
 ---
 
 # Yu Yin<span class="text-2xl">（阴钰）</span>
