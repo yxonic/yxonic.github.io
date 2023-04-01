@@ -1,4 +1,3 @@
-
 import bibtex, * as _bibtex from "bibtex";
 
 export function latexToUnicode(text: string) {
@@ -9,11 +8,11 @@ export function latexToUnicode(text: string) {
 }
 
 export interface Publication {
-  id: string
-  bibtex: string
-  note: string
-  specialNote?: string
-  marks?: number[]
+  id: string;
+  bibtex: string;
+  note: string;
+  specialNote?: string;
+  marks?: number[];
 }
 
 export function useCitation(
@@ -37,7 +36,9 @@ export function useCitation(
           (entry.getFieldAsString("journal") ||
             entry.getFieldAsString("booktitle")) as string
         ),
-        pages: entry.getFieldAsString("pages") && latexToUnicode(entry.getFieldAsString("pages") as string),
+        pages:
+          entry.getFieldAsString("pages") &&
+          latexToUnicode(entry.getFieldAsString("pages") as string),
         year: entry.getFieldAsString("year"),
       };
     }),

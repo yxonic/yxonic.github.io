@@ -1,20 +1,23 @@
-import { renderToString } from '@vue/server-renderer'
-import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr'
-import { createApp } from '../lib/app'
-import type { PageContextServer } from '../lib/context'
+import { renderToString } from "@vue/server-renderer";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { createApp } from "../lib/app";
+import type { PageContextServer } from "../lib/context";
 
-export { render }
+export { render };
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ['pageProps', 'urlPathname']
+export const passToClient = ["pageProps", "urlPathname"];
 
 async function render(pageContext: PageContextServer) {
-  const app = createApp(pageContext)
-  const appHtml = await renderToString(app)
+  const app = createApp(pageContext);
+  const appHtml = await renderToString(app);
 
   // See https://vite-plugin-ssr.com/head
-  const { documentProps, frontmatter } = pageContext.exports
-  const title = documentProps?.title || frontmatter?.title || 'VPages App'
-  const desc = documentProps?.description || frontmatter?.description || 'App using VPages'
+  const { documentProps, frontmatter } = pageContext.exports;
+  const title = documentProps?.title || frontmatter?.title || "VPages App";
+  const desc =
+    documentProps?.description ||
+    frontmatter?.description ||
+    "App using VPages";
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
@@ -27,12 +30,12 @@ async function render(pageContext: PageContextServer) {
       <body>
         <div id="app">${dangerouslySkipEscape(appHtml)}</div>
       </body>
-    </html>`
+    </html>`;
 
   return {
     documentHtml,
     pageContext: {
       // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
-    }
-  }
+    },
+  };
 }

@@ -1,9 +1,9 @@
-import vue from '@vitejs/plugin-vue'
-import ssr from 'vite-plugin-ssr/plugin'
-import uno from 'unocss/vite'
-import vmark from '@vmark/vite-plugin'
-import vslides from '@vslides/vite-plugin'
-import yaml from '@rollup/plugin-yaml'
+import yaml from "@rollup/plugin-yaml";
+import vue from "@vitejs/plugin-vue";
+import vmark from "@vmark/vite-plugin";
+import vslides from "@vslides/vite-plugin";
+import uno from "unocss/vite";
+import ssr from "vite-plugin-ssr/plugin";
 
 export default {
   plugins: [
@@ -18,4 +18,4 @@ export default {
     vmark(),
     yaml(),
   ],
-}
+};

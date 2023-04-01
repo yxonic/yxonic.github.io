@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rimraf dist && vite build"
+    "build": "rimraf dist && vite build",
+    "fmt": "prettier -w ."
   },
   "dependencies": {
     "@vslides/core": "^0.0.7",
@@ -19,6 +20,7 @@
     "@vmark/vite-plugin": "^0.1.8",
     "@vue/server-renderer": "^3.2.47",
     "linkedom": "^0.14.25",
+    "prettier": "^2.8.7",
     "rimraf": "^4.4.1",
     "unocss": "^0.50.6",
     "vite": "^4.2.1",
