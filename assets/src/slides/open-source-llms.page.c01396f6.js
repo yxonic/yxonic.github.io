@@ -1,4 +1,4 @@
-import{t as i,_ as a}from"../../chunks/afcc8c88.js";import{h as n}from"../../chunks/ded0b38f.js";const l={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>n("div",{},[n("h1",{},["Open-Source LLMs"]),`
+import{t as i,_ as a}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/ded0b38f.js";const l={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>n("div",{},[n("h1",{},["Open-Source LLMs"]),`
 `,n("p",{},["@yxonic & @lem0nle"])]),config:{title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"}});t.push({component:()=>n("div",{},[n("h1",{},["Contents"]),`
 `,n("ul",{},[`
 `,n("li",{},["What is LLM?"]),`
@@ -35,6 +35,8 @@ import{t as i,_ as a}from"../../chunks/afcc8c88.js";import{h as n}from"../../chu
 `,n("li",{},[n("a",{href:"https://github.com/THUDM/GLM"},["GLM"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/THUDM/ChatGLM-6B"},["ChatGLM"])]),`
 `,n("li",{},[n("a",{href:"https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html"},["Dolly"])]),`
+`,n("li",{},[n("a",{href:"https://github.com/ymcui/Chinese-LLaMA-Alpaca"},["Chinese-LLaMA-Alpaca"])]),`
+`,n("li",{},[n("a",{href:"https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat"},["ColossalChat"])]),`
 `])]),config:void 0});t.push({component:()=>n("p",{},[n("img",{src:"/imgs/llm_family.png",alt:"LLM Family"},[])]),config:void 0});t.push({component:()=>n("div",{},[n("h1",{},["Model Architecture"]),`
 `,n("ul",{},[`
 `,n("li",{},[n("a",{href:"https://github.com/google-research/t5x"},["T5"])]),`

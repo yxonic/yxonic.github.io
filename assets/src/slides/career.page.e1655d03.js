@@ -1,4 +1,4 @@
-import{t,_ as o}from"../../chunks/afcc8c88.js";import{h as n}from"../../chunks/ded0b38f.js";const r={title:"Career",theme:"./theme/basic",layout:"cover"},e=[];e.push({component:()=>n("div",{},[n("h1",{},["Career"]),`
+import{t as o,_ as t}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/ded0b38f.js";const s={title:"Career",theme:"./theme/basic",layout:"cover"},e=[];e.push({component:()=>n("div",{},[n("h1",{},["Career"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"Career",theme:"./theme/basic",layout:"cover"}});e.push({component:()=>n("div",{},[n("h1",{},["准备工作"]),`
 `,n("ul",{},[`
 `,n("li",{},[n("a",{href:"https://sites.google.com/view/datascience-cheat-sheets"},["Preparation cheet sheet"])]),`
@@ -14,11 +14,44 @@ import{t,_ as o}from"../../chunks/afcc8c88.js";import{h as n}from"../../chunks/d
 `,n("li",{},["教育组组长"]),`
 `,n("li",{},["研究兴趣和方向"]),`
 `,n("li",{},["系统"]),`
-`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["TODO"]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["个人经历：教育组"]),`
+`,n("ul",{},[`
+`,n("li",{},["built up a research group that explores educational data mining topics such as question understanding, student modeling, and adaptive learning and recommendation."]),`
+`,n("li",{},["mentored group members with relevant research interests; organized regular group discussion and technical report to improve communication and collaboration."]),`
+`,n("li",{},["promoted open research by setting up public website for group resources; co-leaded the team to open source educational data and model on GitHub"]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["个人经历：CODIA"]),`
+`,n("ul",{},[`
+`,n("li",{},["built an intelligent online programming platform from scratch; designed and implemented the initial architecture with Node.js + Vue."]),`
+`,n("li",{},["applied user modeling and adaptive learning research from BASE group onto the platform; wrapped knowledge tracing and exercise recommendation models as micro-services."]),`
+`,n("li",{},["promoted the platform for the use of several programming and algorithm classes at USTC, providing improved learning experience for computer science students"]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["个人经历：考试中心"]),`
+`,n("ul",{},[`
+`,n("li",{},["implemented a pre-trained question representation model for question auto-annotation."]),`
+`,n("li",{},["discovered novel research topics such as test paper segmentation from real-world scenarios in NEEA."]),`
+`,n("li",{},["gave talks and lectures on the principles and applications of ML/DL in educational technology."]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["个人经历：科大讯飞"]),`
+`,n("ul",{},[`
+`,n("li",{},["used NLP techniques to carry out formula extraction and similar question recommendation tasks."]),`
+`,n("li",{},["conducted question understanding and diﬀiculty estimation with deep learning methods."]),`
+`,n("li",{},["designed an exercise-enhanced knowledge tracing method for improved student performance prediction."]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["Highlights"]),`
+`,n("ul",{},[`
+`,n("li",{},["Google Scholar: 总引用量 772, h-index 11"]),`
+`,n("li",{},["开源项目"]),`
+`,n("li",{},["NOI，并行计算比赛"]),`
+`])]),config:void 0});e.push({component:()=>n("p",{},[" "]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["TODO"]),`
 `,n("ul",{},[`
 `,n("li",{},["腾讯换成机器学习？换成实习生？"]),`
 `,n("li",{},["问童世炜 0-1 的工作是什么，IEG 有没有机会。"]),`
 `,n("li",{},["字节找人问问情况"]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["目标和联系人"]),`
+`,n("ul",{},[`
+`,n("li",{},["腾讯 AILab"]),`
+`,n("li",{},["字节跳动"]),`
+`,n("li",{},["阿里巴巴，达摩院"]),`
+`,n("li",{},["百度"]),`
+`,n("li",{},["华为"]),`
+`,n("li",{},["小红书"]),`
 `])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["腾讯 AILab 绝悟团队"]),`
 `,n("p",{},[`【团队介绍】
 腾讯绝悟 AI 团队在游戏 AI 领域具有雄厚的科研和工程实力，该团队研发的游戏 AI 在以王者荣耀为代表的多款游戏中达到了极高的竞技水平，击败了人类职业玩家，并具有成熟的商业化链条。近年来，团队在 NeurIPS, ICML, ICLR, AAAI, IJCAI, TNNLS 等人工智能会议/期刊上发表了多篇文章，在学术界及工业界均产生了较大的影响力。`]),`
@@ -60,4 +93,4 @@ import{t,_ as o}from"../../chunks/afcc8c88.js";import{h as n}from"../../chunks/d
 `,n("li",{},["具有良好的问题分析和问题解决能力，对相关技术领域具有敏锐的洞察力和较强的学习能力，能积极应对有挑战性的工作；"]),`
 `,n("li",{},["乐观积极，具有良好的团队合作精神和较强的沟通意识和能力；"]),`
 `,n("li",{},["有丰富的搜索引擎、推荐系统或广告系统相关工作经验最佳； 有较强工程解决能力最佳。"]),`
-`])]),config:void 0});const i={setup(){return()=>n(o,{pages:e,theme:t})}};i.__hmrId="71f983b4";i.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/career.page.mdx";export{i as default,r as frontmatter,e as pages};
+`])]),config:void 0});const i={setup(){return()=>n(t,{pages:e,theme:o})}};i.__hmrId="71f983b4";i.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/career.page.mdx";export{i as default,s as frontmatter,e as pages};
