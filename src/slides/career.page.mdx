@@ -10,24 +10,12 @@ layout: cover
 
 ---
 
-# 准备工作
-
-- [Preparation cheet sheet](https://sites.google.com/view/datascience-cheat-sheets)
-- [ML interview](https://towardsdatascience.com/types-of-machine-learning-interviews-and-how-to-ace-them-51587a95f847)
-- [Soft skill interview](https://towardsdatascience.com/how-to-prepare-for-a-behavioral-soft-skills-interview-cheat-sheet-9347aaeaef82)
-- [ML system interview](https://towardsdatascience.com/what-is-machine-learning-system-design-interview-and-how-to-prepare-for-it-537d1271d754)
-- [Resume](https://aqeel-anwar.medium.com/machine-learning-resume-that-got-me-shortlisted-for-meta-microsoft-nvidia-uber-samsung-intel-220761c1a850)
-- [Resume dos and don'ts](https://aqeel-anwar.medium.com/the-dos-and-donts-of-a-software-engineer-resume-to-get-you-shortlisted-for-interviews-more-7d6a926156c0)
-- [deep learning interviews](https://arxiv.org/abs/2201.00650)
-
----
-
 # 个人陈述
 
 - 中科大陈恩红老师博士生
-- 教育组组长
-- 研究兴趣和方向
-- 系统
+- 在实验室担任智慧教育方向研究组的组长
+- 研究兴趣和方向主要包括：教育数据挖掘，自然语言处理，强化学习
+- 在科研外有较多系统开发经历，带领开发智慧编程平台 CODIA、教育知识图谱平台 LUNA 等
 
 ---
 
@@ -63,99 +51,70 @@ layout: cover
 
 ---
 
+# 研究成果：Spotlight
+
+- 任务：结构化图像转写（典型例子：公式识别为 LaTeX）
+- attention 更注重内容相关，忽略图像内在结构
+- spotlight 每个时刻关注一个点，以围绕中心点的高斯分布作为权重聚合
+- 设计了两种策略控制聚焦中心的移动
+- 引入强化学习，帮助模型学习更加合理的阅读路径
+- 以现在的研究观点来看，spotlight 可以和 multi-head attention 优势互补，可以从下面几个方向改进：
+  - 实现 multi-head spotlight（近期工作）
+  - 和 Transformer 架构适配，去掉序列依赖，从而能够和 multi-head attention 配合使用
+  - 利用局部性特征，通过定义底层计算忽略低权重位置，从而降低复杂度、提高效率
+
+---
+
+# 研究成果：QuesNet
+
+- 任务：无监督预训练试题表征
+- 挑战：domain-specific，多模态
+- 多模态输入表示
+- 通过双向 LSTM 和 self attention，分别得到 token 层和问题层表征
+- 设计了双向 LSTM 上的类 BERT 预训练任务
+- 引入 domain-specific task 多任务学习
+- 以现在的研究观点来看，QuesNet 可以从以下角度进一步改进：
+  - 通用大模型 $\to$ in-domain 大模型 $\to$ domain-specific 任务微调
+  - 架构上更好地适配教育 domain 的多模态输入，特别是数学公式、几何图形等
+
+---
+
+# 研究成果：EKT 和 DTransformer
+
+- 任务：知识追踪
+- 目标：根据学生做题记录估计学生在每个时刻的知识掌握状态
+- EKT 贡献：
+  - **第一个**在 KT 中引入试题文本的工作（之前的工作均基于知识点 embedding）
+  - 通过对文本 attention 聚合最相关的历史记录
+  - 通过对知识矩阵 attention 形成每个知识点上的追踪
+- DTransformer 贡献：
+  - **第一个**使用 Transformer 诊断知识状态的工作（之前的工作只能做成绩预测）
+  - 设计 DTransformer 架构，实现从问题层面到知识层面的能力诊断
+  - 设计对比学习损失提升知识状态的稳定性
+
+---
+
 # Highlights
 
-- Google Scholar: 总引用量 772, h-index 11
-- 开源项目
-- NOI，并行计算比赛
+- 做有影响力的研究
+  - Google Scholar 总引用量 772, h-index 11
+- 0-1 的实现能力
+  - 代码能力：多年编程经历，熟悉多种编程语言，NOI 国家奖牌，并行优化比赛、RDMA 编程比赛第一
+  - 工程能力：丰富的开源项目，CODIA 和 LUNA
+  - 学习能力：涉猎广泛，喜欢跟踪前沿研究和技术
 
 ---
 
-&nbsp;
+# Q&A
 
 ---
 
-# TODO
+# Reference
 
-- 腾讯换成机器学习？换成实习生？
-- 问童世炜 0-1 的工作是什么，IEG 有没有机会。
-- 字节找人问问情况
-
----
-
-# 目标和联系人
-
-- 腾讯 AILab
-- 字节跳动
-- 阿里巴巴，达摩院
-- 百度
-- 华为
-- 小红书
-
----
-
-# 腾讯 AILab 绝悟团队
-
-【团队介绍】
-腾讯绝悟 AI 团队在游戏 AI 领域具有雄厚的科研和工程实力，该团队研发的游戏 AI 在以王者荣耀为代表的多款游戏中达到了极高的竞技水平，击败了人类职业玩家，并具有成熟的商业化链条。近年来，团队在 NeurIPS, ICML, ICLR, AAAI, IJCAI, TNNLS 等人工智能会议/期刊上发表了多篇文章，在学术界及工业界均产生了较大的影响力。
-
-【岗位职责】
-游戏 AI 研发：利用（多智能体）强化学习，训练出复杂游戏场景下的 AI bot。
-
-【岗位要求】
-
-1. 硕士及以上学历；
-2. 具有强化学习相关的研究背景；
-3. 发表过至少一篇 RL 相关的顶会文章，或者深度参与过相关的高品质项目开发（需有明确的成果展示）；
-4. 具有突出的思考能力、动手能力。
-
----
-
-# 准备工作
-
-- 了解绝悟团队
-- 熟悉经历中的强化学习部分
-- multi-agent RL
-
----
-
-# 微信搜一搜
-
----
-
-# 微信搜一搜：问题
-
-- focus
-- 大模型冲击？
-- 留用考核，每年什么时候
-- 地理位置：广州和深圳，业务对比，生活对比
-
----
-
-# 准备工作
-
-- 熟悉讯飞经历
-- 搜索引擎
-- LLM
-
----
-
-# AILab 研究组
-
----
-
-# 腾讯 PCG 搜狗（搜索算法工程师，AI 大模型方向）
-
-岗位职责：
-
-1. 负责 AI 大模型及搜索增强系统的建设
-2. 负责大规模预训练语言模型，海量语料清洗，Prompt 样本工程，Supervised Fine-tuning，Reward Model，Reinforcement Learning
-3. 负责大模型在全文网页阅读理解及引用搜索结果能力的增强。
-
-岗位要求：
-
-- 硕士及以上学历，计算机相关专业； 熟悉 Linux 开发环境，熟练掌握 Python/C++语言；
-- 对大语言模型，预训练，自然语言理解/生成等领域有深刻理解，且具有丰富的项目落地经验；
-- 具有良好的问题分析和问题解决能力，对相关技术领域具有敏锐的洞察力和较强的学习能力，能积极应对有挑战性的工作；
-- 乐观积极，具有良好的团队合作精神和较强的沟通意识和能力；
-- 有丰富的搜索引擎、推荐系统或广告系统相关工作经验最佳； 有较强工程解决能力最佳。
+- [Preparation cheet sheet](https://sites.google.com/view/datascience-cheat-sheets)
+- [ML interview](https://towardsdatascience.com/types-of-machine-learning-interviews-and-how-to-ace-them-51587a95f847)
+- [Soft skill interview](https://towardsdatascience.com/how-to-prepare-for-a-behavioral-soft-skills-interview-cheat-sheet-9347aaeaef82)
+- [ML system interview](https://towardsdatascience.com/what-is-machine-learning-system-design-interview-and-how-to-prepare-for-it-537d1271d754)
+- [Resume](https://aqeel-anwar.medium.com/machine-learning-resume-that-got-me-shortlisted-for-meta-microsoft-nvidia-uber-samsung-intel-220761c1a850)
+- [Resume dos and don'ts](https://aqeel-anwar.medium.com/the-dos-and-donts-of-a-software-engineer-resume-to-get-you-shortlisted-for-interviews-more-7d6a926156c0)
+- [deep learning interviews](https://arxiv.org/abs/2201.00650)
