@@ -1,63 +1,66 @@
 ---
-title: Career
+title: resume
 theme: ./theme/basic
 layout: cover
 ---
 
-# Career
+# 个人陈述
 
 @yxonic
 
 ---
 
-# 个人陈述
+# 简介
 
 - 中科大陈恩红老师博士生
 - 在实验室担任智慧教育方向研究组的组长
 - 研究兴趣和方向主要包括：教育数据挖掘，自然语言处理，强化学习
-- 在科研外有较多系统开发经历，带领开发智慧编程平台 CODIA、教育知识图谱平台 LUNA 等
+- 在科研外有较多系统开发经历，带领开发智慧编程平台 CODIA 等
 
 ---
 
 # 个人经历：教育组
 
-- built up a research group that explores educational data mining topics such as question understanding, student modeling, and adaptive learning and recommendation.
-- mentored group members with relevant research interests; organized regular group discussion and technical report to improve communication and collaboration.
-- promoted open research by setting up public website for group resources; co-leaded the team to open source educational data and model on GitHub
+- 在刘淇老师、黄振亚老师指导下成立教育组，作为组长领导组员探索教育数据挖掘相关领域，如问题理解、学生建模、自适应学习和推荐等，指导小组成员发表 20 余篇学术论文。
+- 定期组织小组讨论和技术报告，增强组内及组间的沟通和协作。
+- 搭建教育组网站分享小组研究进展和开放资源，促进开放研究。
+- 带领小组在 GitHub 上开源教育相关的数据、模型和工具等相关资源。
 
 ---
 
 # 个人经历：CODIA
 
-- built an intelligent online programming platform from scratch; designed and implemented the initial architecture with Node.js + Vue.
-- applied user modeling and adaptive learning research from BASE group onto the platform; wrapped knowledge tracing and exercise recommendation models as micro-services.
-- promoted the platform for the use of several programming and algorithm classes at USTC, providing improved learning experience for computer science students
+- 从零开始搭建智能在线编程平台 CODIA，使用 Vue + Node.js 设计并实现了初始网站架构和基于 GraphQL 的业务 API，并基于 gRPC 实现基础的微服务架构。
+- 将教育组的用户建模和自适应学习等相关研究应用到平台上，指导团队成员将知识追踪和试题推荐模型封装为 gRPC 服务，为用户提供智能诊断和推荐。
+- 搭建基于 GitLab 和 Kubernetes 的 DevOps+MLOps 平台，用于 CODIA 的持续部署，提高团队工作效率、降低协作成本。
+- 在中国科学技术大学推广使用，已多次作为多门编程和算法课程的教学平台，为计算机专业学生提供更好的学习体验。
 
 ---
 
-# 个人经历：考试中心
+# 个人经历：教育部考试中心
 
-- implemented a pre-trained question representation model for question auto-annotation.
-- discovered novel research topics such as test paper segmentation from real-world scenarios in NEEA.
-- gave talks and lectures on the principles and applications of ML/DL in educational technology.
+- 面向考试中心海量题库，训练基于大规模语义预训练的试题表征模型，提升试题属性自动标注效果。
+- 基于考试中心真实场景探索新的研究课题，例如试卷分割、试题查重、相似题推荐和替换等，相关成果用于开发考试中心内部工具。
+- 就如何将深度学习应用于传统教育技术中，在考试中心内部开展报告和讲座。
 
 ---
 
 # 个人经历：科大讯飞
 
-- used NLP techniques to carry out formula extraction and similar question recommendation tasks.
-- conducted question understanding and diﬀiculty estimation with deep learning methods.
-- designed an exercise-enhanced knowledge tracing method for improved student performance prediction.
+- 基于基础 NLP 技术开展题库建设、公式提取和相似题推荐等任务，并参与重构讯飞内部海量试题库以及相似题检索系统。
+- 使用深度学习方法进行试题理解和难度估计等任务，参与开发和优化相关模型，在高考试题难度预测准确性和稳定性指标上超过领域专家。
+- 在知识追踪任务中引入试题题面文本信息，实现了了一种试题增强的知识追踪方法，大幅提升学生得分预测的效果。
 
 ---
 
 # 研究成果：Spotlight
 
 - 任务：结构化图像转写（典型例子：公式识别为 LaTeX）
-- attention 更注重内容相关，忽略图像内在结构
-- spotlight 每个时刻关注一个点，以围绕中心点的高斯分布作为权重聚合
-- 设计了两种策略控制聚焦中心的移动
-- 引入强化学习，帮助模型学习更加合理的阅读路径
+- 挑战：attention 更注重内容相关，忽略图像内在结构
+- Spotlight 贡献：
+  - spotlight 每个时刻关注一个点，以围绕中心点的高斯分布作为权重聚合
+  - 设计了两种策略控制聚焦中心的移动
+  - 引入强化学习，帮助模型学习更加合理的阅读路径
 - 以现在的研究观点来看，spotlight 可以和 multi-head attention 优势互补，可以从下面几个方向改进：
   - 实现 multi-head spotlight（近期工作）
   - 和 Transformer 架构适配，去掉序列依赖，从而能够和 multi-head attention 配合使用
@@ -69,10 +72,11 @@ layout: cover
 
 - 任务：无监督预训练试题表征
 - 挑战：domain-specific，多模态
-- 多模态输入表示
-- 通过双向 LSTM 和 self attention，分别得到 token 层和问题层表征
-- 设计了双向 LSTM 上的类 BERT 预训练任务
-- 引入 domain-specific task 多任务学习
+- QuesNet 贡献：
+  - 多模态输入表示
+  - 通过双向 LSTM 和 self attention，分别得到 token 层和问题层表征
+  - 设计了双向 LSTM 上的类 BERT 预训练任务
+  - 引入 domain-specific task 多任务学习
 - 以现在的研究观点来看，QuesNet 可以从以下角度进一步改进：
   - 通用大模型 $\to$ in-domain 大模型 $\to$ domain-specific 任务微调
   - 架构上更好地适配教育 domain 的多模态输入，特别是数学公式、几何图形等
@@ -107,7 +111,7 @@ layout: cover
 
 # Q&A
 
----
+<!--
 
 # Reference
 
@@ -117,4 +121,4 @@ layout: cover
 - [ML system interview](https://towardsdatascience.com/what-is-machine-learning-system-design-interview-and-how-to-prepare-for-it-537d1271d754)
 - [Resume](https://aqeel-anwar.medium.com/machine-learning-resume-that-got-me-shortlisted-for-meta-microsoft-nvidia-uber-samsung-intel-220761c1a850)
 - [Resume dos and don'ts](https://aqeel-anwar.medium.com/the-dos-and-donts-of-a-software-engineer-resume-to-get-you-shortlisted-for-interviews-more-7d6a926156c0)
-- [deep learning interviews](https://arxiv.org/abs/2201.00650)
+- [deep learning interviews](https://arxiv.org/abs/2201.00650) -->
