@@ -17,7 +17,7 @@ import{t as s,_ as t}from"../../chunks/4c95573a.js";import{h as n}from"../../chu
   `,n("img",{src:"/imgs/resume/bdaa_github.png",alt:"BDAA GitHub",class:"h-48 outline outline-gray-300"},[]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["个人经历：CODIA"]),`
 `,n("ul",{},[`
-`,n("li",{},["从零开始搭建智能在线编程平台 CODIA，使用 Vue + Node.js 设计并实现了初始网站架构和基于 GraphQL 的业务 API，并基于 gRPC 实现基础的微服务架构。"]),`
+`,n("li",{},["从零开始搭建智能在线编程平台 CODIA，使用 Vue + Node.js 设计并实现了初始网站架构和基于 GraphQL 的业务 API，并基于 gRPC 和 Kafka 实现可扩展的微服务架构。"]),`
 `,n("li",{},["将教育组的用户建模和自适应学习等相关研究应用到平台上，指导团队成员将知识追踪和试题推荐模型封装为 gRPC 服务，为用户提供智能诊断和推荐。"]),`
 `,n("li",{},["搭建基于 GitLab 和 Kubernetes 的 DevOps+MLOps 平台，用于 CODIA 的持续部署，提高团队工作效率、降低协作成本。"]),`
 `,n("li",{},["已多次作为中科大多门编程和算法课程的教学平台，为计算机专业学生提供更好的学习体验。"]),`

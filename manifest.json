@@ -264,7 +264,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-server-routing.737cc683.js",
+    "file": "assets/entry-server-routing.24ceae88.js",
     "imports": [
       "_3e74a893.js"
     ],
@@ -281,7 +281,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entry-client-routing.8c8b9839.js",
+    "file": "assets/entry-client-routing.2e8786f3.js",
     "imports": [
       "_3e74a893.js"
     ],
@@ -326,7 +326,7 @@
     "src": "src/slides/open-source-llms.page.mdx"
   },
   "src/slides/resume.page.mdx": {
-    "file": "assets/src/slides/resume.page.53bab1ec.js",
+    "file": "assets/src/slides/resume.page.d736b4aa.js",
     "imports": [
       "_4c95573a.js",
       "_ded0b38f.js"
