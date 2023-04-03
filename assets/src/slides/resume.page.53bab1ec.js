@@ -1,4 +1,4 @@
-import{t,_ as l}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/ded0b38f.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人陈述"]),`
+import{t as s,_ as t}from"../../chunks/4c95573a.js";import{h as n}from"../../chunks/ded0b38f.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中科大陈恩红老师博士生"]),`
@@ -11,22 +11,37 @@ import{t,_ as l}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/d
 `,n("li",{},["定期组织小组讨论和技术报告，增强组内及组间的沟通和协作。"]),`
 `,n("li",{},["搭建教育组网站分享小组研究进展和开放资源，促进开放研究。"]),`
 `,n("li",{},["带领小组在 GitHub 上开源教育相关的数据、模型和工具等相关资源。"]),`
+`]),`
+`,n("div",{class:"mt-6 grid place-items-center grid-cols-2"},[`
+  `,n("img",{src:"/imgs/resume/base_group.png",alt:"BASE Group",class:"h-48 outline outline-gray-300"},[]),`
+  `,n("img",{src:"/imgs/resume/bdaa_github.png",alt:"BDAA GitHub",class:"h-48 outline outline-gray-300"},[]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["个人经历：CODIA"]),`
 `,n("ul",{},[`
 `,n("li",{},["从零开始搭建智能在线编程平台 CODIA，使用 Vue + Node.js 设计并实现了初始网站架构和基于 GraphQL 的业务 API，并基于 gRPC 实现基础的微服务架构。"]),`
 `,n("li",{},["将教育组的用户建模和自适应学习等相关研究应用到平台上，指导团队成员将知识追踪和试题推荐模型封装为 gRPC 服务，为用户提供智能诊断和推荐。"]),`
 `,n("li",{},["搭建基于 GitLab 和 Kubernetes 的 DevOps+MLOps 平台，用于 CODIA 的持续部署，提高团队工作效率、降低协作成本。"]),`
-`,n("li",{},["在中国科学技术大学推广使用，已多次作为多门编程和算法课程的教学平台，为计算机专业学生提供更好的学习体验。"]),`
+`,n("li",{},["已多次作为中科大多门编程和算法课程的教学平台，为计算机专业学生提供更好的学习体验。"]),`
+`]),`
+`,n("div",{class:"mt-4 grid place-items-center grid-cols-2"},[`
+  `,n("img",{src:"/imgs/resume/codia_home.png",alt:"CODIA home",class:"h-40 outline outline-gray-300"},[]),`
+  `,n("img",{src:"/imgs/resume/codia_dev.png",alt:"CODIA dev",class:"h-40 outline outline-gray-300"},[]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["个人经历：教育部考试中心"]),`
 `,n("ul",{},[`
 `,n("li",{},["面向考试中心海量题库，训练基于大规模语义预训练的试题表征模型，提升试题属性自动标注效果。"]),`
-`,n("li",{},["基于考试中心真实场景探索新的研究课题，例如试卷分割、试题查重、相似题推荐和替换等，相关成果用于开发考试中心内部工具。"]),`
+`,n("li",{},["基于考试中心真实场景探索新的研究课题，例如试卷分割、试题查重、相似题推荐和替换等，相关成果用于开发考试中心内部工具，以及实验室智慧教育知识图谱平台 LUNA。"]),`
 `,n("li",{},["就如何将深度学习应用于传统教育技术中，在考试中心内部开展报告和讲座。"]),`
+`]),`
+`,n("div",{class:"mt-6 grid place-items-center grid-cols-2"},[`
+  `,n("img",{src:"/imgs/resume/luna_home.png",alt:"LUNA home",class:"h-48 outline outline-gray-300"},[]),`
+  `,n("img",{src:"/imgs/resume/luna_demo.png",alt:"LUNA demo",class:"h-48 outline outline-gray-300"},[]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["个人经历：科大讯飞"]),`
 `,n("ul",{},[`
 `,n("li",{},["基于基础 NLP 技术开展题库建设、公式提取和相似题推荐等任务，并参与重构讯飞内部海量试题库以及相似题检索系统。"]),`
 `,n("li",{},["使用深度学习方法进行试题理解和难度估计等任务，参与开发和优化相关模型，在高考试题难度预测准确性和稳定性指标上超过领域专家。"]),`
 `,n("li",{},["在知识追踪任务中引入试题题面文本信息，实现了了一种试题增强的知识追踪方法，大幅提升学生得分预测的效果。"]),`
+`]),`
+`,n("div",{class:"mt-2 grid place-items-center grid-cols-1"},[`
+  `,n("img",{src:"/imgs/resume/eernn.png",alt:"EERNN model",class:"h-48 outline outline-gray-300"},[]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["研究成果：Spotlight"]),`
 `,n("ul",{},[`
 `,n("li",{},["任务：结构化图像转写（典型例子：公式识别为 LaTeX）"]),`
@@ -45,6 +60,9 @@ import{t,_ as l}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/d
 `,n("li",{},["利用局部性特征，通过定义底层计算忽略低权重位置，从而降低复杂度、提高效率"]),`
 `]),`
 `]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Spotlight 模型"]),`
+`,n("div",{class:"mt-8 grid place-items-center grid-cols-1"},[`
+  `,n("img",{src:"/imgs/resume/spotlight.png",alt:"Spotlight model",class:"h-72 outline outline-gray-300"},[]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["研究成果：QuesNet"]),`
 `,n("ul",{},[`
 `,n("li",{},["任务：无监督预训练试题表征"]),`
@@ -63,7 +81,10 @@ import{t,_ as l}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/d
 `,n("li",{},["架构上更好地适配教育 domain 的多模态输入，特别是数学公式、几何图形等"]),`
 `]),`
 `]),`
-`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["研究成果：EKT 和 DTransformer"]),`
+`])]),config:void 0});i.push({component:()=>n("div",{class:"mt-4 grid place-items-center grid-cols-1 gap-8"},[`
+  `,n("img",{src:"/imgs/resume/quesnet_arch.png",alt:"QuesNet model",class:"w-screen-sm outline outline-gray-300"},[]),`
+  `,n("img",{src:"/imgs/resume/quesnet_train.png",alt:"QuesNet training",class:"w-screen-sm outline outline-gray-300"},[]),`
+`]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["研究成果：EKT 和 DTransformer"]),`
 `,n("ul",{},[`
 `,n("li",{},["任务：知识追踪"]),`
 `,n("li",{},["目标：根据学生做题记录估计学生在每个时刻的知识掌握状态"]),`
@@ -81,6 +102,12 @@ import{t,_ as l}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/d
 `,n("li",{},["设计对比学习损失提升知识状态的稳定性"]),`
 `]),`
 `]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["EKT 模型"]),`
+`,n("div",{class:"mt-8 grid place-items-center grid-cols-1"},[`
+  `,n("img",{src:"/imgs/resume/ekt.png",alt:"EKT model",class:"h-72 outline outline-gray-300"},[]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["DTransformer 模型"]),`
+`,n("div",{class:"mt-8 grid place-items-center grid-cols-1"},[`
+  `,n("img",{src:"/imgs/resume/dtransformer.png",alt:"DTransformer model",class:"h-72 outline outline-gray-300"},[]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Highlights"]),`
 `,n("ul",{},[`
 `,n("li",{},[`做有影响力的研究
@@ -91,9 +118,9 @@ import{t,_ as l}from"../../chunks/8bae6656.js";import{h as n}from"../../chunks/d
 `,n("li",{},[`0-1 的实现能力
 `,n("ul",{},[`
 `,n("li",{},["代码能力：多年编程经历，熟悉多种编程语言，NOI 国家奖牌，并行优化比赛、RDMA 编程比赛第一"]),`
-`,n("li",{},["工程能力：丰富的开源项目，CODIA 和 LUNA"]),`
+`,n("li",{},["工程能力：丰富的开源项目，CODIA 和 LUNA 开发"]),`
 `,n("li",{},["学习能力：涉猎广泛，喜欢跟踪前沿研究和技术"]),`
 `]),`
 `]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A"]),`
-`]),config:void 0});const e={setup(){return()=>n(l,{pages:i,theme:t})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
+`]),config:void 0});const e={setup(){return()=>n(t,{pages:i,theme:s})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
