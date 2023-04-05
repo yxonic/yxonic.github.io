@@ -1,4 +1,4 @@
-import{t as s,_ as t}from"../../chunks/4c95573a.js";import{h as n}from"../../chunks/ded0b38f.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
+import{t as l,_ as s}from"../../chunks/4c95573a.js";import{h as n}from"../../chunks/ded0b38f.js";const a={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中科大陈恩红老师博士生"]),`
@@ -122,5 +122,48 @@ import{t as s,_ as t}from"../../chunks/4c95573a.js";import{h as n}from"../../chu
 `,n("li",{},["学习能力：涉猎广泛，喜欢跟踪前沿研究和技术"]),`
 `]),`
 `]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Recent Interests: LLM"]),`
+`,n("ul",{},[`
+`,n("li",{},["跟进 LLM 最新进展"]),`
+`,n("li",{},[`从开源 LLM 源码学习
+`,n("ul",{},[`
+`,n("li",{},["HuggingFace ecosystem: tokenizers, transformers (model, trainer, etc.)"]),`
+`,n("li",{},["PyTorch 分布式训练"]),`
+`,n("li",{},["指令微调"]),`
+`,n("li",{},["RLHF: PPO 算法"]),`
+`]),`
+`]),`
+`,n("li",{},[`兴趣方向：
+`,n("ul",{},[`
+`,n("li",{},["指令工程"]),`
+`,n("li",{},["LLM 增强（外部知识，插件，专用模型等）"]),`
+`,n("li",{},["LLM 应用（new Bing, GitHub, Office）"]),`
+`,n("li",{},["低成本微调和预测"]),`
+`]),`
+`]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Recent Interests: vslides"]),`
+`,n("ul",{},[`
+`,n("li",{},["这张幻灯片是用 vslides 做的"]),`
+`,n("li",{},[`目标：
+`,n("ul",{},[`
+`,n("li",{},["喜欢技术分享，需要一个更方便创作的工具"]),`
+`,n("li",{},["基于 Web 技术来做内容呈现，既方便排版设计，又方便在网上分享"]),`
+`]),`
+`]),`
+`,n("li",{},[`技术栈：
+`,n("ul",{},[`
+`,n("li",{},["remark：支持用 Markdown 编写内容"]),`
+`,n("li",{},["vue：用于幻灯片组件开发"]),`
+`,n("li",{},["vite：用于快速预览结果，以及生成静态网站"]),`
+`]),`
+`]),`
+`,n("li",{},[`整体功能分四个组件实现：
+`,n("ul",{},[`
+`,n("li",{},["core：基础功能组件，包括幻灯片展示，翻页功能，主题机制等"]),`
+`,n("li",{},["parser：负责将原始 Markdown 内容解析为幻灯片页面及配置"]),`
+`,n("li",{},["vite-plugin：vite 插件，负责实现幻灯片热重载、静态网站生成等"]),`
+`,n("li",{},["CLI：组合以上组件，形成用于命令行开启幻灯片的 CLI 工具"]),`
+`]),`
+`]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A"]),`
-`]),config:void 0});const e={setup(){return()=>n(t,{pages:i,theme:s})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
+`]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,a as frontmatter,i as pages};

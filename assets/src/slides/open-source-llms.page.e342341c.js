@@ -37,6 +37,8 @@ import{t as i,_ as a}from"../../chunks/4c95573a.js";import{h as n}from"../../chu
 `,n("li",{},[n("a",{href:"https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html"},["Dolly"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/ymcui/Chinese-LLaMA-Alpaca"},["Chinese-LLaMA-Alpaca"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat"},["ColossalChat"])]),`
+`,n("li",{},[n("a",{href:"https://bair.berkeley.edu/blog/2023/04/03/koala/"},["Koala"])]),`
+`,n("li",{},[n("a",{href:"https://vicuna.lmsys.org"},["Vicuna"])]),`
 `])]),config:void 0});t.push({component:()=>n("p",{},[n("img",{src:"/imgs/llm_family.png",alt:"LLM Family"},[])]),config:void 0});t.push({component:()=>n("div",{},[n("h1",{},["Model Architecture"]),`
 `,n("ul",{},[`
 `,n("li",{},[n("a",{href:"https://github.com/google-research/t5x"},["T5"])]),`
