@@ -1,10 +1,25 @@
-import{t as l,_ as s}from"../../chunks/4c95573a.js";import{h as n}from"../../chunks/ded0b38f.js";const a={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
+import{t as l,_ as s}from"../../chunks/4c95573a.js";import{h as n}from"../../chunks/ded0b38f.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中科大陈恩红老师博士生"]),`
 `,n("li",{},["在实验室担任智慧教育方向研究组的组长"]),`
-`,n("li",{},["研究兴趣和方向主要包括：教育数据挖掘，自然语言处理，强化学习"]),`
-`,n("li",{},["在科研外有较多系统开发经历，带领开发智慧编程平台 CODIA 等"]),`
+`,n("li",{},["研究兴趣和方向主要包括：教育数据挖掘，自然语言处理，强化学习等"]),`
+`,n("li",{},[`亮点：
+`,n("ul",{},[`
+`,n("li",{},[`做有影响力的研究
+`,n("ul",{},[`
+`,n("li",{},["Google Scholar 总引用量 772, h-index 11"]),`
+`]),`
+`]),`
+`,n("li",{},[`较强的 0-1 实现能力
+`,n("ul",{},[`
+`,n("li",{},["代码能力：多年编程经历，熟悉多种编程语言，NOI 国家奖牌，并行优化、RDMA 编程比赛第一"]),`
+`,n("li",{},["工程能力：丰富的开源项目，开发实验室 CODIA 和 LUNA 平台"]),`
+`,n("li",{},["学习能力：涉猎广泛，喜欢跟踪最前沿的研究和技术，快速学习和上手能力"]),`
+`]),`
+`]),`
+`]),`
+`]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["个人经历：教育组"]),`
 `,n("ul",{},[`
 `,n("li",{},["在刘淇老师、黄振亚老师指导下成立教育组，作为组长领导组员探索教育数据挖掘相关领域，如问题理解、学生建模、自适应学习和推荐等，指导小组成员发表 20 余篇学术论文。"]),`
@@ -56,6 +71,7 @@ import{t as l,_ as s}from"../../chunks/4c95573a.js";import{h as n}from"../../chu
 `,n("li",{},[`以现在的研究观点来看，spotlight 可以和 multi-head attention 优势互补，可以从下面几个方向改进：
 `,n("ul",{},[`
 `,n("li",{},["实现 multi-head spotlight（近期工作）"]),`
+`,n("li",{},["使用 PPO 算法优化 spotlight actor（近期工作）"]),`
 `,n("li",{},["和 Transformer 架构适配，去掉序列依赖，从而能够和 multi-head attention 配合使用"]),`
 `,n("li",{},["利用局部性特征，通过定义底层计算忽略低权重位置，从而降低复杂度、提高效率"]),`
 `]),`
@@ -108,40 +124,27 @@ import{t as l,_ as s}from"../../chunks/4c95573a.js";import{h as n}from"../../chu
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["DTransformer 模型"]),`
 `,n("div",{class:"mt-8 grid place-items-center grid-cols-1"},[`
   `,n("img",{src:"/imgs/resume/dtransformer.png",alt:"DTransformer model",class:"h-72 outline outline-gray-300"},[]),`
-`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Highlights"]),`
-`,n("ul",{},[`
-`,n("li",{},[`做有影响力的研究
-`,n("ul",{},[`
-`,n("li",{},["Google Scholar 总引用量 772, h-index 11"]),`
-`]),`
-`]),`
-`,n("li",{},[`0-1 的实现能力
-`,n("ul",{},[`
-`,n("li",{},["代码能力：多年编程经历，熟悉多种编程语言，NOI 国家奖牌，并行优化比赛、RDMA 编程比赛第一"]),`
-`,n("li",{},["工程能力：丰富的开源项目，CODIA 和 LUNA 开发"]),`
-`,n("li",{},["学习能力：涉猎广泛，喜欢跟踪前沿研究和技术"]),`
-`]),`
-`]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Recent Interests: LLM"]),`
 `,n("ul",{},[`
 `,n("li",{},["跟进 LLM 最新进展"]),`
-`,n("li",{},[`从开源 LLM 源码学习
+`,n("li",{},[`从开源 LLM 源码学习（LLaMA, Alpaca, ColossalChat）
 `,n("ul",{},[`
-`,n("li",{},["HuggingFace ecosystem: tokenizers, transformers (model, trainer, etc.)"]),`
+`,n("li",{},["HuggingFace: tokenizers, transformers (model, trainer, etc.)"]),`
 `,n("li",{},["PyTorch 分布式训练"]),`
 `,n("li",{},["指令微调"]),`
-`,n("li",{},["RLHF: PPO 算法"]),`
+`,n("li",{},["RLHF: reward model, PPO 算法"]),`
 `]),`
 `]),`
 `,n("li",{},[`兴趣方向：
 `,n("ul",{},[`
-`,n("li",{},["指令工程"]),`
 `,n("li",{},["LLM 增强（外部知识，插件，专用模型等）"]),`
 `,n("li",{},["LLM 应用（new Bing, GitHub, Office）"]),`
 `,n("li",{},["低成本微调和预测"]),`
 `]),`
 `]),`
-`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Recent Interests: vslides"]),`
+`])]),config:void 0});i.push({component:()=>n("div",{class:"mt-16 grid place-items-center grid-cols-1"},[`
+  `,n("img",{src:"/imgs/resume/rlhf_colossal.jpeg",alt:"ColossalChat RLHF",class:"h-72 outline outline-gray-300"},[]),`
+`]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Recent Interests: vslides"]),`
 `,n("ul",{},[`
 `,n("li",{},["这张幻灯片是用 vslides 做的"]),`
 `,n("li",{},[`目标：
@@ -166,4 +169,4 @@ import{t as l,_ as s}from"../../chunks/4c95573a.js";import{h as n}from"../../chu
 `]),`
 `]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A"]),`
-`]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,a as frontmatter,i as pages};
+`]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
