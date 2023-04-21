@@ -2,6 +2,7 @@
   list:
     - id: yin2023tracing
       codeLink: https://github.com/yxonic/DTransformer
+      slidesLink: /slides/www23-promo
       note: TheWebConf~'23, CCF~A
       specialNote: Accepted
       marks: [1, 2]
