@@ -1,0 +1,138 @@
+---
+title: www23-promotion
+theme: ./theme/basic
+layout: cover
+---
+
+<div class="text-left">
+
+# Tracing Knowledge Instead of Patterns: Stable Knowledge Tracing with Diagnostic Transformer
+
+Yu Yin*, Le Dai*, Zhenya Huang, Shuanghong Shen, Fei Wang, Qi Liu, Enhong Chen, Xin Li
+
+</div>
+
+<div class="absolute top-6 left-12 grid place-items-center grid-cols-2">
+  <img src="/imgs/www23/ustc-logo.jpg" alt="ustc logo" class="h-12" />
+  <img src="/imgs/www23/iflytek-logo.jpg" alt="iflytek logo" class="h-20" />
+</div>
+
+<div class="absolute bottom-8 left-12">
+  The ACM Web Conference 2023, Austin, TX, USA
+</div>
+
+---
+
+# What is Knowledge Tracing?
+
+- The popularity of online learning systems
+- It is important for both students and teachers to:
+  - understand how well a student masters knowledge concepts
+  - trace the evolution of knowledge mastery
+- The task: _Knowledge Tracing (KT)_
+  - trace the mastery of knowledge according to previous exercising records
+
+<div class="grid place-items-center grid-cols-1">
+  <img src="/imgs/www23/kt.jpg" alt="KT" class="h-48" />
+</div>
+
+---
+
+# How is Knowledge Tracing done?
+
+- Knowledge mastery has no GT
+  - most solutions are based on _next performance prediction_ along the _exercising history_
+  - ability to do KT $\to$ ability to predict next performance
+- Two problems:
+  - no explicit knowledge mastery diagnosis
+  - sensitive to patterns of exercising history
+
+<div class="mt-2 -ml-12 grid place-items-center grid-cols-2">
+  <img src="/imgs/www23/example1.png" alt="example 1" class="h-48 -ml-12" />
+  <img src="/imgs/www23/example2.png" alt="example 2" class="h-48 -ml-32" />
+</div>
+
+<div class="absolute bottom-31 right-22 text-sm font-semibold tracking-tight text-teal-700 border-2 border-solid px-1.5">
+  read out
+</div>
+
+---
+
+# How are we different?
+
+- We are the first to design a Transformer-based architecture that _explicitly_ diagnose knowledge mastery
+- We ensure stable knowledge tracing that is less sensitive to patterns with a constrastive loss
+
+<div class="mt-8 grid place-items-center grid-cols-2">
+  <img
+    src="/imgs/www23/arch.png"
+    alt="architecture"
+    class="h-56 outline outline-gray-200"
+  />
+  <img src="/imgs/www23/tracing.png" alt="tracing" class="h-28" />
+</div>
+
+---
+
+# What's more?
+
+Visit our session at:
+
+- <span class="font-semibold">
+    UMAP 7: Privacy Preserving Recommendation, Contrastive Learning & Web
+    Accessibility
+  </span>
+
+  - 1:30 PM – 3:00 PM, Thursday, May 4th
+  - AT&T Hotel and Conference Center Classroom #104
+
+Thank you for your attention!
+
+<!--
+Write a script for a 3 minute presentation that introduces our new paper about knowledge tracing. The presentation have 3 pages. The script should cover the key points of each page. I will give the key points of each points, and you will write a script that covers all of them, with an active and vibrant tone. Here are the key points of 3 pages:
+
+Page 1: introduce what is knowledge tracing
+
+1. The popularity of online learning systems
+2. It is important for both students and teachers to:
+   1. understand how well a student masters knowledge concepts
+   2. trace the evolution of knowledge mastery
+3. Knowledge Tracing (KT): trace the mastery of knowledge according to previous exercising records
+
+Page 2: introduce current approach and the limitation
+
+1. Knowledge mastery has no ground truth
+   1. most solutions are based on next performance prediction along the exercising history
+   2. ability to do knowledge tracing is modeled as ability to predict next performance
+2. Two problems of existing approach:
+   1. no explicit knowledge mastery diagnosis
+   2. sensitive to patterns of exercising history
+
+Page 3: introduce our contribution
+
+The contributions include:
+
+1. We are the first to design a Transformer-based architecture that explicitly diagnose knowledge mastery
+2. We ensure stable knowledge tracing that is less sensitive to patterns with a constrastive loss
+
+Please also welcome the audience to come to our session for a detailed introduction in the end.
+
+Here's a script for a three-minute presentation that introduces your new paper about knowledge tracing:
+
+```
+Good afternoon everyone,
+
+Today I would like to introduce our new paper about knowledge tracing.
+
+[Page 1]
+With the rise in popularity of online learning systems, it has become increasingly important for both students and teachers to understand how well a student is mastering knowledge concepts and to trace the evolution of their knowledge mastery over time. This is where Knowledge Tracing comes in. Knowledge Tracing is a technique used to model a student's mastery of skills over time by analyzing their previous exercising records.
+
+[Page 2]
+However, knowledge mastery has no ground truth. Most solutions are based on next performance prediction along the exercising history and the ability to do knowledge tracing is modeled as the ability to predict next performance. This approach has two problems: it does not provide an explicit diagnosis of knowledge mastery and it is sensitive to patterns of exercising history.
+
+[Page 3]
+Our paper addresses these limitations by introducing a new approach. We are the first to design a Transformer-based architecture that explicitly diagnoses knowledge mastery. Additionally, we ensure stable knowledge tracing that is less sensitive to patterns with a contrastive loss.
+
+Thank you for listening and we welcome you to come to our session for a detailed introduction.
+```
+-->
