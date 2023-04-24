@@ -1,14 +1,14 @@
-import{t as l,_ as s}from"../../chunks/4c95573a.js";import{h as n}from"../../chunks/ded0b38f.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
+import{t as l,_ as s}from"../../chunks/chunk-4160ade9.js";import{h as n}from"../../chunks/chunk-55bbd34f.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中科大陈恩红老师博士生"]),`
 `,n("li",{},["在实验室担任智慧教育方向研究组的组长"]),`
-`,n("li",{},["研究兴趣和方向主要包括：教育数据挖掘，自然语言处理，强化学习等"]),`
+`,n("li",{},["研究兴趣和方向主要包括：教育数据挖掘，自然语言处理，多模态表征，强化学习等"]),`
 `,n("li",{},[`自我评价，两个突出亮点：
 `,n("ul",{},[`
 `,n("li",{},[`致力于做有影响力的研究
 `,n("ul",{},[`
-`,n("li",{},["Google Scholar 总引用量 772, h-index 11"]),`
+`,n("li",{},["Google Scholar 总引用量 808, h-index 11"]),`
 `]),`
 `]),`
 `,n("li",{},[`有着较强的 0-1 实现能力
