@@ -9,6 +9,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: grayscale;
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -24,4 +27,29 @@ a {
 }
 a:hover {
   opacity: 0.8;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
 }

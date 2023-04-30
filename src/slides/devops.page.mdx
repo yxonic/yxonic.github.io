@@ -1,5 +1,5 @@
 ---
-title: devops
+title: DevOps with GitLab+Kubernetes
 theme: ./theme/basic
 layout: cover
 ---
@@ -12,15 +12,279 @@ layout: cover
 
 # Contents
 
-- Open-source DevOps architecture
 - GitLab
-  - installation
-  - pipelines
 - Kubernetes
-  - basic concepts
-  - minikube
-  - helm
 - Integrate GitLab with Kubernetes
-  - GitLab Kubernetes agent
-  - manage group infrastructure with agent
-  - Continuous Deployment
+
+---
+
+# Decisions to be made first
+
+- Do we focus on how-to-use only, or also include how to install and manage?
+  - like, Linux usage or Linux installation & management?
+  - can be as simple as everything-on-cloud, or as complex as managing everything by hand
+- How to obtain GitLab and Kubernetes instances?
+  - managed vs self-hosted GitLab
+  - cloud vs existing cluster vs self-hosted Kubernetes
+- Do we start with stateless or stateful apps?
+  - stateless: all states are external to the cluster (in DB, Kafka, etc.); apps are merely computation
+  - stateful: apps have states in the cluster such as storage
+- Do we only deploy apps or also include infrastructure management?
+  - topics involving infrastructure: monitoring, logging, metrics, etc.
+  - install DB or Kafka as cluster infrastructure can avoid expensive cloud services
+
+---
+
+# Deployment paradigms
+
+<div class="grid grid-cols-3 gap-x-2 gap-y-4 place-items-center text-center text-sm">
+  <div class="p-2 border grid gap-2">
+    <div class="grid grid-cols-3 gap-2">
+      <div class="px-0.5 border">nginx</div>
+      <div class="px-0.5 border">backend</div>
+      <div class="px-0.5 border">DB</div>
+    </div>
+    <div class="px-0.5 border">Linux</div>
+  </div>
+  <div class="p-2 border grid gap-2">
+    <div class="flex gap-2">
+      <div class="px-0.5 border grid place-items-center">nginx</div>
+      <div class="px-0.5 border grid place-items-center">backend</div>
+      <div class="grid gap-2">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="px-0.5 border">DB</div>
+          <div class="px-0.5 border">Kafka</div>
+        </div>
+        <div class="px-0.5 border">Docker</div>
+      </div>
+    </div>
+    <div class="px-0.5 border">Linux</div>
+  </div>
+  <div class="p-2 border grid gap-2">
+    <div class="grid grid-cols-4 gap-2">
+      <div class="px-0.5 border">nginx</div>
+      <div class="px-0.5 border">backend</div>
+      <div class="px-0.5 border">DB</div>
+      <div class="px-0.5 border">Kafka</div>
+    </div>
+    <div class="px-0.5 border">Docker</div>
+    <div class="px-0.5 border">Linux</div>
+  </div>
+  <div>bare metal</div>
+  <div>deploy services with docker</div>
+  <div>deploy everything with docker</div>
+  <div class="p-2 border grid gap-2">
+    <div class="flex gap-2">
+      <div class="grid gap-2">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="px-0.5 border">nginx</div>
+          <div class="px-0.5 border">backend</div>
+        </div>
+        <div class="px-0.5 border">docker compose</div>
+      </div>
+      <div class="px-0.5 border grid place-items-center">DB</div>
+      <div class="px-0.5 border grid place-items-center">Kafka</div>
+    </div>
+    <div class="px-0.5 border">Docker</div>
+    <div class="px-0.5 border">Linux</div>
+  </div>
+  <div class="p-2 border grid gap-2">
+    <div class="flex gap-2">
+      <div class="grid gap-2">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="px-0.5 border">nginx</div>
+          <div class="px-0.5 border">backend</div>
+        </div>
+        <div class="px-0.5 border">Kubernetes</div>
+      </div>
+      <div class="px-0.5 border grid place-items-center">DB</div>
+      <div class="px-0.5 border grid place-items-center">Kafka</div>
+    </div>
+    <div class="px-0.5 border">Docker</div>
+    <div class="px-0.5 border">Linux</div>
+  </div>
+  <div class="p-2 border grid gap-2">
+    <div class="grid grid-cols-4 gap-2">
+      <div class="px-0.5 border">nginx</div>
+      <div class="px-0.5 border">backend</div>
+      <div class="px-0.5 border">DB</div>
+      <div class="px-0.5 border">Kafka</div>
+    </div>
+    <div class="px-0.5 border">Kubernetes</div>
+    <div class="px-0.5 border">Docker</div>
+    <div class="px-0.5 border">Linux</div>
+  </div>
+  <div>manage deployment with docker compose</div>
+  <div>deploy app with Kubernetes</div>
+  <div>deploy everything with Kubernetes</div>
+</div>
+
+---
+
+# Cloud services
+
+<div class="grid grid-cols-3 gap-x-2 gap-y-4 place-items-center text-center text-sm">
+  <div class="p-2 border border-dotted grid gap-2">
+    <div class="grid grid-cols-3 gap-2">
+      <div class="px-0.5 border">nginx</div>
+      <div class="px-0.5 border">backend</div>
+      <div class="px-0.5 border">DB</div>
+    </div>
+    <div class="px-0.5 border border-dotted">ECS</div>
+  </div>
+  <div class="p-2 border border-dotted grid gap-2">
+    <div class="flex gap-2">
+      <div class="px-0.5 border grid place-items-center">nginx</div>
+      <div class="px-0.5 border grid place-items-center">backend</div>
+      <div class="grid gap-2">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="px-0.5 border">DB</div>
+          <div class="px-0.5 border">Kafka</div>
+        </div>
+        <div class="px-0.5 border">Docker</div>
+      </div>
+    </div>
+    <div class="px-0.5 border border-dotted">ECS</div>
+  </div>
+  <div class="flex gap-2">
+    <div class="p-2 border border-dotted grid gap-2">
+      <div class="grid grid-cols-2 gap-2">
+        <div class="px-0.5 border grid place-items-center">nginx</div>
+        <div class="px-0.5 border grid place-items-center">backend</div>
+      </div>
+      <div class="px-0.5 border border-dotted grid place-items-center">ECS</div>
+    </div>
+    <div class="flex flex-col w-12">
+      <div class="px-0.5 border border-dotted grid place-items-center">DB</div>
+      <div class="mt-2 px-0.5 border border-dotted grid place-items-center">
+        Kafka
+      </div>
+    </div>
+  </div>
+  <div>ECS is just cloud Linux</div>
+  <div>we can install docker on ECS</div>
+  <div>ECS + cloud components</div>
+  <div class="flex gap-2">
+    <div class="p-2 border border-dotted grid gap-2">
+      <div class="grid grid-cols-2 gap-2">
+        <div class="px-0.5 border grid place-items-center">nginx</div>
+        <div class="px-0.5 border grid place-items-center">backend</div>
+      </div>
+      <div class="px-0.5 border grid place-items-center">Kubernetes</div>
+      <div class="px-0.5 border grid place-items-center">Docker</div>
+      <div class="px-0.5 border border-dotted grid place-items-center">ECS</div>
+    </div>
+    <div class="flex flex-col w-12">
+      <div class="px-0.5 border border-dotted grid place-items-center">DB</div>
+      <div class="mt-2 px-0.5 border border-dotted grid place-items-center">
+        Kafka
+      </div>
+    </div>
+  </div>
+  <div class="flex gap-2">
+    <div class="p-2 border border-dotted grid gap-2">
+      <div class="grid grid-cols-2 gap-2">
+        <div class="px-0.5 border border-dotted grid place-items-center">
+          nginx
+        </div>
+        <div class="px-0.5 border grid place-items-center">backend</div>
+      </div>
+      <div class="px-0.5 border border-dotted grid place-items-center">
+        Kubernetes
+      </div>
+    </div>
+    <div class="flex flex-col w-12">
+      <div class="px-0.5 border border-dotted grid place-items-center">DB</div>
+      <div class="mt-2 px-0.5 border border-dotted grid place-items-center">
+        Kafka
+      </div>
+      <div class="mt-2 px-0.5 border border-dotted grid place-items-center">
+        GitLab
+      </div>
+    </div>
+  </div>
+  <div class="flex gap-2 items-center">
+    <div class="p-2 border border-dotted grid gap-2">
+      <div class="px-0.5 border grid place-items-center">backend</div>
+      <div class="px-0.5 border border-dotted grid place-items-center">
+        lambda
+      </div>
+    </div>
+    <div class="px-0.5 w-10 border border-dotted grid place-items-center">
+      DB
+    </div>
+    <div class="px-0.5 w-10 border border-dotted grid place-items-center">
+      Kafka
+    </div>
+  </div>
+  <div>Kubernetes on ECS</div>
+  <div>managed Kubernetes cluster</div>
+  <div>serverless</div>
+</div>
+
+---
+
+# CODIA architecture
+
+<div class="mt-12 grid gap-4  place-items-center text-center">
+  <div class="flex gap-2">
+    <div class="p-2 border grid gap-2">
+      <div class="flex gap-2">
+        <div class="px-0.5 border grid place-items-center">GitLab</div>
+        <div class="grid gap-2">
+          <div class="flex gap-2">
+            <div class="grid gap-2">
+              <div class="grid grid-cols-2 gap-2">
+                <div class="px-0.5 border">nginx</div>
+                <div class="px-0.5 border">backend</div>
+              </div>
+              <div class="px-0.5 border">Kubernetes</div>
+            </div>
+            <div class="px-0.5 border grid place-items-center">Kafka</div>
+          </div>
+          <div class="px-0.5 border">Docker</div>
+        </div>
+      </div>
+      <div class="px-0.5 border">Linux</div>
+    </div>
+    <div class="flex flex-col w-12">
+      <div class="px-0.5 border border-dotted">DB</div>
+    </div>
+  </div>
+  <div>
+    self-hosted GitLab, hybrid cloud, deploy app with k8s, Kafka on docker to
+    reduce cost
+  </div>
+</div>
+
+---
+
+# GitLab
+
+- installation
+  - [DevOps with GitLab](https://about.gitlab.com/topics/ci-cd/)
+  - [Optional: install GitLab](https://about.gitlab.com/install/)
+  - [Optional: GitLab runner](https://docs.gitlab.com/runner/)
+- pipelines
+  - [Tutorial: GitLab CI/CD pipeline](https://docs.gitlab.com/ee/ci/quick_start/)
+
+---
+
+# Kubernetes
+
+- minikube
+  - [Hello, minikube](https://kubernetes.io/zh-cn/docs/tutorials/hello-minikube/)
+  - [Kubernetes basics](https://kubernetes.io/zh-cn/docs/tutorials/kubernetes-basics/)
+- helm
+  - [Helm quickstart](https://helm.sh/docs/intro/quickstart/)
+  - [Writing helm charts](https://helm.sh/docs/chart_template_guide/getting_started/)
+
+---
+
+# Integrate GitLab with Kubernetes
+
+- connecting GitLab with Kubernetes
+  - [Installing the agent for Kubernetes](https://docs.gitlab.com/ee/user/clusters/agent/install/index.html)
+- operating the cluster with GitLab pipelines
+  - [Using GitLab CI/CD with a Kubernetes cluster](https://docs.gitlab.com/ee/user/clusters/agent/ci_cd_workflow.html)
+  - [example configuration](https://git.bdaa.pro/codia/platform-next/-/blob/master/.gitlab-ci.yml)

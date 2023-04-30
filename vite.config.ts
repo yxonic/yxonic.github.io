@@ -13,7 +13,7 @@ export default {
     }),
     uno(),
     vslides({
-      transformRegex: /\.mdx$/,
+      transformRegex: /\.mdx$/, // sorry for borrowing this ext
     }),
     vmark(),
     yaml(),
