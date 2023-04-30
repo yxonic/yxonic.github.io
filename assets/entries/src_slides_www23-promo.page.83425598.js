@@ -44,7 +44,7 @@ import{t as s,_ as i}from"../chunks/chunk-4160ade9.js";import{h as e}from"../chu
   `,e("img",{src:"/imgs/www23/example1.png",alt:"example 1",class:"h-48 -ml-12"},[]),`
   `,e("img",{src:"/imgs/www23/example2.png",alt:"example 2",class:"h-48 -ml-32"},[]),`
 `]),`
-`,e("div",{class:"absolute bottom-31 right-22 text-sm font-semibold tracking-tight text-teal-700 border-2 border-solid px-1.5"},[`
+`,e("div",{class:"absolute bottom-31 right-22 text-sm font-semibold tracking-tight text-teal-700 border-2 px-1.5"},[`
   read out
 `])]),config:void 0});n.push({component:()=>e("div",{},[e("h1",{},["How are we different?"]),`
 `,e("ul",{},[`

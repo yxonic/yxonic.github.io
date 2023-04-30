@@ -267,7 +267,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-server-routing.25667d4f.js",
+    "file": "assets/entries/entry-server-routing.7c742f17.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -287,7 +287,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-client-routing.816d373b.js",
+    "file": "assets/entries/entry-client-routing.778e7ed3.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -322,7 +322,7 @@
     "src": "src/pages/publications.page.vue"
   },
   "src/slides/devops.page.mdx": {
-    "file": "assets/entries/src_slides_devops.page.22165075.js",
+    "file": "assets/entries/src_slides_devops.page.0428370d.js",
     "imports": [
       "_chunk-4160ade9.js",
       "_chunk-55bbd34f.js"
@@ -332,7 +332,7 @@
     "src": "src/slides/devops.page.mdx"
   },
   "src/slides/interview.page.mdx": {
-    "file": "assets/entries/src_slides_interview.page.c6cb6205.js",
+    "file": "assets/entries/src_slides_interview.page.84ce52fc.js",
     "imports": [
       "_chunk-4160ade9.js",
       "_chunk-55bbd34f.js"
@@ -362,7 +362,7 @@
     "src": "src/slides/resume.page.mdx"
   },
   "src/slides/www23-promo.page.mdx": {
-    "file": "assets/entries/src_slides_www23-promo.page.614db765.js",
+    "file": "assets/entries/src_slides_www23-promo.page.83425598.js",
     "imports": [
       "_chunk-4160ade9.js",
       "_chunk-55bbd34f.js"
@@ -372,7 +372,7 @@
     "src": "src/slides/www23-promo.page.mdx"
   },
   "vpage/renderer/_default.page.client.css": {
-    "file": "assets/static/default.page.client.0bbf85a9.css",
+    "file": "assets/static/default.page.client.5a524b67.css",
     "src": "vpage/renderer/_default.page.client.css"
   },
   "vpage/renderer/_default.page.client.ts": {
@@ -438,9 +438,9 @@
       "assets/static/KaTeXTypewriter-Regular.f01f3e87.ttf"
     ],
     "css": [
-      "assets/static/default.page.client.0bbf85a9.css"
+      "assets/static/default.page.client.5a524b67.css"
     ],
-    "file": "assets/entries/vpage_renderer_default.page.client.cb6ed00c.js",
+    "file": "assets/entries/vpage_renderer_default.page.client.89483027.js",
     "imports": [
       "_chunk-55bbd34f.js"
     ],
