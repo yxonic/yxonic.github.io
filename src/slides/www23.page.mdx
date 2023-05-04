@@ -1,0 +1,193 @@
+---
+title: WWW '23 Tracing Knowledge Instead of Patterns
+theme: ./theme/basic
+layout: cover
+---
+
+<div class="text-left">
+
+# Tracing Knowledge Instead of Patterns: Stable Knowledge Tracing with Diagnostic Transformer
+
+Yu Yin*, Le Dai*, Zhenya Huang, Shuanghong Shen, Fei Wang, Qi Liu, Enhong Chen, Xin Li
+
+</div>
+
+<div class="absolute top-6 left-12 grid items-center grid-cols-3">
+  <img src="https://www2023.thewebconf.org/www-logo2.svg" alt="www2023" class="h-14 p-2 bg-[#5d457bb3]" />
+  <img src="/imgs/www23/ustc-logo.jpg" alt="ustc logo" class="h-12 ml-24" />
+  <img src="/imgs/www23/iflytek-logo.jpg" alt="iflytek logo" class="ml-16 h-20" />
+</div>
+
+<div class="absolute bottom-8 left-12">
+  The ACM Web Conference 2023, Austin, TX, USA
+</div>
+
+---
+
+# Outline
+
+- Introduction
+- DTransformer
+  - the architecture
+  - the training process
+  - inference and tracing
+- Experiments
+
+---
+
+# What is Knowledge Tracing?
+
+- Online learning systems have become more and more popular
+- It is important for a student to:
+  - understand how well they master each knowledge concepts
+  - trace the evolution of knowledge mastery
+- Crucial for building a personalized learning experience:
+  - provide detailed diagnosis other than a total score
+  - tell a student how fast they improve
+  - recommend exercises for a student based on their shortcomings
+
+---
+
+# What is Knowledge Tracing?
+
+- _Knowledge Tracing (KT)_
+  - **goal**: to trace the mastery of knowledge according to previous exercising records
+  - after every exercise, produce a diagnosis on every knowledge concepts
+
+<div class="mt-12 grid place-items-center grid-cols-1">
+  <img src="/imgs/www23/kt.jpg" alt="KT" class="h-48" />
+</div>
+
+---
+
+# How is Knowledge Tracing done?
+
+- Knowledge mastery has no GT
+  - assumption: if a model traces knowledge mastery better, it should be able to more accurately predict whether a student answers the next question correctly
+  - _knowlege tracing_ $\to$ _next performance prediction_
+- Two problems:
+  - generating explicit knowledge mastery diagnosis is non-trivial
+  - more sensitive to response patterns in the exercising history
+- What can we do about them?
+
+---
+
+# A new paradigm
+
+<div class="mt-16 grid grid-cols-2 place-items-center text-center">
+  <div class="grid gap-2 place-items-center">
+    <div class="border px-2">exercising history</div>
+    <div class="flex items-center"><span class="ml-11 text-3xl">↓</span><span>predict</span></div>
+    <div class="border w-36 px-2">next performance prediction</div>
+  </div>
+  <div class="grid gap-2 place-items-center">
+    <div class="border px-2">exercising history</div>
+    <div class="flex items-center"><span class="ml-11 text-3xl">↓</span><span>diagnose</span></div>
+    <div class="border px-2">knowlege states</div>
+    <div class="flex gap-2">
+      <div class="flex items-center"><span>read-out</span><span class="text-3xl">↓</span></div>
+      <div class="flex items-center"><span class="ml-11 text-3xl">↓</span><span>contrastive</span></div>
+    </div>
+    <div class="flex gap-2 -ml-8">
+      <div class="border w-36 px-2">next performance prediction</div>
+      <div class="border grid place-items-center px-2">state stablization</div>
+    </div>
+  </div>
+</div>
+
+---
+
+# Our contributions
+
+- We are the first to design a Transformer-based architecture that _explicitly_ diagnose knowledge mastery.
+- We purpose the Temporal Cumulative Attention, and build two-level extractors for diagnosis purposes.
+- We ensure stable knowledge tracing with a constrastive loss, so that it is less sensitive to patterns.
+
+<div class="mt-8 grid place-items-center">
+  <img
+    src="/imgs/www23/arch.png"
+    alt="architecture"
+    class="h-56 outline outline-gray-200"
+  />
+</div>
+
+---
+
+# DTransformer: the model
+
+- the building block: Temporal Cumulative Attention (TCA)
+- two-level extractor:
+  - question level: collect experiences relavant to each question to get question mastery
+  - knowledge level: collect question mastery results that are relavant to each knowledge concept
+
+<div class="mt-6 grid place-items-center relative">
+  <img
+    src="/imgs/www23/arch.png"
+    alt="architecture"
+    class="h-56 outline outline-gray-200"
+  />
+  <div class="absolute border-4 border-red-600 top-0 left-50 right-94 bottom-0"></div>
+</div>
+
+---
+
+# DTransformer: the training process
+
+- based on the problems we want to solve, the training process consists of two parts:
+  - next performance prediction with read-out mechanism
+  - stablize knowledge states with CL
+  - this ensures the knowledge states to be both accurate and stable
+
+<div class="mt-6 grid place-items-center relative">
+  <img
+    src="/imgs/www23/arch.png"
+    alt="architecture"
+    class="h-56 outline outline-gray-200"
+  />
+  <div class="absolute border-4 border-red-600 top-0 left-95 right-50 bottom-0"></div>
+</div>
+
+---
+
+# DTransformer: inference and tracing
+
+- How do we get the explicit diagnosis?
+- with the read-out mechanism, we can:
+  - predict performance on any questions
+  - estimate/diagnose mastery on any knowledge concepts
+- explicit knowledge tracing:
+  - read-out knowledge mastery on every step
+  - see Appendix A.4 of our paper
+
+---
+
+# Experiments
+
+- overall performance on next performance prediction task
+- KT stability
+
+<div class="mt-4 grid place-items-center grid-cols-2">
+  <img src="/imgs/www23/exp1.png" alt="overall performance" class="h-48" />
+  <img src="/imgs/www23/exp2.png" alt="T+N prediction" class="h-36" />
+</div>
+
+---
+
+# Case study
+
+- the result of knowledge tracing for a student, on five knowledge concepts
+- Temporal Cumulative Attention (TCA) visualized
+
+<div class="mt-4 grid place-items-center grid-cols-1">
+  <img src="/imgs/www23/exp3.png" alt="visualizations" class="h-64" />
+</div>
+
+---
+
+# Thank you!
+
+More resources and information about educational data mining:
+
+- BASE group: &nbsp;[`base.ustc.edu.cn`](https://base.ustc.edu.cn)
+- My website (and this slides): &nbsp;[`yxonic.github.io`](https://yxonic.github.io)
+- My Twitter / GitHub: &nbsp;[`@yxonic`](https://github.com/yxonic)
