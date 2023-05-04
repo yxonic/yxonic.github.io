@@ -264,10 +264,11 @@
       "src/slides/open-source-llms.page.mdx",
       "src/slides/resume.page.mdx",
       "src/slides/www23-promo.page.mdx",
+      "src/slides/www23.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-server-routing.7c742f17.js",
+    "file": "assets/entries/entry-server-routing.3abaebac.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -284,10 +285,11 @@
       "src/slides/open-source-llms.page.mdx",
       "src/slides/resume.page.mdx",
       "src/slides/www23-promo.page.mdx",
+      "src/slides/www23.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-client-routing.778e7ed3.js",
+    "file": "assets/entries/entry-client-routing.8300268c.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -313,7 +315,7 @@
     "src": "src/pages/projects.page.md"
   },
   "src/pages/publications.page.vue": {
-    "file": "assets/entries/src_pages_publications.page.43e491fb.js",
+    "file": "assets/entries/src_pages_publications.page.ff7abdf7.js",
     "imports": [
       "_chunk-55bbd34f.js"
     ],
@@ -371,8 +373,18 @@
     "isEntry": true,
     "src": "src/slides/www23-promo.page.mdx"
   },
+  "src/slides/www23.page.mdx": {
+    "file": "assets/entries/src_slides_www23.page.ad82c7b0.js",
+    "imports": [
+      "_chunk-4160ade9.js",
+      "_chunk-55bbd34f.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/slides/www23.page.mdx"
+  },
   "vpage/renderer/_default.page.client.css": {
-    "file": "assets/static/default.page.client.5a524b67.css",
+    "file": "assets/static/default.page.client.dc87656c.css",
     "src": "vpage/renderer/_default.page.client.css"
   },
   "vpage/renderer/_default.page.client.ts": {
@@ -438,9 +450,9 @@
       "assets/static/KaTeXTypewriter-Regular.f01f3e87.ttf"
     ],
     "css": [
-      "assets/static/default.page.client.5a524b67.css"
+      "assets/static/default.page.client.dc87656c.css"
     ],
-    "file": "assets/entries/vpage_renderer_default.page.client.89483027.js",
+    "file": "assets/entries/vpage_renderer_default.page.client.5c70a1e7.js",
     "imports": [
       "_chunk-55bbd34f.js"
     ],
