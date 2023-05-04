@@ -1,4 +1,4 @@
-import{t as i,_ as s}from"../chunks/chunk-4160ade9.js";import{h as e}from"../chunks/chunk-55bbd34f.js";const l={title:"WWW '23 Tracing Knowledge Instead of Patterns",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("div",{class:"text-left"},[`
+import{t as i,_ as s}from"../chunks/chunk-4160ade9.js";import{h as e}from"../chunks/chunk-55bbd34f.js";const r={title:"WWW '23 Tracing Knowledge Instead of Patterns",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("div",{class:"text-left"},[`
 `,e("h1",{},["Tracing Knowledge Instead of Patterns: Stable Knowledge Tracing with Diagnostic Transformer"]),`
 `,e("p",{},["Yu Yin*, Le Dai*, Zhenya Huang, Shuanghong Shen, Fei Wang, Qi Liu, Enhong Chen, Xin Li"]),`
 `]),`
@@ -147,9 +147,9 @@ import{t as i,_ as s}from"../chunks/chunk-4160ade9.js";import{h as e}from"../chu
 `,e("div",{class:"mt-4 grid place-items-center grid-cols-1"},[`
   `,e("img",{src:"/imgs/www23/exp3.png",alt:"visualizations",class:"h-64"},[]),`
 `])]),config:void 0});n.push({component:()=>e("div",{},[e("h1",{},["Thank you!"]),`
-`,e("p",{},["More resources and information about educational data mining:"]),`
+`,e("p",{},["more resources and information about educational data mining:"]),`
 `,e("ul",{},[`
-`,e("li",{},["BASE group:  ",e("a",{href:"https://base.ustc.edu.cn"},[e("code",{},["base.ustc.edu.cn"])])]),`
+`,e("li",{},["Source code:  ",e("a",{href:"https://github.com/yxonic/DTransformer"},[e("code",{},["github.com/yxonic/DTransformer"])])]),`
 `,e("li",{},["My website (and this slides):  ",e("a",{href:"https://yxonic.github.io"},[e("code",{},["yxonic.github.io"])])]),`
 `,e("li",{},["My Twitter / GitHub:  ",e("a",{href:"https://github.com/yxonic"},[e("code",{},["@yxonic"])])]),`
-`])]),config:void 0});const t={setup(){return()=>e(s,{pages:n,theme:i})}};t.__hmrId="377996a4";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/www23.page.mdx";export{t as default,l as frontmatter,n as pages};
+`])]),config:void 0});const t={setup(){return()=>e(s,{pages:n,theme:i})}};t.__hmrId="377996a4";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/www23.page.mdx";export{t as default,r as frontmatter,n as pages};
