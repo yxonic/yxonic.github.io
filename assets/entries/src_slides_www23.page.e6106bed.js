@@ -66,16 +66,28 @@ import{t as i,_ as s}from"../chunks/chunk-4160ade9.js";import{h as e}from"../chu
 `,e("div",{class:"mt-16 grid grid-cols-2 place-items-center text-center"},[`
   `,e("div",{class:"grid gap-2 place-items-center"},[`
     `,e("div",{class:"border px-2"},["exercising history"]),`
-    `,e("div",{class:"flex items-center"},[e("span",{class:"ml-11 text-3xl"},["↓"]),e("span",{},["predict"])]),`
+    `,e("div",{class:"flex items-center"},[`
+      `,e("span",{class:"ml-11 text-3xl"},["↓"]),`
+      `,e("span",{},["predict"]),`
+    `]),`
     `,e("div",{class:"border w-36 px-2"},["next performance prediction"]),`
   `]),`
   `,e("div",{class:"grid gap-2 place-items-center"},[`
     `,e("div",{class:"border px-2"},["exercising history"]),`
-    `,e("div",{class:"flex items-center"},[e("span",{class:"ml-11 text-3xl"},["↓"]),e("span",{},["diagnose"])]),`
+    `,e("div",{class:"flex items-center"},[`
+      `,e("span",{class:"ml-11 text-3xl"},["↓"]),`
+      `,e("span",{},["diagnose"]),`
+    `]),`
     `,e("div",{class:"border px-2"},["knowlege states"]),`
     `,e("div",{class:"flex gap-2"},[`
-      `,e("div",{class:"flex items-center"},[e("span",{},["read-out"]),e("span",{class:"text-3xl"},["↓"])]),`
-      `,e("div",{class:"flex items-center"},[e("span",{class:"ml-11 text-3xl"},["↓"]),e("span",{},["contrastive"])]),`
+      `,e("div",{class:"flex items-center"},[`
+        `,e("span",{},["read-out"]),`
+        `,e("span",{class:"text-3xl"},["↓"]),`
+      `]),`
+      `,e("div",{class:"flex items-center"},[`
+        `,e("span",{class:"ml-11 text-3xl"},["↓"]),`
+        `,e("span",{},["contrastive"]),`
+      `]),`
     `]),`
     `,e("div",{class:"flex gap-2 -ml-8"},[`
       `,e("div",{class:"border w-36 px-2"},["next performance prediction"]),`

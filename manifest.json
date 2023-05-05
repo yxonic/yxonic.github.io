@@ -268,7 +268,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-server-routing.9d4270d0.js",
+    "file": "assets/entries/entry-server-routing.ab52e2b6.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -289,7 +289,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-client-routing.65b5b77b.js",
+    "file": "assets/entries/entry-client-routing.24758e10.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -334,7 +334,7 @@
     "src": "src/slides/devops.page.mdx"
   },
   "src/slides/interview.page.mdx": {
-    "file": "assets/entries/src_slides_interview.page.84ce52fc.js",
+    "file": "assets/entries/src_slides_interview.page.1f6fae78.js",
     "imports": [
       "_chunk-4160ade9.js",
       "_chunk-55bbd34f.js"
@@ -374,7 +374,7 @@
     "src": "src/slides/www23-promo.page.mdx"
   },
   "src/slides/www23.page.mdx": {
-    "file": "assets/entries/src_slides_www23.page.eab8ebac.js",
+    "file": "assets/entries/src_slides_www23.page.e6106bed.js",
     "imports": [
       "_chunk-4160ade9.js",
       "_chunk-55bbd34f.js"
