@@ -1,4 +1,4 @@
-import{t as l,_ as s}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chunks/chunk-55bbd34f.js";const a={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
+import{t as l,_ as s}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chunks/chunk-55bbd34f.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中国科学技术大学陈恩红教授博士生"]),`
@@ -219,5 +219,85 @@ import{t as l,_ as s}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chu
 `,n("li",{},["CLI：组合以上组件，形成用于命令行开启幻灯片的 CLI 工具"]),`
 `]),`
 `]),`
-`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A"]),`
-`]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,a as frontmatter,i as pages};
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A: 大模型改进"]),`
+`,n("ul",{},[`
+`,n("li",{},[`整体效果
+`,n("ul",{},[`
+`,n("li",{},["提高数据质量：爬取高质量来源，数据精细化预处理，设计标注任务"]),`
+`,n("li",{},["模型角度：GLM 多种范式训练，增加模型容量，增长模型记忆"]),`
+`,n("li",{},["评价指标角度：用更好的评价指标监控模型进展（如引入自评价）"]),`
+`]),`
+`]),`
+`,n("li",{},[`推理能力和代码能力
+`,n("ul",{},[`
+`,n("li",{},["数学题：引入数学解题步骤数据，数据标准化，多模态数据"]),`
+`,n("li",{},["代码：筛选和预处理，增广高质量代码，构造精细任务数据集（如测试代码）"]),`
+`]),`
+`]),`
+`,n("li",{},[`效率角度
+`,n("ul",{},[`
+`,n("li",{},["训练/微调效率：attn 加速、编译优化技术、分布式训练技术、低精度训练、少量参数微调"]),`
+`,n("li",{},["推理速度：参数量化，多终端优化（陈天奇 WebGPU，苹果 M 芯片）"]),`
+`,n("li",{},["迭代效率：建立 pipeline，快速封装验证发布模型，类似 huggingface 的模型和数据集发布平台"]),`
+`]),`
+`]),`
+`,n("li",{},[`适用范围
+`,n("ul",{},[`
+`,n("li",{},["发布不同量级的大模型，小量级专注特定领域，发挥小量级的优势（学习 google 思路）"]),`
+`,n("li",{},["针对检索增强、记忆增强、多轮迭代等应用场景优化模型（如构造相应数据集）"]),`
+`]),`
+`]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A: 多模态"]),`
+`,n("ul",{},[`
+`,n("li",{},[`从图像/文本模型角度
+`,n("ul",{},[`
+`,n("li",{},["模型改进：增强对结构信息的理解"]),`
+`,n("li",{},["效率优化："]),`
+`]),`
+`]),`
+`,n("li",{},[`从多模态 alignment 角度
+`,n("ul",{},[`
+`,n("li",{},["图文 pair 上训练"]),`
+`,n("li",{},["encoder-decoder 训练"]),`
+`,n("li",{},["generative 训练"]),`
+`]),`
+`]),`
+`,n("li",{},[`从数据的角度
+`,n("ul",{},[`
+`,n("li",{},["关联 pairs 数据"]),`
+`,n("li",{},["模态混合的数据"]),`
+`]),`
+`]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A: 大模型源代码中学到什么"]),`
+`,n("ul",{},[`
+`,n("li",{},["代码是对整个算法的最完备和准确的描述，读代码能够最直接、完整地掌握算法"]),`
+`,n("li",{},["最近的一次读代码经历：理解了 PPO 算法，熟悉其实现（核心在于 experience buffer 中放了什么）"]),`
+`,n("li",{},[`从代码中学习一些 best practice
+`,n("ul",{},[`
+`,n("li",{},["数据预处理，参数初始化等"]),`
+`,n("li",{},["运用 einops 等工具更好地表达模型结构/计算"]),`
+`,n("li",{},["效率优化如分布式训练"]),`
+`]),`
+`]),`
+`,n("li",{},[`从代码中产生新的理解
+`,n("ul",{},[`
+`,n("li",{},["CL loss 的实现启发：从固定几个类别中选出正确分类 ",n("span",{class:"math math-inline"},[n("span",{class:"katex"},[n("span",{class:"katex-mathml"},[n("math",{xmlns:"http://www.w3.org/1998/Math/MathML"},[n("semantics",{},[n("mrow",{},[n("mo",{},["→"])]),n("annotation",{encoding:"application/x-tex"},["\\to"])])])]),n("span",{class:"katex-html","aria-hidden":"true"},[n("span",{class:"base"},[n("span",{class:"strut",style:"height:0.3669em;"},[]),n("span",{class:"mrel"},["→"])])])])])," 从任意一些候选中选出最相关的候选"]),`
+`]),`
+`]),`
+`])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["Q&A: 搜索质量改进"]),`
+`,n("ul",{},[`
+`,n("li",{},["几个使用过程中发现的问题和改进角度："]),`
+`,n("li",{},[`短 query
+`,n("ul",{},[`
+`,n("li",{},["同义词：构造同义词表，，训练表征"]),`
+`,n("li",{},["追问：类似 bingchat"]),`
+`]),`
+`]),`
+`,n("li",{},[`生僻 query
+`,n("ul",{},[`
+`,n("li",{},["长 query 缩短"]),`
+`,n("li",{},["模糊搜索：传统模糊搜索技术，向量搜索"]),`
+`]),`
+`]),`
+`]),`
+`]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
