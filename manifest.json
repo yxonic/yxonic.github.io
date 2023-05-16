@@ -268,7 +268,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-server-routing.3a4829c1.js",
+    "file": "assets/entries/entry-server-routing.be302d4b.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -289,7 +289,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-client-routing.ae58565b.js",
+    "file": "assets/entries/entry-client-routing.48e5c543.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -354,7 +354,7 @@
     "src": "src/slides/open-source-llms.page.mdx"
   },
   "src/slides/resume.page.mdx": {
-    "file": "assets/entries/src_slides_resume.page.daa54261.js",
+    "file": "assets/entries/src_slides_resume.page.239b21dd.js",
     "imports": [
       "_chunk-4160ade9.js",
       "_chunk-55bbd34f.js"

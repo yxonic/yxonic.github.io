@@ -43,12 +43,11 @@ import{t as l,_ as s}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chu
 `,n("li",{},[`贡献：
 `,n("ul",{},[`
 `,n("li",{},["从零开始搭建智能在线编程平台 CODIA，使用 Vue + Node.js 设计并实现了初始网站架构和基于 GraphQL 的业务 API，并基于 gRPC 和 Kafka 实现可扩展的微服务架构。"]),`
-`,n("li",{},["制定同时面向学生和教师的产品策略，为学生提供更好的编程学习体验（如在线 IDE、可视化能力诊断等），为教师提供更好的教学辅助（如题目设置、学情分析等）。"]),`
 `,n("li",{},["将教育组的",n("strong",{},["认知诊断"]),"和",n("strong",{},["自适应推荐"]),"等相关研究应用到平台上，指导团队成员将知识追踪和试题推荐模型封装为 gRPC 服务，促进研究的真实场景验证。"]),`
 `,n("li",{},["搭建基于 GitLab 和 Kubernetes 的 DevOps+MLOps 平台，用于 CODIA 的功能开发和持续部署，提高团队工作效率、降低协作成本。"]),`
-`,n("li",{},["已多次作为中科大多门编程和算法课程的教学平台，为相关专业的教师和学生提供更好的学习体验。"]),`
 `]),`
 `]),`
+`,n("li",{},["总结：像一个创业项目，要面面俱到。从零搭建一个完整的架构和开发 pipeline 很有挑战，但也很有意思。虽然是一个研究团队，但会按照企业级的标准去思考和实施，过程中获得了对全局架构的理解。"]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["CODIA 展示"]),`
 `,n("div",{class:"mt-4 grid place-items-center grid-cols-2 gap-y-8"},[`
   `,n("img",{src:"/imgs/resume/codia_home.png",alt:"CODIA home",class:"h-40 outline outline-gray-300"},[]),`
@@ -299,5 +298,4 @@ import{t as l,_ as s}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chu
 `,n("li",{},["模糊搜索：传统模糊搜索技术，向量搜索"]),`
 `]),`
 `]),`
-`]),`
-`]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
+`])]),config:void 0});i.push({component:()=>n("div",{},[]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
