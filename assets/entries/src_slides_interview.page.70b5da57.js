@@ -4,7 +4,7 @@ import{t as l,_ as o}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chu
 `,n("li",{},["深挖经历"]),`
 `,n("li",{},["基础知识"]),`
 `,n("li",{},["算法题"]),`
-`,n("li",{},["新工作适配"]),`
+`,n("li",{},["behavioral"]),`
 `])]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["深挖经历：QuesNet"]),`
 `,n("ul",{},[`
 `,n("li",{},["简单介绍"]),`
@@ -46,12 +46,16 @@ import{t as l,_ as o}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chu
 `,n("li",{},["系统有上线吗？上线分哪些模块呢？流程大致是什么样的？"]),`
 `,n("li",{},["最终效果好吗？怎么去检验最终的效果？"]),`
 `,n("li",{},["复盘：如果现在去做会怎么做？分哪几步？"]),`
-`])]),config:void 0});i.push({component:()=>n("h1",{},["深挖经历：华为比赛"]),config:void 0});i.push({component:()=>n("h1",{},["深挖经历：金融商务组"]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["新工作适配"]),`
+`])]),config:void 0});i.push({component:()=>n("h1",{},["深挖经历：华为比赛"]),config:void 0});i.push({component:()=>n("h1",{},["深挖经历：金融商务组"]),config:void 0});i.push({component:()=>n("h1",{},["基础知识"]),config:void 0});i.push({component:()=>n("h1",{},["算法题"]),config:void 0});i.push({component:()=>n("div",{},[n("h1",{},["behavioral"]),`
 `,n("ul",{},[`
+`,n("li",{},["之前的工作进一步怎么做？"]),`
+`,n("li",{},["之前工作中最大的困难是什么？怎么解决的？"]),`
+`,n("li",{},["我们在做 xxx，你感兴趣吗？"]),`
 `,n("li",{},["如果给你 xxx 问题，你会怎么做？"]),`
-`,n("li",{},["你可以为我们团队带来什么？"]),`
+`,n("li",{},["你可以为我们团队带来什么不一样的东西？"]),`
+`,n("li",{},["你对我们的产品是什么看法？痛点是什么？怎么改进？"]),`
 `,n("li",{},["你怎么理解我们在做的 xxx 事情？"]),`
-`,n("li",{},["针对产品现在的形态，你有什么改进的想法？"]),`
 `,n("li",{},["对于我们在做的事，你对具体哪些方面会比较感兴趣呢？"]),`
+`,n("li",{},["你的有什么业余爱好？"]),`
 `,n("li",{},["关于我们你有什么想问的吗？（传递出兴趣和积极性的机会）"]),`
 `])]),config:void 0});const e={setup(){return()=>n(o,{pages:i,theme:l})}};e.__hmrId="4d481f5b";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/interview.page.mdx";export{e as default,c as frontmatter,i as pages};

@@ -259,16 +259,18 @@
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
       "src/pages/publications.page.vue",
+      "src/slides/bevy.page.mdx",
       "src/slides/devops.page.mdx",
       "src/slides/interview.page.mdx",
       "src/slides/open-source-llms.page.mdx",
+      "src/slides/project.page.mdx",
       "src/slides/resume.page.mdx",
       "src/slides/www23-promo.page.mdx",
       "src/slides/www23.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-server-routing.be302d4b.js",
+    "file": "assets/entries/entry-server-routing.6a711c78.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -280,16 +282,18 @@
       "src/pages/index.page.md",
       "src/pages/projects.page.md",
       "src/pages/publications.page.vue",
+      "src/slides/bevy.page.mdx",
       "src/slides/devops.page.mdx",
       "src/slides/interview.page.mdx",
       "src/slides/open-source-llms.page.mdx",
+      "src/slides/project.page.mdx",
       "src/slides/resume.page.mdx",
       "src/slides/www23-promo.page.mdx",
       "src/slides/www23.page.mdx",
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-client-routing.48e5c543.js",
+    "file": "assets/entries/entry-client-routing.2c607aca.js",
     "imports": [
       "_chunk-55f9c175.js"
     ],
@@ -323,6 +327,16 @@
     "isEntry": true,
     "src": "src/pages/publications.page.vue"
   },
+  "src/slides/bevy.page.mdx": {
+    "file": "assets/entries/src_slides_bevy.page.21ee2125.js",
+    "imports": [
+      "_chunk-4160ade9.js",
+      "_chunk-55bbd34f.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/slides/bevy.page.mdx"
+  },
   "src/slides/devops.page.mdx": {
     "file": "assets/entries/src_slides_devops.page.0428370d.js",
     "imports": [
@@ -334,7 +348,7 @@
     "src": "src/slides/devops.page.mdx"
   },
   "src/slides/interview.page.mdx": {
-    "file": "assets/entries/src_slides_interview.page.209a0f77.js",
+    "file": "assets/entries/src_slides_interview.page.70b5da57.js",
     "imports": [
       "_chunk-4160ade9.js",
       "_chunk-55bbd34f.js"
@@ -352,6 +366,16 @@
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "src/slides/open-source-llms.page.mdx"
+  },
+  "src/slides/project.page.mdx": {
+    "file": "assets/entries/src_slides_project.page.0a4fc322.js",
+    "imports": [
+      "_chunk-4160ade9.js",
+      "_chunk-55bbd34f.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/slides/project.page.mdx"
   },
   "src/slides/resume.page.mdx": {
     "file": "assets/entries/src_slides_resume.page.239b21dd.js",
