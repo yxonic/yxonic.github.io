@@ -1,4 +1,4 @@
-import{t as n,_ as i}from"../chunks/chunk-4160ade9.js";import{h as e}from"../chunks/chunk-55bbd34f.js";const s={theme:"./theme/basic",title:"Project Ideas",layout:"cover"},t=[];t.push({component:()=>e("div",{},[e("h1",{},["Project Ideas"]),`
+import{t as n,_ as i}from"../chunks/chunk-aec62340.js";import{h as e}from"../chunks/chunk-5cf4a0e1.js";const s={theme:"./theme/basic",title:"Project Ideas",layout:"cover"},t=[];t.push({component:()=>e("div",{},[e("h1",{},["Project Ideas"]),`
 `,e("p",{},["@yxonic & @lem0nle"])]),config:{theme:"./theme/basic",title:"Project Ideas",layout:"cover"}});t.push({component:()=>e("div",{},[e("h1",{},["Ideas"]),`
 `,e("ul",{},[`
 `,e("li",{},["高性能计算"]),`

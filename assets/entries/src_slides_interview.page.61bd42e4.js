@@ -1,4 +1,4 @@
-import{t as l,_ as o}from"../chunks/chunk-4160ade9.js";import{h as n}from"../chunks/chunk-55bbd34f.js";const c={title:"Interview Preparation",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Interview Preparation"]),`
+import{t as l,_ as o}from"../chunks/chunk-aec62340.js";import{h as n}from"../chunks/chunk-5cf4a0e1.js";const c={title:"Interview Preparation",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Interview Preparation"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"Interview Preparation",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["面试问题类型"]),`
 `,n("ul",{},[`
 `,n("li",{},["深挖经历"]),`
