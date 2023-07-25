@@ -271,7 +271,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-server-routing.4629fd50.js",
+    "file": "assets/entries/entry-server-routing.c1b07893.js",
     "imports": [
       "_chunk-72b7e08f.js"
     ],
@@ -295,7 +295,7 @@
       "vpage/renderer/_error.page.vue",
       "vpage/renderer/_default.page.client.ts"
     ],
-    "file": "assets/entries/entry-client-routing.e0e2e08c.js",
+    "file": "assets/entries/entry-client-routing.fc930e28.js",
     "imports": [
       "_chunk-72b7e08f.js"
     ],
@@ -330,7 +330,7 @@
     "src": "src/pages/publications.page.vue"
   },
   "src/slides/bevy.page.mdx": {
-    "file": "assets/entries/src_slides_bevy.page.d4800415.js",
+    "file": "assets/entries/src_slides_bevy.page.ee409ac2.js",
     "imports": [
       "_chunk-aec62340.js",
       "_chunk-5cf4a0e1.js"

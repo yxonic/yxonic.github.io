@@ -1,6 +1,7 @@
-import{t as o,_ as t}from"../chunks/chunk-aec62340.js";import{h as n}from"../chunks/chunk-5cf4a0e1.js";const d={title:"Learn Bevy",theme:"./theme/basic",layout:"cover"},e=[];e.push({component:()=>n("div",{},[n("h1",{},["Learn Bevy"]),`
+import{t,_ as o}from"../chunks/chunk-aec62340.js";import{h as n}from"../chunks/chunk-5cf4a0e1.js";const s={title:"Learn Bevy",theme:"./theme/basic",layout:"cover"},e=[];e.push({component:()=>n("div",{},[n("h1",{},["Learn Bevy"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"Learn Bevy",theme:"./theme/basic",layout:"cover"}});e.push({component:()=>n("div",{},[n("h1",{},["Content"]),`
 `,n("ul",{},[`
+`,n("li",{},["Introduction"]),`
 `,n("li",{},["Quickstart"]),`
 `,n("li",{},["Development and debugging"]),`
 `,n("li",{},["World"]),`
@@ -12,6 +13,19 @@ import{t as o,_ as t}from"../chunks/chunk-aec62340.js";import{h as n}from"../chu
 `,n("li",{},["Visual effects"]),`
 `,n("li",{},["Audio"]),`
 `,n("li",{},["2D"]),`
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["Introduction"]),`
+`,n("ul",{},[`
+`,n("li",{},["Bevy is a game engine that provides first-class low-level mechanisms"]),`
+`,n("li",{},['Instead of feature-full, Bevy is more like "mechanism-full"']),`
+`,n("li",{},["We may use these mechanisms to create our own features, strategies, fancy ideas, and eventually, ",n("em",{},["games"])]),`
+`,n("li",{},["Building games from low-level mechanisms is overwhelming at first. We want to alleviate this initial pain."]),`
+`,n("li",{},[`This book takes a top-down approach to give you a creator's guidance. We try to answer:
+`,n("ul",{},[`
+`,n("li",{},["How to start creating from scratch?"]),`
+`,n("li",{},["When creating something, what mechanisms can you use?"]),`
+`,n("li",{},["When you want to change something, what parts should you adjust?"]),`
+`]),`
+`]),`
 `])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["Quickstart"]),`
 `,n("ul",{},[`
 `,n("li",{},["Launch the game"]),`
@@ -28,6 +42,7 @@ import{t as o,_ as t}from"../chunks/chunk-aec62340.js";import{h as n}from"../chu
 `,n("li",{},["Debugging"]),`
 `])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["World"]),`
 `,n("ul",{},[`
+`,n("li",{},["Scene"]),`
 `,n("li",{},["Coordinates and transform"]),`
 `,n("li",{},["Spawn and discard"]),`
 `,n("li",{},["Time"]),`
@@ -53,6 +68,7 @@ import{t as o,_ as t}from"../chunks/chunk-aec62340.js";import{h as n}from"../chu
 `,n("ul",{},[`
 `,n("li",{},["Custom events"]),`
 `,n("li",{},["State machine"]),`
+`,n("li",{},["Scheduling"]),`
 `,n("li",{},["Database"]),`
 `])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["UI"]),`
 `,n("ul",{},[`
@@ -70,4 +86,9 @@ import{t as o,_ as t}from"../chunks/chunk-aec62340.js";import{h as n}from"../chu
 `,n("li",{},["Blend"]),`
 `,n("li",{},["Generate"]),`
 `,n("li",{},["3D audio"]),`
-`])]),config:void 0});e.push({component:()=>n("h1",{},["2D"]),config:void 0});const i={setup(){return()=>n(t,{pages:e,theme:o})}};i.__hmrId="50a4355e";i.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/bevy.page.mdx";export{i as default,d as frontmatter,e as pages};
+`])]),config:void 0});e.push({component:()=>n("div",{},[n("h1",{},["2D"]),`
+`,n("ul",{},[`
+`,n("li",{},["2D world"]),`
+`,n("li",{},["Graphics"]),`
+`,n("li",{},[]),`
+`])]),config:void 0});const i={setup(){return()=>n(o,{pages:e,theme:t})}};i.__hmrId="50a4355e";i.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/bevy.page.mdx";export{i as default,s as frontmatter,e as pages};
