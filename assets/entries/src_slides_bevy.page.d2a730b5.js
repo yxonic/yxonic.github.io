@@ -128,8 +128,8 @@ opt-level = 3
 `,e("li",{},[`The mechanism of a camera
 `,e("ul",{},[`
 `,e("li",{},["without a camera, the world is just a bunch of data describing what everything is and where they are"]),`
-`,e("li",{},["a camera uses such information to calculate what we should have seen from a certain point of view"]),`
-`,e("li",{},["with object shapes, positions, environment lighting, etc., the camera will compute colors of each pixels on the screen, as if we are seeing things directly from there; this process is called ",e("em",{},["rendering"])]),`
+`,e("li",{},["a camera uses such information to calculate what we should see from a certain point of view"]),`
+`,e("li",{},["specifically, given object shapes, positions, environment lightings, etc., the camera will compute colors of each pixels on the screen, as if we were seeing things directly from there; this process is called ",e("em",{},["rendering"])]),`
 `]),`
 `]),`
 `])]),config:void 0});n.push({component:()=>e("div",{},[e("h1",{},["See through a camera ",e("code",{},["ch01/step-3"])]),`
@@ -145,7 +145,7 @@ opt-level = 3
 `,e("li",{},[e("a",{href:"https://github.com/bevyengine/bevy/blob/main/examples/3d/load_gltf.rs"},["https://github.com/bevyengine/bevy/blob/main/examples/3d/load_gltf.rs"])]),`
 `]),`
 `]),`
-`,e("li",{},["Also change background color [TODO]"]),`
+`,e("li",{},["Also change background color to give us a more lively feel [TODO]"]),`
 `])]),config:void 0});n.push({component:()=>e("div",{},[e("h1",{},["Move objects"]),`
 `,e("ul",{},[`
 `,e("li",{},["Write a system to move the fox around [TODO]"]),`
