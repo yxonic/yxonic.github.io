@@ -24,35 +24,181 @@ layout: cover
 - Visual effects
 - Audio
 - 2D
+- Game release
 
 ---
 
 # Introduction
 
-- Bevy is a game engine that provides first-class low-level mechanisms
+- Bevy is a game engine that provides first-class low-level mechanisms for game developing
 - Instead of feature-full, Bevy is more like "mechanism-full"
-- We may use these mechanisms to create our own features, strategies, fancy ideas, and eventually, *games*
+- We may use these mechanisms to create our own features, strategies, fancy ideas, and eventually, _games_
 - Building games from low-level mechanisms is overwhelming at first. We want to alleviate this initial pain.
-- This book takes a top-down approach to give you a creator's guidance. We try to answer:
+- This guide takes a top-down approach to give you a creator's guidance to learning Bevy.
+- Some questions I will try to answer:
   - How to start creating from scratch?
   - When creating something, what mechanisms can you use?
   - When you want to change something, what parts should you adjust?
 
 ---
 
-# Quickstart
+# Brief introduction to Bevy
+
+- Bevy is a refreshingly simple data-driven game engine built in Rust. _(https://bevyengine.org)_
+- Compared with other game engines, Bevy is representing and tracking the internal data more elegantly
+  - it helps you materialize the imaginary game world as concrete data
+  - it organizes data as Entity-Component-System (ECS), a time-tested paradigm seen in many other engines
+  - ...yet it leverages advanced Rust features to make it refreshingly simple for us to use
+- How is my experience working with Bevy?
+  - Accurate: I fully control the code, the code fully controls the game world
+  - Confident: less unexpected behaviors or mysterious bugs, thanks to Rust and Bevy's clear architecture
+  - Creative: put things together creatively, or craft your own features, all as I want
+  - Agile: I can build, publish and iterate your game real quick
+
+---
+
+# Quickstart `ch01`
 
 - Launch the game
-- Import a scene
+- Import a model
 - See through a camera
 - Move objects
 - Respond to events
-- Maintain states
+- Manage behaviors with states
+- Recap
+
+---
+
+# Launch the game `ch01/step-1`
+
+- Install Rust: [Rust official guide](https://www.rust-lang.org/learn/get-started), [Bevy Book installing rust and OS dependencies](https://bevyengine.org/learn/book/getting-started/setup/#rust-setup)
+- Start a new project:
+  ```bash
+  cargo new learn_bevy_game
+  cd learn_bevy_game
+  ```
+- Add Bevy as dependency (with a link-time optimization):
+  ```bash
+  cargo add bevy --features dynamic_linking
+  ```
+- Apply an optimization for debugging experience: add the following lines to `Cargo.toml`
+  ```toml
+  [profile.dev.package."*"]
+  opt-level = 3
+  ```
+- Test the game (which is just a hello world program for now):
+  ```bash
+  cargo run # this could take some time; later builds would be a lot faster
+  ```
+- Read more about the optimizations and building commands: [bevy book](https://bevyengine.org/learn/book/getting-started/setup/), [unofficial bevy cheatbook](https://bevy-cheatbook.github.io/pitfalls/performance.html)
+
+---
+
+# Import a model `ch01/step-2-1`
+
+- Setup a window, a main game loop, and other main features with `DefaultPlugins`
+  - Bevy at its core is just a skeleton for supporting the ECS paradigm
+  - a new Bevy app contains nothing; we add ECS to it to give it meanings
+  - a plugin is a pack of ECS items that work together to handle a specific aspect of the game
+  - window management, game loop, input management, logging, are all supported through some default plugins
+
+---
+
+# Import a model `ch01/step-2-2`
+
+- [Download](https://github.com/bevyengine/bevy/raw/main/assets/models/animated/Fox.glb) a model to `assets/models/Fox.glb`
+  - you can design your 3D model _visually_ with software like Blender
+  - then you can export it to formats like glTF (or its binary version `.glb`) to use it _programmatically_ in Bevy
+- Load this model in Bevy app
+  - in the code we add `load_scene_system` at `Startup` phase of the game
+  - scene is kind of like a container; we can put one or more models, lights and cameras together as a scene
+  - here we load a scene with an `AssetServer`, and spawn it in `load_scene_system` (systems are just functions)
+    ```rs
+    commands.spawn(SceneBundle {
+        scene: asset_server.load("models/Fox.glb#Scene0"),
+        ..default()
+    });
+    ```
+- Observe it in the window with a camera
+  - let's set up a default camera for now
+    ```rs
+    commands.spawn(Camera3dBundle::default());
+    ```
+
+---
+
+# Import a model
+
+- Now run the game with `cargo run`, you'll see something like this:
+
+<div class="grid px-32">
+
+![part of the fox](/imgs/bevy/ch01_2_2.png)
+
+</div>
+
+---
+
+# See through a camera
+
+- We are now already seeing the 3D game world in the window, through a _camera_
+- The mechanism of a camera
+  - without a camera, the world is just a bunch of data describing what everything is and where they are
+  - a camera uses such information to calculate what we should have seen from a certain point of view
+  - with object shapes, positions, environment lighting, etc., the camera will compute colors of each pixels on the screen, as if we are seeing things directly from there; this process is called _rendering_
+
+---
+
+# See through a camera `ch01/step-3`
+
+- Let's move our camera to a more comfortable position [TODO]
+  - https://bevy-cheatbook.github.io/features/coords.html
+  - https://bevy-cheatbook.github.io/features/transforms.html
+- Then, we add some lights to make this scene look more natural [TODO]
+  - https://github.com/bevyengine/bevy/blob/main/examples/3d/load_gltf.rs
+- Also change background color [TODO]
+
+---
+
+# Move objects
+
+- Write a system to move the fox around [TODO]
+- Trigger an animation when moving [TODO]
+  - https://github.com/bevyengine/bevy/blob/main/examples/animation/animated_fox.rs
+
+---
+
+# Respond to events
+
+- Bind systems to keyboard events [TODO]
+- The discreteness of time, i.e. frames [TODO]
+
+---
+
+# Manage behaviors with states
+
+- Fox state: running, idle [TODO]
+- Make the fox come back after idling for some while [TODO]
+
+---
+
+# Recap
+
+- Game development mindset
+  - describe the game world
+  - game $\to$ player: what will player see (with rendering)
+  - player $\to$ game: how will our game react to players (with events)
+  - the evolution of the game world: state machines
+
+---
+
+#
 
 ---
 
 # Development and debugging
 
+- Project structure
 - Workflow
 - Asset management
 - Logging
@@ -132,6 +278,11 @@ layout: cover
 
 # 2D
 
-- 2D world
-- Graphics
-- 
+---
+
+# Game release
+
+- Before releasing
+- Build command
+- Optimizations
+- Cross-platform support
