@@ -16,7 +16,7 @@ export interface Publication {
 }
 
 export function useCitation(
-  allPublications: { year: number; list: Publication[] }[]
+  allPublications: { year: number; list: Publication[] }[],
 ) {
   return allPublications.map(({ year, list }) => ({
     year,
@@ -30,11 +30,11 @@ export function useCitation(
         specialNote: latexToUnicode(pub.specialNote || ""),
         title: entry.getFieldAsString("TITLE"),
         authors: (entry.getField("author") as any).authors$.map(
-          (author: any) => author.firstNames + " " + author.lastNames
+          (author: any) => author.firstNames + " " + author.lastNames,
         ),
         bookname: latexToUnicode(
           (entry.getFieldAsString("journal") ||
-            entry.getFieldAsString("booktitle")) as string
+            entry.getFieldAsString("booktitle")) as string,
         ),
         pages:
           entry.getFieldAsString("pages") &&

@@ -1,17 +1,17 @@
 import { renderToString } from "@vue/server-renderer";
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import { createApp } from "../lib/app";
 import type { PageContextServer } from "../lib/context";
 
 export { render };
-// See https://vite-plugin-ssr.com/data-fetching
+// See https://vike.dev/data-fetching
 export const passToClient = ["pageProps", "urlPathname"];
 
 async function render(pageContext: PageContextServer) {
   const app = createApp(pageContext);
   const appHtml = await renderToString(app);
 
-  // See https://vite-plugin-ssr.com/head
+  // See https://vike.dev/head
   const { documentProps, frontmatter } = pageContext.exports;
   const title = documentProps?.title || frontmatter?.title || "VPages App";
   const desc =
@@ -35,7 +35,7 @@ async function render(pageContext: PageContextServer) {
   return {
     documentHtml,
     pageContext: {
-      // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
+      // We can add some `pageContext` here, which is useful if we want to do page redirection https://vike.dev/page-redirection
     },
   };
 }
