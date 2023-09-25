@@ -1,4 +1,4 @@
-import{t as l,_ as s}from"../chunks/chunk-aec62340.js";import{h as n}from"../chunks/chunk-5cf4a0e1.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
+import{t as l,_ as s}from"../chunks/chunk-c19db50d.js";import{h as n}from"../chunks/chunk-fb584783.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中国科学技术大学陈恩红教授博士生"]),`
