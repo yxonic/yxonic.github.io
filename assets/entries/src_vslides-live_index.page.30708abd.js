@@ -1,0 +1,1 @@
+import{P as t,E as a}from"../chunks/chunk-fa73d7b3.js";import{d as o,o as s,c,a as e,w as n,b as r}from"../chunks/chunk-90a40ea9.js";const d={class:"fixed top-0 left-0 right-0 bottom-0 grid grid-cols-2"},i=r("div",null,"test",-1),g=o({__name:"index.page",setup(_){return(l,p)=>(s(),c("div",d,[e(t,{class:"bg-black"},{default:n(()=>[e(a)]),_:1}),i]))}});export{g as default};

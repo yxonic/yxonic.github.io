@@ -1,4 +1,4 @@
-import{t,_ as a}from"../chunks/chunk-c19db50d.js";import{h as e}from"../chunks/chunk-fb584783.js";const l={title:"Learn Bevy",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["Learn Bevy"]),`
+import{t,_ as a}from"../chunks/chunk-5d3539dc.js";import"../chunks/chunk-fa73d7b3.js";import{h as e}from"../chunks/chunk-90a40ea9.js";const r={title:"Learn Bevy",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["Learn Bevy"]),`
 `,e("p",{},["@yxonic"])]),config:{title:"Learn Bevy",theme:"./theme/basic",layout:"cover"}});n.push({component:()=>e("div",{},[e("h1",{},["Content"]),`
 `,e("ul",{},[`
 `,e("li",{},["Introduction"]),`
@@ -231,4 +231,4 @@ opt-level = 3
 `,e("li",{},["Build command"]),`
 `,e("li",{},["Optimizations"]),`
 `,e("li",{},["Cross-platform support"]),`
-`])]),config:void 0});const i={setup(){return()=>e(a,{pages:n,theme:t})}};i.__hmrId="50a4355e";i.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/bevy.page.mdx";export{i as default,l as frontmatter,n as pages};
+`])]),config:void 0});const i={setup(){return()=>e(a,{pages:n,theme:t})}};i.__hmrId="50a4355e";i.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/bevy.page.mdx";export{i as default,r as frontmatter,n as pages};

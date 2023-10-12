@@ -1,4 +1,4 @@
-import{t as l,_ as s}from"../chunks/chunk-c19db50d.js";import{h as n}from"../chunks/chunk-fb584783.js";const o={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
+import{t as l,_ as s}from"../chunks/chunk-5d3539dc.js";import"../chunks/chunk-fa73d7b3.js";import{h as n}from"../chunks/chunk-90a40ea9.js";const r={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中国科学技术大学陈恩红教授博士生"]),`
@@ -298,4 +298,4 @@ import{t as l,_ as s}from"../chunks/chunk-c19db50d.js";import{h as n}from"../chu
 `,n("li",{},["模糊搜索：传统模糊搜索技术，向量搜索"]),`
 `]),`
 `]),`
-`])]),config:void 0});i.push({component:()=>n("div",{},[]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,o as frontmatter,i as pages};
+`])]),config:void 0});i.push({component:()=>n("div",{},[]),config:void 0});const e={setup(){return()=>n(s,{pages:i,theme:l})}};e.__hmrId="3b5dd257";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{e as default,r as frontmatter,i as pages};

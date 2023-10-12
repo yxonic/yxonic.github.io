@@ -1,4 +1,4 @@
-import{t as e,_ as a}from"../chunks/chunk-c19db50d.js";import{h as n}from"../chunks/chunk-fb584783.js";const l={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Open-Source LLMs"]),`
+import{t as e,_ as a}from"../chunks/chunk-5d3539dc.js";import"../chunks/chunk-fa73d7b3.js";import{h as n}from"../chunks/chunk-90a40ea9.js";const c={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Open-Source LLMs"]),`
 `,n("p",{},["@yxonic & @lem0nle"])]),config:{title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["Contents"]),`
 `,n("ul",{},[`
 `,n("li",{},["What is LLM?"]),`
@@ -73,4 +73,4 @@ import{t as e,_ as a}from"../chunks/chunk-c19db50d.js";import{h as n}from"../chu
 `,n("li",{},[n("a",{href:"https://github.com/sigoden/aichat"},["https://github.com/sigoden/aichat"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/zurawiki/gptcommit"},["https://github.com/zurawiki/gptcommit"])]),`
 `,n("li",{},[n("a",{href:"https://github.com/keijiro/AICommand"},["https://github.com/keijiro/AICommand"])]),`
-`])]),config:void 0});const t={setup(){return()=>n(a,{pages:i,theme:e})}};t.__hmrId="2f1e2fef";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/open-source-llms.page.mdx";export{t as default,l as frontmatter,i as pages};
+`])]),config:void 0});const t={setup(){return()=>n(a,{pages:i,theme:e})}};t.__hmrId="2f1e2fef";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/open-source-llms.page.mdx";export{t as default,c as frontmatter,i as pages};
