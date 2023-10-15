@@ -21,6 +21,42 @@
         </label>
       </div>
     </div>
+
+    <div class="mt-12 mx-4 flex flex-wrap justify-center space-x-12">
+      <fretboard
+        class="pb-12"
+        :real="false"
+        :scale-length="3000"
+        :height="120"
+        :min-fret="0"
+        :max-fret="3"
+        :n-strings="6"
+        :even-factor="0.5"
+      />
+      <fretboard
+        class="pb-12"
+        :real="false"
+        :scale-length="3000"
+        :height="120"
+        :min-fret="2"
+        :max-fret="6"
+        :n-strings="6"
+        :even-factor="1"
+      />
+      <fretboard
+        :real="false"
+        :scale-length="3000"
+        :height="120"
+        :min-fret="0"
+        :max-fret="7"
+        :n-strings="6"
+        :even-factor="1"
+      />
+    </div>
+
+    <div class="mt-8">
+      <fretboard :min-fret="2" :max-fret="5" :n-strings="4" :even-factor="1" />
+    </div>
   </article>
 </template>
 
