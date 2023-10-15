@@ -6,6 +6,7 @@
         :fretless="config.fretless"
         :even-factor="config.isEven ? 0.8 : 0"
         :marker="config.marker"
+        class="shadow-gray-500 shadow-lg"
       />
       <div class="mt-8 flex justify-center space-x-4">
         <label>
