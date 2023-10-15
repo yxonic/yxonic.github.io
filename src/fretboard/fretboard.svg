@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3120" height="500">
+  <defs>
+    <linearGradient id="board" x1="0" y1="100%" x2="0" y2="0">
+      <stop offset="0%" stop-color="#100" />
+      <stop offset="0.8%" stop-color="#877" />
+      <stop offset="1.6%" stop-color="#402028" />
+      <stop offset="98.5%" stop-color="#644" />
+      <stop offset="99.5%" stop-color="#988" />
+      <stop offset="100%" stop-color="#402028" />
+    </linearGradient>
+
+    <filter id="shadow" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="0" dy="10" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+
+  <g>
+    <rect width="3120" height="470" fill="url(#board)" filter="url(#shadow)" />
+
+    <svg width="3120" height="490" x="80">
+      <defs>
+        <linearGradient id="fret" x1="0" y1="0" x2="100%" y2="0">
+          <stop offset="0%" stop-color="#000" />
+          <stop offset="50%" stop-color="#eee" />
+          <stop offset="100%" stop-color="#aaa" />
+        </linearGradient>
+      </defs>
+
+      <svg>
+        <circle cx="536.38" cy="235" r="23" fill="#ddd" />
+        <circle cx="914.25" cy="235" r="23" fill="#ddd" />
+        <circle cx="1250.89" cy="235" r="23" fill="#ddd" />
+        <circle cx="1550.81" cy="235" r="23" fill="#ddd" />
+        <circle cx="1940.47" cy="110" r="23" fill="#ddd" />
+        <circle cx="1940.47" cy="360" r="23" fill="#ddd" />
+        <circle cx="2268.13" cy="235" r="23" fill="#ddd" />
+        <circle cx="2457.07" cy="235" r="23" fill="#ddd" />
+        <circle cx="2625.4" cy="235" r="23" fill="#ddd" />
+        <circle cx="2775.36" cy="235" r="23" fill="#ddd" />
+        <circle cx="2970.2" cy="110" r="21" fill="#ddd" />
+        <circle cx="2970.2" cy="360" r="21" fill="#ddd" />
+      </svg>
+
+      <svg width="8" height="470" x="220.491722">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="432.384311">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="632.384867">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="821.160805">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="999.342085">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="1167.523309">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="1326.265710">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="1476.099022">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="1617.523250">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="1751.010335">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="1877.005734">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="1995.929902">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2108.179697">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2214.129705">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2314.133488">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2408.524765">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2497.618528">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2581.712087">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2661.086069">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2736.005351">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2806.719943">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2873.465825">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2936.465733">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+      <svg width="8" height="470" x="2995.929901">
+        <rect width="8" height="470" fill="url(#fret)" />
+        <path fill="#eee" d="M0,0 C0,10 8,10 8,0" />
+        <path fill="#aaa" d="M0,470 C0,460 8,460 8,470" />
+      </svg>
+    </svg>
+
+    <svg y="40" width="3120" height="400" filter="url(#shadow)">
+      <defs>
+        <linearGradient id="string" x1="0" y1="100%" x2="0" y2="0">
+          <stop offset="0%" stop-color="#000" />
+          <stop offset="50%" stop-color="#eee" />
+          <stop offset="100%" stop-color="#aaa" />
+        </linearGradient>
+        <pattern id="ring1" width="3" height="6" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="3" height="6" fill="url(#string)" stroke="#333" />
+        </pattern>
+        <pattern id="ring2" width="3.2" height="7.8" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="3.2" height="7.8" fill="url(#string)" stroke="#333" />
+        </pattern>
+        <pattern id="ring3" width="3.4" height="10.2" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="3.4" height="10.2" fill="url(#string)" stroke="#333" />
+        </pattern>
+        <pattern id="ring4" width="3.6" height="12" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="3.6" height="12" fill="url(#string)" stroke="#333" />
+        </pattern>
+      </defs>
+
+      <g>
+        <svg y="0">
+          <rect width="3120" height="6" fill="url(#ring1)" />
+        </svg>
+        <svg y="120">
+          <rect width="3120" height="7.8" fill="url(#ring2)" />
+        </svg>
+        <svg y="248">
+          <rect width="3120" height="10.2" fill="url(#ring3)" />
+        </svg>
+        <svg y="370">
+          <rect width="3120" height="12" fill="url(#ring4)" />
+        </svg>
+      </g>
+    </svg>
+
+    <svg width="100" height="480" x="40" y="-2">
+      <defs>
+        <linearGradient id="box-short" x1="0" y1="100%" x2="0" y2="0">
+          <stop offset="0%" stop-color="#332" />
+          <stop offset="8%" stop-color="#bba" />
+          <stop offset="95%" stop-color="#bba" />
+          <stop offset="100%" stop-color="#ddc" />
+        </linearGradient>
+        <linearGradient id="box-long" x1="0" y1="100%" x2="0" y2="0">
+          <stop offset="0%" stop-color="#332" />
+          <stop offset="3%" stop-color="#bba" />
+          <stop offset="98%" stop-color="#bba" />
+          <stop offset="100%" stop-color="#ddc" />
+        </linearGradient>
+      </defs>
+      <rect width="40" height="40" fill="url(#box-short)" rx="5" ry="5" />
+      <rect y="50" width="40" height="110" fill="url(#box-long)" rx="5" ry="5" />
+      <rect y="173" width="40" height="114" fill="url(#box-long)" rx="5" ry="5" />
+      <rect y="305" width="40" height="104" fill="url(#box-long)" rx="5" ry="5" />
+      <rect y="428" width="40" height="45" fill="url(#box-short)" rx="5" ry="5" />
+    </svg>
+  </g>
+</svg>
