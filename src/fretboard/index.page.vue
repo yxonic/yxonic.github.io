@@ -5,6 +5,7 @@
         :n-strings="config.moreStrings ? 6 : 4"
         :fretless="config.fretless"
         :even-factor="config.isEven ? 0.8 : 0"
+        :marker="config.marker"
       />
       <div class="mt-8 flex justify-center space-x-4">
         <label>
@@ -19,6 +20,10 @@
           <input type="checkbox" v-model="config.isEven" />
           even fret space
         </label>
+        <label>
+          <input type="checkbox" v-model="config.marker" />
+          marker
+        </label>
       </div>
     </div>
 
@@ -27,17 +32,17 @@
         class="pb-12"
         :real="false"
         :scale-length="3000"
-        :height="120"
+        :height="150"
         :min-fret="0"
         :max-fret="3"
         :n-strings="6"
-        :even-factor="0.5"
+        :even-factor="0"
       />
       <fretboard
         class="pb-12"
         :real="false"
         :scale-length="3000"
-        :height="120"
+        :height="150"
         :min-fret="2"
         :max-fret="6"
         :n-strings="6"
@@ -46,11 +51,12 @@
       <fretboard
         :real="false"
         :scale-length="3000"
-        :height="120"
+        :height="150"
         :min-fret="0"
-        :max-fret="7"
+        :max-fret="12"
         :n-strings="6"
         :even-factor="1"
+        marker
       />
     </div>
 
@@ -68,5 +74,6 @@ const config = reactive({
   moreStrings: false,
   fretless: false,
   isEven: false,
+  marker: true,
 });
 </script>

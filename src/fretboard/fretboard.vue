@@ -78,7 +78,7 @@
       <!-- vertical elements -->
       <svg :x="padX" :width="fretboardRight">
         <!-- markers -->
-        <svg v-if="!fretless" :x="nutWidth">
+        <svg v-if="!fretless && marker" :x="nutWidth">
           <g v-for="i in markerIndex">
             <circle
               v-if="i % 12 !== 0"
@@ -105,7 +105,7 @@
         </svg>
 
         <!-- side markers -->
-        <svg v-if="fretless" :x="nutWidth">
+        <svg v-if="fretless && marker" :x="nutWidth">
           <g v-for="i in markerIndex">
             <circle
               v-if="i % 12 !== 0"
@@ -227,7 +227,7 @@
       "
     >
       <!-- nut -->
-      <svg :x="padX">
+      <svg>
         <line
           :x1="nutWidth"
           :x2="nutWidth"
@@ -239,7 +239,7 @@
       </svg>
 
       <!-- frets -->
-      <svg v-for="i in 24" :x="padX + nutWidth + getFretPos(i)">
+      <svg v-for="i in 24" :x="nutWidth + getFretPos(i)">
         <line
           x1="0"
           x2="0"
@@ -250,12 +250,43 @@
         />
       </svg>
 
+      <!-- markers -->
+      <svg v-if="marker" :x="nutWidth">
+        <g v-for="i in markerIndex">
+          <circle
+            v-if="i % 12 !== 0"
+            :cx="(getFretPos(i - 1) + getFretPos(i)) / 2"
+            :cy="(Math.ceil(nStrings / 2) - 0.5) * stringGap"
+            :r="markerSize"
+          />
+          <g v-else>
+            <circle
+              :cx="(getFretPos(i - 1) + getFretPos(i)) / 2"
+              :cy="
+                stringGap * 0.5 +
+                stringGap * Math.floor(Math.sqrt(nStrings - 1) - 1)
+              "
+              :r="markerSize"
+            />
+            <circle
+              :cx="(getFretPos(i - 1) + getFretPos(i)) / 2"
+              :cy="
+                fretboardWidth -
+                stringGap * 0.5 -
+                stringGap * Math.floor(Math.sqrt(nStrings - 1) - 1)
+              "
+              :r="markerSize"
+            />
+          </g>
+        </g>
+      </svg>
+
       <!-- strings -->
-      <svg :x="fretboardLeft">
+      <svg :x="fretboardLeft - padX">
         <line
           v-for="s in strings"
           :x1="0"
-          :x2="fretboardLength"
+          :x2="fretboardLength + padX * 2"
           :y1="s.y + fretSize / 2"
           :y2="s.y + fretSize / 2"
           stroke="black"
@@ -283,6 +314,7 @@ export interface Props {
   nutWidth?: number;
   fretSize?: number;
   stringGap?: number;
+  marker?: boolean;
 }
 const props = withDefaults(defineProps<Props>(), {
   scaleLength: 4000,
@@ -294,6 +326,7 @@ const props = withDefaults(defineProps<Props>(), {
   fretless: false,
   evenFactor: 0.0,
   stringGap: 80,
+  marker: false,
 });
 
 // configs
@@ -328,6 +361,9 @@ const lastString = computed(() => {
 });
 
 // computed fretboard params
+const fretboardLeft = computed(() => {
+  return props.minFret == 0 ? 0 : getFretPos(props.minFret) + nutWidth.value;
+});
 const fretboardRight = computed(() => {
   return (
     getFretPos(props.maxFret) +
@@ -335,9 +371,6 @@ const fretboardRight = computed(() => {
     fretSize.value / 2 +
     padX.value * 2
   );
-});
-const fretboardLeft = computed(() => {
-  return props.minFret == 0 ? 0 : getFretPos(props.minFret) + nutWidth.value;
 });
 const fretboardLength = computed(() => {
   return fretboardRight.value - fretboardLeft.value;
