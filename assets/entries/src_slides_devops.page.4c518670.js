@@ -1,4 +1,4 @@
-import{t as s,_ as i}from"../chunks/chunk-5d3539dc.js";import"../chunks/chunk-fa73d7b3.js";import{h as e}from"../chunks/chunk-90a40ea9.js";const c={title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["DevOps with GitLab+Kubernetes"]),`
+import{t as s,_ as i}from"../chunks/chunk-d6fe06e1.js";import"../chunks/chunk-3a90f8bd.js";import{h as e}from"../chunks/chunk-b403f1cd.js";const c={title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["DevOps with GitLab+Kubernetes"]),`
 `,e("p",{},["@yxonic"])]),config:{title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"}});n.push({component:()=>e("div",{},[e("h1",{},["Contents"]),`
 `,e("ul",{},[`
 `,e("li",{},["GitLab"]),`

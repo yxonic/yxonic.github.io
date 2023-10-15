@@ -1,4 +1,4 @@
-import{t as i,_ as s}from"../chunks/chunk-5d3539dc.js";import"../chunks/chunk-fa73d7b3.js";import{h as e}from"../chunks/chunk-90a40ea9.js";const l={title:"WWW '23 Tracing Knowledge Instead of Patterns",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("div",{class:"text-left"},[`
+import{t as i,_ as s}from"../chunks/chunk-d6fe06e1.js";import"../chunks/chunk-3a90f8bd.js";import{h as e}from"../chunks/chunk-b403f1cd.js";const l={title:"WWW '23 Tracing Knowledge Instead of Patterns",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("div",{class:"text-left"},[`
 `,e("h1",{},["Tracing Knowledge Instead of Patterns: Stable Knowledge Tracing with Diagnostic Transformer"]),`
 `,e("p",{},["Yu Yin*, Le Dai*, Zhenya Huang, Shuanghong Shen, Fei Wang, Qi Liu, Enhong Chen, Xin Li"]),`
 `]),`

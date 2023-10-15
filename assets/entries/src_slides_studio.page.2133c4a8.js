@@ -1,4 +1,4 @@
-import{t as o,_ as t}from"../chunks/chunk-5d3539dc.js";import"../chunks/chunk-fa73d7b3.js";import{h as n}from"../chunks/chunk-90a40ea9.js";const s={title:"Studio Setup",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("h1",{},["Studio Setup"]),config:{title:"Studio Setup",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["Use cases"]),`
+import{t as o,_ as t}from"../chunks/chunk-d6fe06e1.js";import"../chunks/chunk-3a90f8bd.js";import{h as n}from"../chunks/chunk-b403f1cd.js";const s={title:"Studio Setup",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("h1",{},["Studio Setup"]),config:{title:"Studio Setup",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["Use cases"]),`
 `,n("ul",{},[`
 `,n("li",{},["Gaming"]),`
 `,n("li",{},["Practicing and playing instruments"]),`
