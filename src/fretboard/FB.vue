@@ -1,8 +1,8 @@
 <template>
   <svg
-    class="mx-auto"
-    :height="height"
-    :viewBox="fretboardLeft + ' 0 ' + fretboardLength + ' ' + fretboardWidth"
+    :height="svgHeight"
+    :width="svgWidth"
+    :viewBox="'0 0 ' + width + ' ' + height"
   >
     <defs>
       <linearGradient id="board" x1="0" y1="100%" x2="0" y2="0">
@@ -47,17 +47,17 @@
       </linearGradient>
 
       <pattern
-        v-for="i in strings.length"
+        v-for="i in fretboard.strings"
         :id="'ring' + i"
         width="3"
-        :height="strings[i - 1].h"
+        :height="getStringWidth(i)"
         patternUnits="userSpaceOnUse"
       >
         <rect
           x="0"
           y="0"
           width="3"
-          :height="strings[i - 1].h"
+          :height="getStringWidth(i)"
           fill="url(#string)"
           stroke="#333"
         />
@@ -65,36 +65,32 @@
     </defs>
 
     <!-- fingerboard -->
-    <svg :x="fretboardLeft">
-      <rect
-        :width="fretboardLength"
-        :height="fretboardWidth"
-        fill="url(#board)"
-      />
+    <svg x="0">
+      <rect :width="width" :height="height" fill="url(#board)" />
     </svg>
 
     <!-- vertical elements -->
-    <svg :x="padX" :width="fretboardRight">
+    <svg>
       <!-- markers -->
-      <svg v-if="!fretless && marker" :x="nutWidth">
+      <svg v-if="!fretless && marker">
         <g v-for="i in markerIndex">
           <circle
             v-if="i % 12 !== 0"
-            :cx="(getFretPos(i - 1) + getFretPos(i)) / 2"
-            :cy="fretboardWidth / 2"
+            :cx="fretboard.getFretSpaceX(i)"
+            :cy="height / 2"
             :r="markerSize"
             fill="#ddd"
           />
           <g v-else>
             <circle
-              :cx="(getFretPos(i - 1) + getFretPos(i)) / 2"
-              :cy="fretboardWidth / 4"
+              :cx="fretboard.getFretSpaceX(i)"
+              :cy="height * 0.25"
               :r="markerSize"
               fill="#ddd"
             />
             <circle
-              :cx="(getFretPos(i - 1) + getFretPos(i)) / 2"
-              :cy="(fretboardWidth / 4) * 3"
+              :cx="fretboard.getFretSpaceX(i)"
+              :cy="height * 0.75"
               :r="markerSize"
               fill="#ddd"
             />
@@ -103,25 +99,25 @@
       </svg>
 
       <!-- side markers -->
-      <svg v-if="fretless && marker" :x="nutWidth">
+      <svg v-if="fretless && marker">
         <g v-for="i in markerIndex">
           <circle
             v-if="i % 12 !== 0"
-            :cx="getFretPos(i)"
-            :cy="fretboardWidth - sideMarkerSize - 10"
+            :cx="fretboard.getFretX(i)"
+            :cy="height - sideMarkerSize - 10"
             :r="sideMarkerSize"
             fill="#ddd"
           />
           <g v-else>
             <circle
-              :cx="getFretPos(i) - sideMarkerSize * 2"
-              :cy="fretboardWidth - sideMarkerSize - 10"
+              :cx="fretboard.getFretX(i) - sideMarkerSize * 2"
+              :cy="height - sideMarkerSize - 10"
               :r="sideMarkerSize"
               fill="#ddd"
             />
             <circle
-              :cx="getFretPos(i) + sideMarkerSize * 2"
-              :cy="fretboardWidth - sideMarkerSize - 10"
+              :cx="fretboard.getFretX(i) + sideMarkerSize * 2"
+              :cy="height - sideMarkerSize - 10"
               :r="sideMarkerSize"
               fill="#ddd"
             />
@@ -130,14 +126,14 @@
       </svg>
 
       <!-- frets -->
-      <svg v-if="!fretless" :x="nutWidth">
+      <svg v-if="!fretless">
         <svg
           v-for="i in 24"
           :width="fretSize"
-          :height="fretboardWidth"
-          :x="getFretPos(i) - fretSize / 2"
+          :height="height"
+          :x="fretboard.getFretX(i) - fretSize / 2"
         >
-          <rect :width="fretSize" :height="fretboardWidth" fill="url(#fret)" />
+          <rect :width="fretSize" :height="height" fill="url(#fret)" />
           <path
             fill="#ccc"
             :d="'M0,0 C0,10 ' + fretSize + ',10 ' + fretSize + ',0'"
@@ -146,17 +142,17 @@
             fill="#888"
             :d="
               'M0,' +
-              fretboardWidth +
+              height +
               ' C0,' +
-              (fretboardWidth - 10) +
+              (height - 10) +
               ' ' +
               fretSize +
               ',' +
-              (fretboardWidth - 10) +
+              (height - 10) +
               ' ' +
               fretSize +
               ',' +
-              fretboardWidth
+              height
             "
           />
         </svg>
@@ -164,22 +160,22 @@
     </svg>
 
     <!-- strings -->
-    <svg filter="url(#shadow)" :x="fretboardLeft">
-      <svg v-for="(s, i) in strings" :y="s.y">
+    <svg filter="url(#shadow)">
+      <svg v-for="i in fretboard.strings" :y="fretboard.getStringY(i)">
         <rect
-          :width="fretboardLength"
-          :height="s.h"
-          :fill="s.h > 4 ? 'url(#ring' + (i + 1) + ')' : 'url(#string)'"
+          :width="width"
+          :height="getStringWidth(i)"
+          :fill="getStringWidth(i) > 4 ? 'url(#ring' + i + ')' : 'url(#string)'"
         />
       </svg>
     </svg>
 
     <!-- nuts -->
-    <svg :x="padX">
+    <svg :x="fretboard.offsetX - nutWidth">
       <!-- top -->
       <rect
         y="0"
-        :height="padY - 4"
+        :height="padY - 2"
         fill="url(#box-short)"
         :width="nutWidth"
         rx="5"
@@ -187,9 +183,9 @@
       />
       <!-- middle -->
       <rect
-        v-for="i in strings.length - 1"
-        :y="strings[i - 1].y + strings[i - 1].h + 6"
-        :height="stringGap - 10"
+        v-for="i in strings - 1"
+        :y="fretboard.getStringY(i) + getStringWidth(i) + 4"
+        :height="fretboard.stringGap - 8"
         fill="url(#box-long)"
         :width="nutWidth"
         rx="5"
@@ -197,7 +193,7 @@
       />
       <!-- bottom -->
       <rect
-        :y="lastString.y + lastString.h + 6"
+        :y="fretboard.getStringY(strings) + getStringWidth(strings) + 4"
         :height="padY - 6"
         fill="url(#box-short)"
         :width="nutWidth"
@@ -210,95 +206,73 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import { Fretboard } from "./fretboard";
 
+// define props
 export interface Props {
-  scaleLength?: number;
-  height?: number;
   width?: number;
-  real?: boolean;
-  nStrings?: number;
-  stringGauges?: number[];
+  height?: number;
+  scale?: number;
+  instrument?: string;
   minFret?: number;
   maxFret?: number;
-  fretless?: boolean;
   evenFactor?: number;
   nutWidth?: number;
   fretSize?: number;
-  stringGap?: number;
   marker?: boolean;
+  fretless?: boolean;
 }
 const props = withDefaults(defineProps<Props>(), {
-  scaleLength: 4000,
   height: 200,
-  real: true,
-  nStrings: 4,
+  width: 1500,
+  scale: 1,
+  instrument: "bass",
   minFret: 0,
   maxFret: 24,
-  fretless: false,
   evenFactor: 0.0,
-  stringGap: 80,
-  marker: false,
+  nutWidth: 40,
+  fretSize: 10,
+  marker: true,
+  fretless: false,
 });
 
-// configs
+// static configs
+const padX = 40;
+const padY = 40;
 const markerIndex = [3, 5, 7, 9, 12, 15, 17, 19, 21, 24];
 const markerSize = 20;
 const sideMarkerSize = 6;
+const gauges: Record<string, number[]> = {
+  guitar: [9, 11, 16, 24, 32, 42],
+  bass: [45, 65, 80, 100],
+};
 
-const padX = computed(() => (props.real ? 40 : 0));
-const padY = computed(() => (props.real ? 40 : 0));
+// computed
+const strings = computed(() => gauges[props.instrument]?.length || 4);
+const svgHeight = computed(() => props.height);
+const svgWidth = computed(() => props.width);
+const height = computed(() => 400 / props.scale);
+const width = computed(() => (height.value / props.height) * props.width);
 
-// computed string position
-const nutWidth = computed(() => (props.real ? 40 : 12));
-const fretSize = computed(() => (props.real ? 10 : 4));
-const strings = computed(() => {
-  const gauges =
-    props.nStrings === 4 ? [45, 65, 80, 100] : [9, 11, 16, 24, 32, 42, 60, 80];
-  const s = [];
-  let y = padY.value;
-  for (let i = 0; i < props.nStrings; i++) {
-    const h = props.real
-      ? gauges[i] < 20
-        ? Math.sqrt(gauges[i])
-        : Math.sqrt(gauges[i]) + 2
-      : 0;
-    s.push({ y, h });
-    y += props.stringGap + h;
-  }
-  return s;
-});
-const lastString = computed(() => {
-  return strings.value[strings.value.length - 1];
-});
+// fretboard
+const fretboard = computed(
+  () =>
+    new Fretboard({
+      width: width.value,
+      height: height.value,
+      strings: strings.value,
+      minFret: props.minFret,
+      maxFret: props.maxFret,
+      padX,
+      padY,
+      nutWidth: props.nutWidth,
+      stringGauges: gauges[props.instrument],
+      evenFactor: props.evenFactor,
+    })
+);
 
-// computed fretboard params
-const fretboardLeft = computed(() => {
-  return props.minFret == 0 ? 0 : getFretPos(props.minFret) + nutWidth.value;
-});
-const fretboardRight = computed(() => {
-  return (
-    getFretPos(props.maxFret) +
-    nutWidth.value +
-    fretSize.value / 2 +
-    padX.value * 2
-  );
-});
-const fretboardLength = computed(() => {
-  return fretboardRight.value - fretboardLeft.value;
-});
-const fretboardWidth = computed(() => {
-  return lastString.value.y + lastString.value.h + padY.value;
-});
-
-// calculate fret position
-function getFretPos(i: number, evenFactor?: number) {
-  if (!evenFactor) {
-    evenFactor = props.evenFactor;
-  }
-  if (evenFactor >= 0.95) {
-    return ((props.scaleLength * 0.5) / 12) * i;
-  }
-  const l = (0.5 * props.scaleLength) / (1 - 1 / (2 - evenFactor));
-  return l - l / (2 - evenFactor) ** (i / 12);
+function getStringWidth(n: number) {
+  let g = gauges[props.instrument][n - 1];
+  return Math.sqrt(g);
 }
 </script>

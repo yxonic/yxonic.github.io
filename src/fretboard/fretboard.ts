@@ -6,8 +6,8 @@ function assert(value: unknown, message: string) {
 
 export interface FBConfig {
   // size
-  svgHeight: number;
-  svgWidth: number;
+  height: number;
+  width: number;
   // instrument
   strings: number;
   minFret?: number;
@@ -24,6 +24,7 @@ export class Fretboard {
   svgHeight: number;
   svgWidth: number;
   scaleLength: number;
+  strings: number;
   minFret: number;
   maxFret: number;
   offsetX: number;
@@ -32,8 +33,9 @@ export class Fretboard {
   stringGap: number;
 
   constructor(config: FBConfig) {
-    this.svgHeight = config.svgHeight;
-    this.svgWidth = config.svgWidth;
+    this.svgHeight = config.height;
+    this.svgWidth = config.width;
+    this.strings = config.strings;
 
     // default values
     this.minFret = config.minFret ?? 0;

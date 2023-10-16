@@ -3,8 +3,8 @@ import { Fretboard } from "./fretboard";
 
 test("full fretboard geometry", () => {
   let fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 3000,
+    height: 200,
+    width: 3000,
     strings: 4,
   });
   expect(fb.minFret).toBe(0);
@@ -12,8 +12,8 @@ test("full fretboard geometry", () => {
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(2990);
 
   fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 3000,
+    height: 200,
+    width: 3000,
     strings: 4,
     nutWidth: 10,
   });
@@ -24,15 +24,15 @@ test("full fretboard geometry", () => {
 
 test("partial fretboard geometry", () => {
   let fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 300,
+    height: 200,
+    width: 300,
     strings: 4,
     minFret: 3,
     maxFret: 6,
   });
   fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 300,
+    height: 200,
+    width: 300,
     strings: 4,
     nutWidth: 10,
     minFret: 3,
@@ -44,8 +44,8 @@ test("partial fretboard geometry", () => {
 
 test("even out fret spaces", () => {
   let fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 300,
+    height: 200,
+    width: 300,
     strings: 4,
     minFret: 3,
     maxFret: 6,
@@ -55,8 +55,8 @@ test("even out fret spaces", () => {
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(290);
 
   fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 300,
+    height: 200,
+    width: 300,
     strings: 4,
     minFret: 3,
     maxFret: 6,
@@ -66,8 +66,8 @@ test("even out fret spaces", () => {
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(290);
 
   fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 300,
+    height: 200,
+    width: 300,
     strings: 4,
     minFret: 3,
     maxFret: 6,
@@ -82,15 +82,15 @@ test("even out fret spaces", () => {
 
 test("string position", () => {
   let fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 300,
+    height: 200,
+    width: 300,
     strings: 4,
   });
   expect(fb.getStringY(1)).toBeCloseTo(10);
   expect(fb.getStringY(4)).toBeCloseTo(190);
   fb = new Fretboard({
-    svgHeight: 200,
-    svgWidth: 300,
+    height: 200,
+    width: 300,
     strings: 6,
     stringGauges: [9, 11, 16, 24, 32, 42, 60, 80],
   });
