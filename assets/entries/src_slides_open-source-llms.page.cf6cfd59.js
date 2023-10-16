@@ -1,4 +1,4 @@
-import{t as e,_ as a}from"../chunks/chunk-d6fe06e1.js";import"../chunks/chunk-3a90f8bd.js";import{h as n}from"../chunks/chunk-b403f1cd.js";const c={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Open-Source LLMs"]),`
+import{t as e,_ as a}from"../chunks/chunk-359860ee.js";import"../chunks/chunk-73bb7f23.js";import{h as n}from"../chunks/chunk-3f35ad78.js";const c={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Open-Source LLMs"]),`
 `,n("p",{},["@yxonic & @lem0nle"])]),config:{title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["Contents"]),`
 `,n("ul",{},[`
 `,n("li",{},["What is LLM?"]),`
