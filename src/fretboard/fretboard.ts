@@ -7,8 +7,7 @@ function assert(value: unknown, message: string) {
 export interface FBConfig {
   // size
   svgHeight: number;
-  svgWidth?: number;
-  scaleLength?: number;
+  svgWidth: number;
   // instrument
   strings: number;
   minFret?: number;
@@ -30,9 +29,11 @@ export class Fretboard {
   offsetX: number;
   stringY: number[];
   evenFactor: number;
+  stringGap: number;
 
   constructor(config: FBConfig) {
     this.svgHeight = config.svgHeight;
+    this.svgWidth = config.svgWidth;
 
     // default values
     this.minFret = config.minFret ?? 0;
@@ -42,48 +43,61 @@ export class Fretboard {
     const padY = config.padY ?? 10;
     const nutWidth = config.nutWidth ?? 0;
 
-    assert(
-      (config.svgWidth ?? 0) ^ (config.scaleLength ?? 0),
-      "must provide exactly one of svgWidth and scaleLength"
-    );
     assert(this.minFret < this.maxFret, "must contain at least one fret");
 
-    this.svgWidth = 0;
-    this.scaleLength = 0;
     this.offsetX = padX;
     if (this.minFret === 0) this.offsetX += nutWidth;
 
-    if (config.scaleLength) {
-      this.scaleLength = config.scaleLength;
-      const minFretX = this.getFretX(this.minFret);
-      this.offsetX -= minFretX - this.offsetX;
-      this.svgWidth = this.getFretX(this.maxFret) + padX;
-    } else if (config.svgWidth) {
-      this.svgWidth = config.svgWidth;
-      this.scaleLength = 5000;
-      const minFretX = this.getFretX(this.minFret);
-      const maxFretX = this.getFretX(this.maxFret);
-      console.log(minFretX, maxFretX);
-      let w = this.svgWidth - this.offsetX - padX;
-      assert(w > 10, "svg too small");
-      this.scaleLength = (5000 * w) / (maxFretX - minFretX);
-      this.offsetX -= this.getFretX(this.minFret) - this.offsetX;
-    }
+    this.scaleLength = 1;
+    const minFretX = this.getFretX(this.minFret);
+    const maxFretX = this.getFretX(this.maxFret);
+    let w = this.svgWidth - this.offsetX - padX;
+    assert(w > 10, "svg too small");
+    this.scaleLength = w / (maxFretX - minFretX);
+    this.offsetX -= this.getFretX(this.minFret, 0);
 
     this.stringY = [];
     let y = padY;
-    let dy = (this.svgHeight - 2 * padY) / (config.strings - 1);
+    let stringW = 0;
+    if (config.stringGauges) {
+      assert(
+        config.strings <= config.stringGauges.length,
+        "stringGauges must cover all strings"
+      );
+      stringW = config.stringGauges
+        .slice(0, config.strings)
+        .map((a) => Math.sqrt(a))
+        .reduce((a, b) => a + b);
+    }
+    this.stringGap =
+      (this.svgHeight - 2 * padY - stringW) / (config.strings - 1);
     for (let i = 0; i < config.strings; ++i) {
       this.stringY.push(y);
-      y += dy;
+      if (config.stringGauges) {
+        y += Math.sqrt(config.stringGauges[i]);
+      }
+      y += this.stringGap;
     }
   }
 
-  getFretX(n: number) {
+  getFretX(n: number, offset?: number) {
+    if (offset === undefined) offset = this.offsetX;
     if (this.evenFactor >= 0.95) {
-      return ((this.scaleLength * 0.5) / 12) * n + this.offsetX;
+      return ((this.scaleLength * 0.5) / 12) * n + offset;
     }
     const l = (0.5 * this.scaleLength) / (1 - 1 / (2 - this.evenFactor));
-    return l - l / (2 - this.evenFactor) ** (n / 12) + this.offsetX;
+    return l - l / (2 - this.evenFactor) ** (n / 12) + offset;
+  }
+
+  getStringY(n: number) {
+    return this.stringY[n - 1];
+  }
+
+  getFretSpaceX(n: number) {
+    return (this.getFretX(n) + this.getFretX(n - 1)) / 2;
+  }
+
+  getStringSpaceY(n: number) {
+    return this.getStringY(n) + this.stringGap / 2;
   }
 }

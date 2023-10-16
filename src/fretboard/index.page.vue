@@ -1,13 +1,15 @@
 <template>
   <article class="fixed top-0 left-0 right-0 bottom-0 overflow-y-scroll py-20">
     <div class="max-w-screen-lg mx-auto">
-      <fretboard
-        :n-strings="config.moreStrings ? 6 : 4"
-        :fretless="config.fretless"
-        :even-factor="config.isEven ? 0.8 : 0"
-        :marker="config.marker"
-        class="shadow-gray-500 shadow-lg"
-      />
+      <div class="overflow-x-scroll">
+        <FB
+          :n-strings="config.moreStrings ? 6 : 4"
+          :fretless="config.fretless"
+          :even-factor="config.isEven ? 0.8 : 0"
+          :marker="config.marker"
+          class="shadow-gray-500 shadow-lg"
+        />
+      </div>
       <div class="mt-8 flex justify-center space-x-4">
         <label>
           <input type="checkbox" v-model="config.moreStrings" />
@@ -28,9 +30,11 @@
       </div>
     </div>
 
-    <div class="mt-12 mx-4 flex flex-wrap justify-center space-x-12">
-      <fretboard
-        class="pb-12"
+    <div
+      class="mt-12 mx-4 flex flex-wrap justify-center items-center space-x-12"
+    >
+      <FBDiagram
+        class="py-6"
         :real="false"
         :scale-length="3000"
         :height="150"
@@ -39,17 +43,18 @@
         :n-strings="6"
         :even-factor="0"
       />
-      <fretboard
-        class="pb-12"
+      <FBDiagram
+        class="py-6"
         :real="false"
         :scale-length="3000"
-        :height="150"
+        :height="100"
         :min-fret="2"
         :max-fret="6"
-        :n-strings="6"
+        :n-strings="4"
         :even-factor="1"
       />
-      <fretboard
+      <FBDiagram
+        class="py-6"
         :real="false"
         :scale-length="3000"
         :height="150"
@@ -62,14 +67,15 @@
     </div>
 
     <div class="mt-8">
-      <fretboard :min-fret="2" :max-fret="5" :n-strings="4" :even-factor="1" />
+      <FB :min-fret="2" :max-fret="5" :n-strings="4" :even-factor="1" />
     </div>
   </article>
 </template>
 
 <script setup>
 import { reactive } from "vue";
-import fretboard from "./fretboard.vue";
+import FB from "./FB.vue";
+import FBDiagram from "./FBDiagram.vue";
 
 const config = reactive({
   moreStrings: false,

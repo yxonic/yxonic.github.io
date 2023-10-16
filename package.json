@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && vite build",
-    "fmt": "prettier -w ."
+    "fmt": "prettier -w .",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vslides/core": "^0.0.9",
@@ -26,6 +27,7 @@
     "unocss": "^0.56.5",
     "vike": "^0.4.143",
     "vite": "^4.4.11",
+    "vitest": "^0.34.6",
     "vue": "^3.3.4"
   }
 }
