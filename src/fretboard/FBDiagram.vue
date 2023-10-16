@@ -18,7 +18,10 @@
 
     <!-- frets -->
     <g v-if="!fretless">
-      <svg v-for="i in maxFret - minFret" :x="fretboard.getFretX(i + minFret)">
+      <svg
+        v-for="i in maxFret - minFret + 1"
+        :x="fretboard.getFretX(i + minFret - 1)"
+      >
         <line
           x1="0"
           x2="0"
