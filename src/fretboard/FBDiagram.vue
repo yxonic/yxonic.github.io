@@ -7,12 +7,12 @@
     <!-- nut -->
     <svg>
       <line
-        :x1="fretboard.getFretX(0) - nutWidth"
-        :x2="fretboard.getFretX(0) - nutWidth"
+        :x1="fretboard.getFretX(0) - nutWidth / 2 + 4"
+        :x2="fretboard.getFretX(0) - nutWidth / 2 + 4"
         :y1="fretboard.getStringY(1) - 2"
         :y2="fretboard.getStringY(strings) + 2"
         stroke="black"
-        :stroke-width="nutWidth * 2"
+        :stroke-width="nutWidth"
       />
     </svg>
 
@@ -25,8 +25,8 @@
         <line
           x1="0"
           x2="0"
-          :y1="fretboard.getStringY(1)"
-          :y2="fretboard.getStringY(strings)"
+          :y1="fretboard.getStringY(1) - 2"
+          :y2="fretboard.getStringY(strings) + 2"
           stroke="black"
           :stroke-width="8"
         />
@@ -93,6 +93,7 @@ export interface Props {
   evenFactor?: number;
   marker?: boolean;
   fretless?: boolean;
+  pad?: boolean;
 }
 const props = withDefaults(defineProps<Props>(), {
   height: 200,
@@ -101,14 +102,15 @@ const props = withDefaults(defineProps<Props>(), {
   strings: 4,
   minFret: 0,
   maxFret: 24,
-  evenFactor: 0.0,
+  evenFactor: 1.0,
   marker: true,
   fretless: false,
+  pad: true,
 });
 
 // static configs
-const nutWidth = 15;
-const padX = 40;
+const nutWidth = 30;
+const padX = computed(() => (props.pad ? 40 : 0));
 const padY = 40;
 const markerSize = 20;
 
@@ -132,7 +134,7 @@ const fretboard = computed(
       strings: props.strings,
       minFret: props.minFret,
       maxFret: props.maxFret,
-      padX,
+      padX: padX.value,
       padY,
       nutWidth,
       evenFactor: props.evenFactor,

@@ -34,28 +34,26 @@
       <FBDiagram
         class="p-6"
         :height="150"
-        :width="200"
+        :width="180"
         :min-fret="0"
         :max-fret="3"
         :strings="6"
-        :even-factor="0"
         :marker="false"
+        :pad="false"
       />
       <FBDiagram
         class="p-6"
         :height="150"
-        :width="200"
+        :width="300"
         :min-fret="1"
         :max-fret="6"
         :strings="4"
-        :even-factor="1"
       />
       <FB
         class="p-6"
         :height="150"
         :width="200"
         :scale="1.2"
-        :even-factor="1"
         :min-fret="2"
         :max-fret="5"
       />
