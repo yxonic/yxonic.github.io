@@ -19,6 +19,25 @@ async function render(pageContext: PageContextServer) {
     frontmatter?.description ||
     "App using VPages";
 
+  const giscusScript =
+    documentProps?.giscus || frontmatter?.giscus
+      ? `<script src="https://giscus.app/client.js"
+  data-repo="yxonic/yxonic.github.io"
+  data-repo-id="R_kgDOJJCXNQ"
+  data-category="Page Discussion"
+  data-category-id="DIC_kwDOJJCXNc4Cacuq"
+  data-mapping="pathname"
+  data-strict="1"
+  data-reactions-enabled="0"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="en"
+  crossorigin="anonymous"
+  async>
+</script>`
+      : "";
+
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -29,6 +48,8 @@ async function render(pageContext: PageContextServer) {
       </head>
       <body>
         <div id="app">${dangerouslySkipEscape(appHtml)}</div>
+
+        ${dangerouslySkipEscape(giscusScript)}
       </body>
     </html>`;
 

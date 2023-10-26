@@ -53,3 +53,7 @@ video {
   border-width: 0;
   border-style: solid;
 }
+
+.giscus {
+  margin-top: 4rem;
+}
