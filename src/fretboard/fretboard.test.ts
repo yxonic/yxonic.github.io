@@ -5,7 +5,7 @@ test("full fretboard geometry", () => {
   let fb = new Fretboard({
     height: 200,
     width: 3000,
-    strings: 4,
+    instrument: "bass4",
   });
   expect(fb.minFret).toBe(0);
   expect(fb.getFretX(fb.minFret)).toBeCloseTo(10);
@@ -14,7 +14,7 @@ test("full fretboard geometry", () => {
   fb = new Fretboard({
     height: 200,
     width: 3000,
-    strings: 4,
+    instrument: "bass4",
     nutWidth: 10,
   });
   expect(fb.minFret).toBe(0);
@@ -26,14 +26,14 @@ test("partial fretboard geometry", () => {
   let fb = new Fretboard({
     height: 200,
     width: 300,
-    strings: 4,
+    instrument: "bass4",
     minFret: 3,
     maxFret: 6,
   });
   fb = new Fretboard({
     height: 200,
     width: 300,
-    strings: 4,
+    instrument: "bass4",
     nutWidth: 10,
     minFret: 3,
     maxFret: 6,
@@ -46,7 +46,7 @@ test("even out fret spaces", () => {
   let fb = new Fretboard({
     height: 200,
     width: 300,
-    strings: 4,
+    instrument: "bass4",
     minFret: 3,
     maxFret: 6,
     evenFactor: 0.5,
@@ -57,7 +57,7 @@ test("even out fret spaces", () => {
   fb = new Fretboard({
     height: 200,
     width: 300,
-    strings: 4,
+    instrument: "bass4",
     minFret: 3,
     maxFret: 6,
     evenFactor: 0.8,
@@ -68,7 +68,7 @@ test("even out fret spaces", () => {
   fb = new Fretboard({
     height: 200,
     width: 300,
-    strings: 4,
+    instrument: "bass4",
     minFret: 3,
     maxFret: 6,
     evenFactor: 1.0,
@@ -84,16 +84,45 @@ test("string position", () => {
   let fb = new Fretboard({
     height: 200,
     width: 300,
-    strings: 4,
+    instrument: "bass4",
   });
   expect(fb.getStringY(1)).toBeCloseTo(10);
   expect(fb.getStringY(4)).toBeCloseTo(190);
   fb = new Fretboard({
     height: 200,
     width: 300,
-    strings: 6,
-    stringGauges: [9, 11, 16, 24, 32, 42, 60, 80],
+    instrument: "guitar6",
+    stringHasWidth: true,
   });
   expect(fb.getStringY(1)).toBeCloseTo(10);
-  expect(fb.getStringY(6) + Math.sqrt(42)).toBeCloseTo(190);
+  expect(fb.getStringY(6) + Math.sqrt(46)).toBeCloseTo(190);
+});
+
+test("get note", () => {
+  // fretted
+  let fb = new Fretboard({
+    height: 200,
+    width: 300,
+    instrument: "guitar6",
+  });
+  expect(fb.getNote(1, 3).name).toBe("G4");
+  expect(fb.getNote(1, 3).x).toBeCloseTo(60.0649);
+  expect(fb.getNote(1, 3).y).toBeCloseTo(10);
+  expect(fb.getNote(6, 3).name).toBe("G2");
+  expect(fb.getNote(6, 3).x).toBeCloseTo(60.0649);
+  expect(fb.getNote(6, 3).y).toBeCloseTo(190);
+
+  // fretless
+  fb = new Fretboard({
+    height: 200,
+    width: 300,
+    instrument: "guitar6",
+    fretless: true,
+  });
+  expect(fb.getNote(1, 3).name).toBe("G4");
+  expect(fb.getNote(1, 3).x).toBeCloseTo(69.3987);
+  expect(fb.getNote(1, 3).y).toBeCloseTo(10);
+  expect(fb.getNote(6, 3).name).toBe("G2");
+  expect(fb.getNote(6, 3).x).toBeCloseTo(69.3987);
+  expect(fb.getNote(6, 3).y).toBeCloseTo(190);
 });

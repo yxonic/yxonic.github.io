@@ -6,7 +6,7 @@
           :fretless="config.fretless"
           :even-factor="config.isEven ? 0.8 : 0"
           :marker="config.marker"
-          :instrument="config.moreStrings ? 'guitar' : 'bass'"
+          :instrument="config.moreStrings ? 'guitar6' : 'bass4'"
           class="shadow-gray-500 shadow-lg"
         />
       </div>

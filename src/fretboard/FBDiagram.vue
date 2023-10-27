@@ -87,7 +87,7 @@ export interface Props {
   width?: number;
   height?: number;
   scale?: number;
-  strings?: number;
+  instrument?: string;
   minFret?: number;
   maxFret?: number;
   evenFactor?: number;
@@ -99,7 +99,7 @@ const props = withDefaults(defineProps<Props>(), {
   height: 200,
   width: 1500,
   scale: 1,
-  strings: 4,
+  instrument: "bass4",
   minFret: 0,
   maxFret: 24,
   evenFactor: 1.0,
@@ -115,6 +115,7 @@ const padY = 40;
 const markerSize = 20;
 
 // computed
+const strings = computed(() => fretboard.value.strings);
 const svgHeight = computed(() => props.height);
 const svgWidth = computed(() => props.width);
 const height = computed(() => 400 / props.scale);
@@ -131,13 +132,14 @@ const fretboard = computed(
     new Fretboard({
       width: width.value,
       height: height.value,
-      strings: props.strings,
+      instrument: props.instrument,
       minFret: props.minFret,
       maxFret: props.maxFret,
       padX: padX.value,
       padY,
       nutWidth,
       evenFactor: props.evenFactor,
+      fretless: props.fretless,
     })
 );
 </script>

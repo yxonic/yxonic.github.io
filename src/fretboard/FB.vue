@@ -226,7 +226,7 @@ const props = withDefaults(defineProps<Props>(), {
   height: 200,
   width: 1500,
   scale: 1,
-  instrument: "bass",
+  instrument: "bass4",
   minFret: 0,
   maxFret: 24,
   evenFactor: 0.0,
@@ -242,13 +242,9 @@ const padY = 40;
 const markerIndex = [3, 5, 7, 9, 12, 15, 17, 19, 21, 24];
 const markerSize = 20;
 const sideMarkerSize = 6;
-const gauges: Record<string, number[]> = {
-  guitar: [9, 11, 16, 24, 32, 42],
-  bass: [45, 65, 80, 100],
-};
 
 // computed
-const strings = computed(() => gauges[props.instrument]?.length || 4);
+const strings = computed(() => fretboard.value.strings);
 const svgHeight = computed(() => props.height);
 const svgWidth = computed(() => props.width);
 const height = computed(() => 400 / props.scale);
@@ -260,19 +256,20 @@ const fretboard = computed(
     new Fretboard({
       width: width.value,
       height: height.value,
-      strings: strings.value,
+      instrument: props.instrument,
       minFret: props.minFret,
       maxFret: props.maxFret,
       padX,
       padY,
       nutWidth: props.nutWidth,
-      stringGauges: gauges[props.instrument],
       evenFactor: props.evenFactor,
+      stringHasWidth: true,
+      fretless: props.fretless,
     })
 );
 
 function getStringWidth(n: number) {
-  let g = gauges[props.instrument][n - 1];
+  let g = fretboard.value.stringGauges![n - 1];
   return Math.sqrt(g);
 }
 </script>
