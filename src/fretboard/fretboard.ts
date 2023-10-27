@@ -4,6 +4,13 @@ function assert(value: unknown, message: string) {
   }
 }
 
+export class Note {
+  name: string;
+  pitch: number;
+  x: number;
+  y: number;
+}
+
 export interface FBConfig {
   // size
   height: number;
@@ -12,6 +19,8 @@ export interface FBConfig {
   strings: number;
   minFret?: number;
   maxFret?: number;
+  fretless?: boolean;
+  tuning?: string[];
   // display
   padX?: number;
   padY?: number;
@@ -27,6 +36,8 @@ export class Fretboard {
   strings: number;
   minFret: number;
   maxFret: number;
+  fretless: boolean;
+  tuning: string[];
   offsetX: number;
   stringY: number[];
   evenFactor: number;
@@ -36,6 +47,8 @@ export class Fretboard {
     this.svgHeight = config.height;
     this.svgWidth = config.width;
     this.strings = config.strings;
+    this.fretless = !!config.fretless;
+    this.tuning = config.tuning || [];
 
     // default values
     this.minFret = config.minFret ?? 0;
@@ -102,4 +115,6 @@ export class Fretboard {
   getStringSpaceY(n: number) {
     return this.getStringY(n) + this.stringGap / 2;
   }
+
+  getNote(string: number, fret: number): Note {}
 }
