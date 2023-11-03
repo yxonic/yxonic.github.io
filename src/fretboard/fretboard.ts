@@ -73,6 +73,7 @@ export class Fretboard {
   strings: number;
   minFret: number;
   maxFret: number;
+  frets: number[];
   fretless: boolean;
   tuning: string[];
   useFlats: boolean;
@@ -101,18 +102,21 @@ export class Fretboard {
     const padY = config.padY ?? 10;
     const nutWidth = config.nutWidth ?? 0;
 
-    assert(this.minFret < this.maxFret, "must contain at least one fret");
+    assert(this.minFret <= this.maxFret, "must contain at least one fret");
 
     this.offsetX = padX;
     if (this.minFret === 0) this.offsetX += nutWidth;
 
     this.scaleLength = 1;
-    const minFretX = this.getFretX(this.minFret);
-    const maxFretX = this.getFretX(this.maxFret);
+    const left = this.minFret > 0 ? this.minFret - 1 : 0;
+    const right = this.maxFret;
+    this.frets = Array.from({ length: right - left + 1 }, (_, i) => i + left);
+    const leftX = this.getFretX(left);
+    const rightX = this.getFretX(right);
     let w = this.svgWidth - this.offsetX - padX;
     assert(w > 10, "svg too small");
-    this.scaleLength = w / (maxFretX - minFretX);
-    this.offsetX -= this.getFretX(this.minFret, 0);
+    this.scaleLength = w / (rightX - leftX);
+    this.offsetX -= this.getFretX(left, 0);
 
     this.stringY = [];
     let y = padY;

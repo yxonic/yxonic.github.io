@@ -32,29 +32,31 @@
 
     <div class="mt-12 mx-4 flex flex-wrap justify-center items-center">
       <FBDiagram
-        class="p-6"
-        :height="150"
-        :width="180"
-        :min-fret="0"
-        :max-fret="3"
-        :strings="6"
+        class="p-10 transform rotate-90"
+        :height="180"
+        :width="120"
+        :min-fret="3"
+        :max-fret="5"
+        instrument="guitar6"
         :marker="false"
         :pad="false"
+        :rotate-marker="true"
       />
       <FBDiagram
-        class="p-6"
+        class="p-10"
         :height="150"
         :width="300"
-        :min-fret="1"
-        :max-fret="6"
-        :strings="4"
+        :min-fret="0"
+        :max-fret="7"
+        instrument="guitar6"
+        :fret-marker="false"
       />
       <FB
-        class="p-6"
+        class="p-10"
         :height="150"
         :width="200"
         :scale="1.2"
-        :min-fret="2"
+        :min-fret="3"
         :max-fret="5"
       />
     </div>
@@ -72,4 +74,10 @@ const config = reactive({
   isEven: false,
   marker: true,
 });
+</script>
+
+<script>
+export const frontmatter = {
+  title: "Fretboard Demo",
+};
 </script>

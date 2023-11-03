@@ -18,10 +18,7 @@
 
     <!-- frets -->
     <g v-if="!fretless">
-      <svg
-        v-for="i in maxFret - minFret + 1"
-        :x="fretboard.getFretX(i + minFret - 1)"
-      >
+      <svg v-for="i in frets" :x="fretboard.getFretX(i)">
         <line
           x1="0"
           x2="0"
@@ -31,6 +28,28 @@
           :stroke-width="8"
         />
       </svg>
+    </g>
+
+    <g
+      v-if="fretMarker && minFret > 1"
+      :transform="rotateMarker ? 'rotate(-90)' : undefined"
+    >
+      <text
+        v-if="!rotateMarker"
+        :x="fretboard.getFretX(minFret - 1) + 4"
+        :y="fretboard.getStringY(1) - 30"
+        style="font-size: 48px; font-style: italic"
+      >
+        {{ minFret }} fr
+      </text>
+      <text
+        v-else
+        :x="fretboard.getFretX(minFret - 1) - 10"
+        :y="fretboard.getStringY(1)"
+        style="font-size: 42px; font-style: italic"
+      >
+        {{ minFret }} fr
+      </text>
     </g>
 
     <!-- markers -->
@@ -94,6 +113,8 @@ export interface Props {
   marker?: boolean;
   fretless?: boolean;
   pad?: boolean;
+  fretMarker?: boolean;
+  rotateMarker?: boolean;
 }
 const props = withDefaults(defineProps<Props>(), {
   height: 200,
@@ -106,16 +127,19 @@ const props = withDefaults(defineProps<Props>(), {
   marker: true,
   fretless: false,
   pad: true,
+  fretMarker: true,
+  rotateMarker: false,
 });
 
 // static configs
 const nutWidth = 30;
-const padX = computed(() => (props.pad ? 40 : 0));
-const padY = 40;
 const markerSize = 20;
 
 // computed
+const padX = computed(() => (props.pad ? 40 : 0));
+const padY = 40;
 const strings = computed(() => fretboard.value.strings);
+const frets = computed(() => fretboard.value.frets);
 const svgHeight = computed(() => props.height);
 const svgWidth = computed(() => props.width);
 const height = computed(() => 400 / props.scale);
