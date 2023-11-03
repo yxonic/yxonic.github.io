@@ -2,7 +2,7 @@
   <svg
     :height="svgHeight"
     :width="svgWidth"
-    :viewBox="'0 0 ' + width + ' ' + height"
+    :viewBox="'0 0 ' + width + ' ' + (height + 4)"
   >
     <!-- nut -->
     <svg>
@@ -117,7 +117,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 // static configs
 const padX = 0;
-const padY = 40;
+const padY = 80;
 const nutWidth = 30;
 const markerSize = 20;
 

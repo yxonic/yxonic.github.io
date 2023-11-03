@@ -33,8 +33,8 @@
     <div class="mt-12 mx-4 flex flex-wrap justify-center items-center">
       <ChordDiagram
         class="p-10"
-        :height="120"
-        :width="180"
+        :height="100"
+        :width="200"
         :scale="1.5"
         :min-fret="3"
         :max-fret="5"
@@ -43,8 +43,9 @@
       />
       <FBDiagram
         class="p-10"
-        :height="150"
+        :height="180"
         :width="300"
+        :scale="0.8"
         :min-fret="5"
         :max-fret="12"
         instrument="guitar6"

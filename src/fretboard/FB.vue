@@ -165,7 +165,7 @@
         <rect
           :width="width"
           :height="getStringWidth(i)"
-          :fill="getStringWidth(i) > 4 ? 'url(#ring' + i + ')' : 'url(#string)'"
+          :fill="getStringWidth(i) > 5 ? 'url(#ring' + i + ')' : 'url(#string)'"
         />
       </svg>
     </svg>

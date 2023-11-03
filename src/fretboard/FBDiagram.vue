@@ -140,7 +140,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 // static configs
 const padX = 40;
-const padY = 40;
+const padY = 80;
 const nutWidth = 30;
 const markerSize = 20;
 const sideMarkerSize = 6;
