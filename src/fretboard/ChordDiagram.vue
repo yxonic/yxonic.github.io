@@ -7,10 +7,10 @@
     <!-- nut -->
     <svg>
       <line
-        :x1="fretboard.getFretX(0) - nutWidth / 2 + 4"
-        :x2="fretboard.getFretX(0) - nutWidth / 2 + 4"
-        :y1="fretboard.getStringY(1) - 2"
-        :y2="fretboard.getStringY(strings) + 2"
+        :y1="fretboard.getFretX(0) - nutWidth / 2 + 4"
+        :y2="fretboard.getFretX(0) - nutWidth / 2 + 4"
+        :x1="fretboard.getStringY(1) - 2"
+        :x2="fretboard.getStringY(strings) + 2"
         stroke="black"
         :stroke-width="nutWidth"
       />
@@ -18,12 +18,12 @@
 
     <!-- frets -->
     <g v-if="!fretless">
-      <svg v-for="i in frets" :x="fretboard.getFretX(i)">
+      <svg v-for="i in frets" :y="fretboard.getFretX(i)">
         <line
-          x1="0"
-          x2="0"
-          :y1="fretboard.getStringY(1) - 2"
-          :y2="fretboard.getStringY(strings) + 2"
+          y1="0"
+          y2="0"
+          :x1="fretboard.getStringY(1) - 2"
+          :x2="fretboard.getStringY(strings) + 2"
           stroke="black"
           :stroke-width="8"
         />
@@ -32,34 +32,34 @@
 
     <g v-if="fretNote && minFret > 1">
       <text
-        :x="fretboard.getFretX(minFret - 1) + 4"
-        :y="fretboard.getStringY(1) - 30"
-        style="font-size: 48px; font-style: italic"
+        :y="fretboard.getFretX(minFret - 1) + 40"
+        :x="fretboard.getStringY(strings) + 20"
+        style="font-size: 42px; font-style: italic"
       >
         {{ minFret }} fr
       </text>
     </g>
 
     <!-- markers -->
-    <svg v-if="marker && !fretless">
+    <svg v-if="marker">
       <g v-for="i in markerIndex">
         <circle
           v-if="i % 12 !== 0"
-          :cx="fretboard.getFretSpaceX(i)"
-          :cy="fretboard.getStringSpaceY(Math.ceil(strings / 2))"
+          :cy="fretboard.getFretSpaceX(i)"
+          :cx="fretboard.getStringSpaceY(Math.ceil(strings / 2))"
           :r="markerSize"
         />
         <g v-else>
           <circle
-            :cx="fretboard.getFretSpaceX(i)"
-            :cy="
+            :cy="fretboard.getFretSpaceX(i)"
+            :cx="
               fretboard.getStringSpaceY(Math.ceil(Math.sqrt(strings - 1) - 1))
             "
             :r="markerSize"
           />
           <circle
-            :cx="fretboard.getFretSpaceX(i)"
-            :cy="
+            :cy="fretboard.getFretSpaceX(i)"
+            :cx="
               fretboard.getStringSpaceY(
                 strings - Math.ceil(Math.sqrt(strings - 1) - 1)
               )
@@ -69,38 +69,15 @@
         </g>
       </g>
     </svg>
-    <!-- side markers -->
-    <svg v-if="marker && fretless">
-      <g v-for="i in markerIndex">
-        <circle
-          v-if="i % 12 !== 0"
-          :cx="fretboard.getFretX(i)"
-          :cy="height - sideMarkerSize - 10"
-          :r="sideMarkerSize"
-        />
-        <g v-else>
-          <circle
-            :cx="fretboard.getFretX(i) - sideMarkerSize * 2"
-            :cy="height - sideMarkerSize - 10"
-            :r="sideMarkerSize"
-          />
-          <circle
-            :cx="fretboard.getFretX(i) + sideMarkerSize * 2"
-            :cy="height - sideMarkerSize - 10"
-            :r="sideMarkerSize"
-          />
-        </g>
-      </g>
-    </svg>
 
     <!-- strings -->
     <svg>
       <line
         v-for="i in strings"
-        :x1="fretboard.getFretX(0)"
-        :x2="fretboard.getFretX(25)"
-        :y1="fretboard.getStringY(i)"
-        :y2="fretboard.getStringY(i)"
+        :y1="fretboard.getFretX(0)"
+        :y2="fretboard.getFretX(25)"
+        :x1="fretboard.getStringY(i)"
+        :x2="fretboard.getStringY(i)"
         stroke="black"
         :stroke-width="4"
       />
@@ -139,11 +116,10 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 // static configs
-const padX = 40;
+const padX = 0;
 const padY = 40;
 const nutWidth = 30;
 const markerSize = 20;
-const sideMarkerSize = 6;
 
 // computed
 const strings = computed(() => fretboard.value.strings);
@@ -162,8 +138,8 @@ const markerIndex = computed(() =>
 const fretboard = computed(
   () =>
     new Fretboard({
-      width: width.value,
-      height: height.value,
+      width: height.value,
+      height: width.value,
       instrument: props.instrument,
       minFret: props.minFret,
       maxFret: props.maxFret,

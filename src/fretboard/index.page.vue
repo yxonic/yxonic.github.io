@@ -31,25 +31,25 @@
     </div>
 
     <div class="mt-12 mx-4 flex flex-wrap justify-center items-center">
-      <FBDiagram
-        class="p-10 transform rotate-90"
-        :height="180"
-        :width="120"
+      <ChordDiagram
+        class="p-10"
+        :height="120"
+        :width="180"
+        :scale="1.5"
         :min-fret="3"
         :max-fret="5"
         instrument="guitar6"
         :marker="false"
-        :pad="false"
-        :rotate-marker="true"
       />
       <FBDiagram
         class="p-10"
         :height="150"
         :width="300"
-        :min-fret="0"
-        :max-fret="7"
+        :min-fret="5"
+        :max-fret="12"
         instrument="guitar6"
-        :fret-marker="false"
+        :fretless="config.fretless"
+        :marker="config.marker"
       />
       <FB
         class="p-10"
@@ -58,6 +58,8 @@
         :scale="1.2"
         :min-fret="3"
         :max-fret="5"
+        :fretless="config.fretless"
+        :marker="config.marker"
       />
     </div>
   </article>
@@ -67,6 +69,7 @@
 import { reactive } from "vue";
 import FB from "./FB.vue";
 import FBDiagram from "./FBDiagram.vue";
+import ChordDiagram from "./ChordDiagram.vue";
 
 const config = reactive({
   moreStrings: false,
