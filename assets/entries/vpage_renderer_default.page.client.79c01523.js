@@ -1,1 +1,0 @@
-import{c as r}from"../chunks/chunk-b46b6e61.js";import{s as c,h as s}from"../chunks/chunk-1b8a94fb.js";const a=Symbol();function i(o,n){o.provide(a,n)}function m(o){const{Page:n,pageProps:e}=o,p=c({render(){return s(n,e||{})}}),t=r(p);return i(t,o),t}function d(o){m(o).mount("#app")}export{d as render};
