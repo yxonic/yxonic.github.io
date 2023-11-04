@@ -3,6 +3,8 @@
     :height="svgHeight"
     :width="svgWidth"
     :viewBox="'0 0 ' + width + ' ' + height"
+    @click="(e: any) => onClick(e.offsetX, e.offsetY)"
+    @mousemove="(e: any) => onMouseMove(e.offsetX, e.offsetY)"
   >
     <defs>
       <linearGradient id="board" x1="0" y1="100%" x2="0" y2="0">
@@ -299,5 +301,19 @@ const fretboard = computed(
 function getStringWidth(n: number) {
   let g = fretboard.value.stringGauges![n - 1];
   return Math.sqrt(g);
+}
+
+function getNoteFromPos(x: number, y: number) {
+  x = (x / svgWidth.value) * width.value;
+  y = (y / svgHeight.value) * height.value;
+  return fretboard.value.getNoteFromPos(x, y);
+}
+
+function onClick(x: number, y: number) {
+  console.log(getNoteFromPos(x, y));
+}
+
+function onMouseMove(x: number, y: number) {
+  // console.log(getNoteFromPos(x, y)?.tag);
 }
 </script>

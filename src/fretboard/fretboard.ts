@@ -49,7 +49,6 @@ export class Note {
       index = (index + 1) % 12;
       if (index === 0) octave++;
     }
-    console.log(notes[index]);
     return new Note(notes[index] + String(octave));
   }
 }
@@ -216,7 +215,11 @@ export class Fretboard {
   }
 
   getStringSpaceY(n: number) {
-    return this.getStringY(n) + this.stringGap / 2;
+    return (
+      this.getStringY(n) +
+      (this.stringGauges ? Math.sqrt(this.stringGauges[n - 1]) : 0) +
+      this.stringGap / 2
+    );
   }
 
   getNote(string: number, fret: number, tag?: string, style?: Style) {
@@ -230,5 +233,33 @@ export class Fretboard {
         : this.getFretSpaceX(fret);
     const y = this.getStringY(string);
     return { note, tag: noteTag, x, y };
+  }
+
+  getNoteFromPos(x: number, y: number) {
+    let l = this.frets[0] - 1,
+      r = this.frets[this.frets.length - 1] + 1;
+    while (l < r - 1) {
+      let m = Math.floor((l + r) / 2);
+      if (this.getFretX(m) > x) r = m;
+      else l = m;
+    }
+    const fret = r;
+    if (fret < this.frets[0] || fret > this.frets[this.frets.length - 1]) {
+      return;
+    }
+
+    l = 0;
+    r = this.strings + 1;
+    while (l < r - 1) {
+      let m = Math.floor((l + r) / 2);
+      if (this.getStringSpaceY(m) > y) r = m;
+      else l = m;
+    }
+    const string = r;
+    if (string < 1 || string > this.strings) {
+      return;
+    }
+
+    return { string, fret };
   }
 }
