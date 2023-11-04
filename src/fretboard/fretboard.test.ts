@@ -98,19 +98,14 @@ test("string position", () => {
   expect(fb.getStringY(6) + Math.sqrt(46)).toBeCloseTo(190);
 });
 
-test("get note", () => {
+test("get note position", () => {
   // fretted
   let fb = new Fretboard({
     height: 200,
     width: 300,
     instrument: "guitar6",
   });
-  expect(fb.getNote(1, 3).note.name).toBe("G4");
-  expect(fb.getNote(1, 3).x).toBeCloseTo(62.0649);
-  expect(fb.getNote(1, 3).y).toBeCloseTo(10);
-  expect(fb.getNote(6, 3).note.name).toBe("G2");
-  expect(fb.getNote(6, 3).x).toBeCloseTo(62.0649);
-  expect(fb.getNote(6, 3).y).toBeCloseTo(190);
+  expect(fb.getNoteX(3)).toBeCloseTo(62.0649);
 
   // fretless
   fb = new Fretboard({
@@ -119,10 +114,5 @@ test("get note", () => {
     instrument: "guitar6",
     fretless: true,
   });
-  expect(fb.getNote(1, 3).note.name).toBe("G4");
-  expect(fb.getNote(1, 3).x).toBeCloseTo(69.3987);
-  expect(fb.getNote(1, 3).y).toBeCloseTo(10);
-  expect(fb.getNote(6, 3).note.name).toBe("G2");
-  expect(fb.getNote(6, 3).x).toBeCloseTo(69.3987);
-  expect(fb.getNote(6, 3).y).toBeCloseTo(190);
+  expect(fb.getNoteX(3)).toBeCloseTo(69.3987);
 });

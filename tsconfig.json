@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es2021"],
+    "lib": ["es2021", "dom"],
     "allowJs": true,
     "strict": true,
     "esModuleInterop": true,

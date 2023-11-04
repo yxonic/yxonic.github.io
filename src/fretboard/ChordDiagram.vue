@@ -1,109 +1,113 @@
 <template>
-  <svg
-    :height="svgHeight"
-    :width="svgWidth"
-    :viewBox="'0 0 ' + width + ' ' + (height + 4)"
-  >
-    <!-- nut -->
-    <svg>
-      <line
-        :y1="fretboard.getFretX(0) - nutWidth / 2 + 4"
-        :y2="fretboard.getFretX(0) - nutWidth / 2 + 4"
-        :x1="fretboard.getStringY(1) + 2"
-        :x2="fretboard.getStringY(strings) - 2"
-        stroke="black"
-        :stroke-width="nutWidth"
-      />
-    </svg>
-
-    <!-- frets -->
-    <g v-if="!fretless">
-      <svg v-for="i in frets" :y="fretboard.getFretX(i)">
+  <div>
+    <svg
+      :height="svgHeight"
+      :width="svgWidth"
+      :viewBox="'0 0 ' + width + ' ' + (height + 4)"
+      @click="onClick"
+    >
+      <!-- nut -->
+      <svg>
         <line
-          y1="0"
-          y2="0"
+          :y1="fretboard.getFretX(0) - nutWidth / 2 + 4"
+          :y2="fretboard.getFretX(0) - nutWidth / 2 + 4"
           :x1="fretboard.getStringY(1) + 2"
           :x2="fretboard.getStringY(strings) - 2"
           stroke="black"
-          :stroke-width="8"
+          :stroke-width="nutWidth"
         />
       </svg>
-    </g>
 
-    <g v-if="fretNote && minFret > 1">
-      <text
-        :y="fretboard.getFretX(minFret - 1) + 40"
-        :x="fretboard.getStringY(strings) + 20"
-        style="font-size: 42px; font-style: italic"
-      >
-        {{ minFret }} fr
-      </text>
-    </g>
+      <!-- frets -->
+      <g v-if="!fretless">
+        <svg v-for="i in frets" :y="fretboard.getFretX(i)">
+          <line
+            y1="0"
+            y2="0"
+            :x1="fretboard.getStringY(1) + 2"
+            :x2="fretboard.getStringY(strings) - 2"
+            stroke="black"
+            :stroke-width="8"
+          />
+        </svg>
+      </g>
 
-    <!-- markers -->
-    <svg v-if="marker">
-      <g v-for="i in markerIndex">
-        <circle
-          v-if="i % 12 !== 0"
-          :cy="fretboard.getFretSpaceX(i)"
-          :cx="fretboard.getStringSpaceY(Math.ceil(strings / 2))"
-          :r="markerSize"
-        />
-        <g v-else>
+      <g v-if="fretNote && minFret > 1">
+        <text
+          :y="fretboard.getNoteX(minFret) + 8"
+          :x="fretboard.getStringY(1) + 40"
+          text-anchor="middle"
+          style="font-size: 42px; font-style: italic"
+        >
+          {{ minFret }} fr
+        </text>
+      </g>
+
+      <!-- markers -->
+      <svg v-if="marker">
+        <g v-for="i in markerIndex">
           <circle
+            v-if="i % 12 !== 0"
             :cy="fretboard.getFretSpaceX(i)"
-            :cx="
-              fretboard.getStringSpaceY(Math.ceil(Math.sqrt(strings - 1) - 1))
-            "
+            :cx="fretboard.getStringSpaceY(Math.ceil(strings / 2))"
             :r="markerSize"
           />
-          <circle
-            :cy="fretboard.getFretSpaceX(i)"
-            :cx="
-              fretboard.getStringSpaceY(
-                strings - Math.ceil(Math.sqrt(strings - 1) - 1)
-              )
-            "
-            :r="markerSize"
-          />
+          <g v-else>
+            <circle
+              :cy="fretboard.getFretSpaceX(i)"
+              :cx="
+                fretboard.getStringSpaceY(Math.ceil(Math.sqrt(strings - 1) - 1))
+              "
+              :r="markerSize"
+            />
+            <circle
+              :cy="fretboard.getFretSpaceX(i)"
+              :cx="
+                fretboard.getStringSpaceY(
+                  strings - Math.ceil(Math.sqrt(strings - 1) - 1)
+                )
+              "
+              :r="markerSize"
+            />
+          </g>
         </g>
+      </svg>
+
+      <!-- strings -->
+      <svg>
+        <line
+          v-for="i in strings"
+          :y1="fretboard.getFretX(fretboard.frets[0])"
+          :y2="fretboard.getFretX(maxFret)"
+          :x1="fretboard.getStringY(i)"
+          :x2="fretboard.getStringY(i)"
+          stroke="black"
+          :stroke-width="4"
+        />
+      </svg>
+
+      <!-- tags -->
+      <g v-for="note in taggedNotes">
+        <circle :cx="note.y" :cy="note.x" :r="tagSize + 4" :fill="note.fg" />
+        <circle :cx="note.y" :cy="note.x" :r="tagSize" :fill="note.bg" />
+        <text
+          :y="note.x + 12"
+          :x="note.y"
+          text-anchor="middle"
+          :fill="note.fg"
+          :stroke="note.fg"
+          style="font-size: 36px"
+        >
+          {{ note.tag }}
+        </text>
       </g>
     </svg>
-
-    <!-- strings -->
-    <svg>
-      <line
-        v-for="i in strings"
-        :y1="fretboard.getFretX(fretboard.frets[0])"
-        :y2="fretboard.getFretX(maxFret)"
-        :x1="fretboard.getStringY(i)"
-        :x2="fretboard.getStringY(i)"
-        stroke="black"
-        :stroke-width="4"
-      />
-    </svg>
-
-    <!-- tags -->
-    <g v-for="note in taggedNotes">
-      <circle :cx="note.y" :cy="note.x" :r="tagSize + 4" :fill="note.tag.fg" />
-      <circle :cx="note.y" :cy="note.x" :r="tagSize" :fill="note.tag.bg" />
-      <text
-        :y="note.x + 12"
-        :x="note.y"
-        text-anchor="middle"
-        :fill="note.tag.fg"
-        :stroke="note.tag.fg"
-        style="font-size: 36px"
-      >
-        {{ note.tag.tag }}
-      </text>
-    </g>
-  </svg>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { Fretboard, Style } from "./fretboard";
+import { computed, shallowRef, triggerRef, watch } from "vue";
+import { Fretboard, NoteManager, Style } from "./fretboard";
 
 // define props
 export interface Props {
@@ -111,13 +115,14 @@ export interface Props {
   height?: number;
   scale?: number;
   instrument?: string;
+  useFlats?: boolean;
   minFret?: number;
   maxFret?: number;
   evenFactor?: number;
   marker?: boolean;
   fretNote?: boolean;
   fretless?: boolean;
-  tags?: { string: number; fret: number; tag?: string; style?: Style }[];
+  tags?: { string: number; fret: number; style?: Style }[];
 }
 const props = withDefaults(defineProps<Props>(), {
   height: 200,
@@ -151,11 +156,6 @@ const markerIndex = computed(() =>
     (i) => i >= props.minFret && i <= props.maxFret
   )
 );
-const taggedNotes = computed(() =>
-  (props.tags ?? []).map((tag) =>
-    fretboard.value.getNote(tag.string, tag.fret, tag.tag, tag.style)
-  )
-);
 
 // fretboard
 const fretboard = computed(
@@ -174,4 +174,42 @@ const fretboard = computed(
       reverseStrings: true,
     })
 );
+
+const noteManager = shallowRef(
+  new NoteManager({
+    instrument: props.instrument,
+    useFlats: props.useFlats,
+    tags: props.tags,
+  })
+);
+watch(props, () => {
+  noteManager.value.setInstrument(props.instrument);
+  if (props.useFlats !== undefined) noteManager.value.useFlats = props.useFlats;
+  triggerRef(noteManager);
+});
+const taggedNotes = computed(() =>
+  noteManager.value.getAllTags().map((tag) => ({
+    ...tag,
+    x: fretboard.value.getNoteX(tag.fret),
+    y: fretboard.value.getNoteY(tag.string),
+  }))
+);
+
+function getNoteFromPos(x: number, y: number) {
+  x = (x / svgWidth.value) * width.value;
+  y = (y / svgHeight.value) * height.value;
+  return fretboard.value.getNoteFromPos(y, x);
+}
+function onClick(e?: MouseEvent) {
+  if (!e?.currentTarget) return;
+  // directly use offsetX and offsetY may cause problems in Safari
+  // const x = e.offsetX, y = e.offsetY;
+  const rect = (e.currentTarget as Element).getBoundingClientRect();
+  const x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+  const note = getNoteFromPos(x, y);
+  if (note === undefined) return;
+  noteManager.value.toggleTag(note.string, note.fret);
+  triggerRef(noteManager);
+}
 </script>

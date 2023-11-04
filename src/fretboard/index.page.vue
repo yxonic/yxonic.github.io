@@ -7,6 +7,7 @@
           :even-factor="config.isEven ? 0.8 : 0"
           :marker="config.marker"
           :instrument="config.moreStrings ? 'guitar6' : 'bass4'"
+          :use-flats="config.useFlats"
           class="shadow-gray-500 shadow-lg"
         />
       </div>
@@ -14,6 +15,10 @@
         <label>
           <input type="checkbox" v-model="config.moreStrings" />
           more strings
+        </label>
+        <label>
+          <input type="checkbox" v-model="config.useFlats" />
+          sharp/flat
         </label>
         <label>
           <input type="checkbox" v-model="config.fretless" />
@@ -38,6 +43,7 @@
         :scale="1.2"
         :max-fret="3"
         instrument="guitar6"
+        :use-flats="config.useFlats"
         :marker="false"
         :tags="[
           { string: 5, fret: 3, style: 'highlight' },
@@ -55,6 +61,7 @@
         :min-fret="5"
         :max-fret="12"
         instrument="guitar6"
+        :use-flats="config.useFlats"
         :fretless="config.fretless"
         :marker="config.marker"
         :tags="[
@@ -78,6 +85,7 @@
         :scale="1.2"
         :min-fret="3"
         :max-fret="5"
+        :use-flats="config.useFlats"
         :fretless="config.fretless"
         :marker="config.marker"
         :tags="[
@@ -98,6 +106,7 @@ import ChordDiagram from "./ChordDiagram.vue";
 
 const config = reactive({
   moreStrings: false,
+  useFlats: false,
   fretless: false,
   isEven: false,
   marker: true,

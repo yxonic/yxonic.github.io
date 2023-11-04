@@ -56,7 +56,7 @@ export class Note {
 export class NoteTag {
   string: number;
   fret: number;
-  tag?: string;
+  tag: string;
   fg: string;
   bg: string;
   constructor(
@@ -72,10 +72,6 @@ export class NoteTag {
     this.fg = fg;
     this.bg = bg;
   }
-  getNote(tuning: string[], useFlats?: boolean) {
-    const openStringNote = tuning[tuning.length - this.string];
-    return new Note(openStringNote).transpose(this.fret, useFlats);
-  }
 }
 
 const standardTuning: Record<string, string[]> = {
@@ -84,7 +80,7 @@ const standardTuning: Record<string, string[]> = {
   guitarDropD: ["D2", "A2", "D3", "G3", "B3", "E4"],
   bass4: ["E1", "A1", "D2", "G2"],
   bass5: ["B0", "E1", "A1", "D2", "G2"],
-  ukulele: ["C4", "G3", "E3", "A2"],
+  ukulele: ["G4", "C4", "E4", "A4"],
 };
 
 const standardStringGauges: Record<string, number[]> = {
@@ -93,10 +89,8 @@ const standardStringGauges: Record<string, number[]> = {
   guitarDropD: [10, 13, 17, 26, 36, 46],
   bass4: [45, 65, 80, 100],
   bass5: [45, 65, 80, 100, 130],
-  ukulele: [28, 32, 40, 28],
+  ukulele: [14, 16, 20, 14],
 };
-
-export type Style = "default" | "highlight" | "inactive" | "selected";
 
 export interface FBConfig {
   // size
@@ -114,7 +108,6 @@ export interface FBConfig {
   nutWidth?: number;
   evenFactor?: number;
   stringHasWidth?: boolean;
-  colorMap?: Record<Style, { fg: string; bg: string }>;
 }
 export class Fretboard {
   svgHeight: number;
@@ -125,24 +118,20 @@ export class Fretboard {
   maxFret: number;
   frets: number[];
   fretless: boolean;
-  tuning: string[];
-  useFlats: boolean;
   stringGauges?: number[];
   offsetX: number;
   stringY: number[];
+  reverseStrings: boolean = false;
   evenFactor: number;
   stringGap: number;
-  colorMap: Record<Style, { fg: string; bg: string }>;
 
   constructor(config: FBConfig) {
     this.svgHeight = config.height;
     this.svgWidth = config.width;
-    this.tuning = standardTuning[config.instrument];
-    this.useFlats = this.tuning.filter((t) => t.includes("b")).length > 0;
     this.stringGauges = config.stringHasWidth
       ? standardStringGauges[config.instrument]
       : undefined;
-    this.strings = this.tuning.length;
+    this.strings = standardStringGauges[config.instrument].length;
     this.fretless = !!config.fretless;
 
     // default values
@@ -186,15 +175,9 @@ export class Fretboard {
       y += this.stringGap;
     }
     if (config.reverseStrings) {
+      this.reverseStrings = true;
       this.stringY = this.stringY.reverse();
     }
-
-    this.colorMap = config.colorMap ?? {
-      default: { fg: "black", bg: "white" },
-      highlight: { fg: "white", bg: "black" },
-      inactive: { fg: "black", bg: "#999999" },
-      selected: { fg: "white", bg: "red" },
-    };
   }
 
   getFretX(n: number, offset?: number) {
@@ -206,12 +189,18 @@ export class Fretboard {
     return l - l / (2 - this.evenFactor) ** (n / 12) + offset;
   }
 
-  getStringY(n: number) {
-    return this.stringY[n - 1];
-  }
-
   getFretSpaceX(n: number) {
     return (this.getFretX(n) + this.getFretX(n - 1) + 4) / 2;
+  }
+
+  getNoteX(fret: number) {
+    return this.fretless || fret === 0
+      ? this.getFretX(fret)
+      : this.getFretSpaceX(fret);
+  }
+
+  getStringY(n: number) {
+    return this.stringY[n - 1];
   }
 
   getStringSpaceY(n: number) {
@@ -222,17 +211,11 @@ export class Fretboard {
     );
   }
 
-  getNote(string: number, fret: number, tag?: string, style?: Style) {
-    const { fg, bg } = this.colorMap[style ?? "default"];
-    const noteTag = new NoteTag(string, fret, tag ?? "", fg, bg);
-    const note = noteTag.getNote(this.tuning, this.useFlats);
-    if (tag === undefined) noteTag.tag = note.name.slice(0, -1);
-    const x =
-      this.fretless || fret === 0
-        ? this.getFretX(fret)
-        : this.getFretSpaceX(fret);
-    const y = this.getStringY(string);
-    return { note, tag: noteTag, x, y };
+  getNoteY(string: number) {
+    return (
+      this.stringY[string - 1] +
+      (this.stringGauges ? Math.sqrt(this.stringGauges[string - 1]) / 2 : 0)
+    );
   }
 
   getNoteFromPos(x: number, y: number) {
@@ -244,7 +227,7 @@ export class Fretboard {
       else l = m;
     }
     const fret = r;
-    if (fret < this.frets[0] || fret > this.frets[this.frets.length - 1]) {
+    if (fret < this.minFret || fret > this.maxFret) {
       return;
     }
 
@@ -252,14 +235,87 @@ export class Fretboard {
     r = this.strings + 1;
     while (l < r - 1) {
       let m = Math.floor((l + r) / 2);
-      if (this.getStringSpaceY(m) > y) r = m;
+      if (
+        this.reverseStrings
+          ? this.getStringSpaceY(m) < y
+          : this.getStringSpaceY(m) > y
+      )
+        r = m;
       else l = m;
     }
-    const string = r;
+    const string = this.reverseStrings ? l : r;
     if (string < 1 || string > this.strings) {
       return;
     }
 
     return { string, fret };
+  }
+}
+
+export type Style = "default" | "highlight" | "inactive" | "selected";
+export interface NoteManagerConfig {
+  instrument: string;
+  useFlats?: boolean;
+  colorMap?: Record<Style, { fg: string; bg: string }>;
+  tags?: { string: number; fret: number; style?: Style }[];
+}
+export class NoteManager {
+  tuning: string[] = [];
+  useFlats: boolean = false;
+  tags: Record<string, { string: number; fret: number; style?: Style }> = {};
+  colorMap: Record<Style, { fg: string; bg: string }>;
+
+  constructor(config: NoteManagerConfig) {
+    this.setInstrument(config.instrument);
+    this.setTags(config.tags);
+    if (config.useFlats !== undefined) this.useFlats = config.useFlats;
+    this.colorMap = config.colorMap ?? {
+      default: { fg: "black", bg: "white" },
+      highlight: { fg: "white", bg: "black" },
+      inactive: { fg: "black", bg: "#999999" },
+      selected: { fg: "white", bg: "#dd0000" },
+    };
+  }
+
+  setInstrument(instrument: string) {
+    this.tuning = standardTuning[instrument];
+    this.useFlats = this.tuning.filter((t) => t.includes("b")).length > 0;
+  }
+
+  setTags(tags?: { string: number; fret: number; style?: Style }[]) {
+    this.tags = Object.fromEntries(
+      (tags ?? []).map((tag) => [[tag.string, tag.fret], tag])
+    );
+  }
+
+  getNoteTag(string: number, fret: number, style: Style = "default") {
+    const openStringNote = this.tuning[this.tuning.length - string];
+    const note = new Note(openStringNote).transpose(fret, this.useFlats);
+    const tag = note.name.slice(0, -1);
+    const { fg, bg } = this.colorMap[style];
+    return new NoteTag(string, fret, tag, fg, bg);
+  }
+
+  getAllTags() {
+    return Object.values(this.tags)
+      .filter(({ string }) => string <= this.tuning.length)
+      .map((tag) => this.getNoteTag(tag.string, tag.fret, tag.style));
+  }
+
+  setTag(string: number, fret: number, style: Style = "default") {
+    this.tags[String([string, fret])] = { string, fret, style };
+  }
+  removeTag(string: number, fret: number) {
+    delete this.tags[String([string, fret])];
+  }
+  toggleTag(string: number, fret: number) {
+    const tag = this.tags[String([string, fret])];
+    if (tag === undefined) {
+      this.setTag(string, fret, "default");
+    } else if (tag.style === undefined || tag.style === "default") {
+      tag.style = "highlight";
+    } else {
+      this.removeTag(string, fret);
+    }
   }
 }
