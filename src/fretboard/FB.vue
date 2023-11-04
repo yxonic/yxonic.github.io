@@ -14,7 +14,7 @@
         <stop offset="100%" stop-color="#402028" />
       </linearGradient>
 
-      <filter id="shadow" x="0" y="0" width="200%" height="200%">
+      <filter id="shadow" x="-20%" y="-20%" width="200%" height="200%">
         <feOffset result="offOut" in="SourceAlpha" dx="0" dy="5" />
         <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
         <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
@@ -201,12 +201,33 @@
         ry="5"
       />
     </svg>
+
+    <!-- tags -->
+    <g v-for="note in taggedNotes">
+      <circle
+        :cx="note.x"
+        :cy="note.y + getStringWidth(note.tag.string) / 2"
+        :r="tagSize"
+        :fill="note.tag.bg"
+        filter="url(#shadow)"
+      />
+      <text
+        :x="note.x"
+        :y="note.y + getStringWidth(note.tag.string) / 2 + 12"
+        text-anchor="middle"
+        :fill="note.tag.fg"
+        :stroke="note.tag.fg"
+        style="font-size: 36px"
+      >
+        {{ note.tag.tag }}
+      </text>
+    </g>
   </svg>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { Fretboard } from "./fretboard";
+import { Fretboard, Style } from "./fretboard";
 
 // define props
 export interface Props {
@@ -221,6 +242,7 @@ export interface Props {
   fretSize?: number;
   marker?: boolean;
   fretless?: boolean;
+  tags?: { string: number; fret: number; tag?: string; style?: Style }[];
 }
 const props = withDefaults(defineProps<Props>(), {
   height: 200,
@@ -242,6 +264,7 @@ const padY = 40;
 const markerIndex = [3, 5, 7, 9, 12, 15, 17, 19, 21, 24];
 const markerSize = 20;
 const sideMarkerSize = 6;
+const tagSize = 35;
 
 // computed
 const strings = computed(() => fretboard.value.strings);
@@ -249,6 +272,11 @@ const svgHeight = computed(() => props.height);
 const svgWidth = computed(() => props.width);
 const height = computed(() => 400 / props.scale);
 const width = computed(() => (height.value / props.height) * props.width);
+const taggedNotes = computed(() =>
+  (props.tags ?? []).map((tag) =>
+    fretboard.value.getNote(tag.string, tag.fret, tag.tag, tag.style)
+  )
+);
 
 // fretboard
 const fretboard = computed(

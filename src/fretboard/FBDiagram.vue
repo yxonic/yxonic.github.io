@@ -69,29 +69,6 @@
         </g>
       </g>
     </svg>
-    <!-- side markers -->
-    <svg v-if="marker && fretless">
-      <g v-for="i in markerIndex">
-        <circle
-          v-if="i % 12 !== 0"
-          :cx="fretboard.getFretX(i)"
-          :cy="height - sideMarkerSize - 10"
-          :r="sideMarkerSize"
-        />
-        <g v-else>
-          <circle
-            :cx="fretboard.getFretX(i) - sideMarkerSize * 2"
-            :cy="height - sideMarkerSize - 10"
-            :r="sideMarkerSize"
-          />
-          <circle
-            :cx="fretboard.getFretX(i) + sideMarkerSize * 2"
-            :cy="height - sideMarkerSize - 10"
-            :r="sideMarkerSize"
-          />
-        </g>
-      </g>
-    </svg>
 
     <!-- strings -->
     <svg>
@@ -105,12 +82,28 @@
         :stroke-width="4"
       />
     </svg>
+
+    <!-- tags -->
+    <g v-for="note in taggedNotes">
+      <circle :cx="note.x" :cy="note.y" :r="tagSize + 4" :fill="note.tag.fg" />
+      <circle :cx="note.x" :cy="note.y" :r="tagSize" :fill="note.tag.bg" />
+      <text
+        :x="note.x"
+        :y="note.y + 12"
+        text-anchor="middle"
+        :fill="note.tag.fg"
+        :stroke="note.tag.fg"
+        style="font-size: 36px"
+      >
+        {{ note.tag.tag }}
+      </text>
+    </g>
   </svg>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { Fretboard } from "./fretboard";
+import { Fretboard, Style } from "./fretboard";
 
 // define props
 export interface Props {
@@ -124,6 +117,7 @@ export interface Props {
   marker?: boolean;
   fretNote?: boolean;
   fretless?: boolean;
+  tags?: { string: number; fret: number; tag?: string; style?: Style }[];
 }
 const props = withDefaults(defineProps<Props>(), {
   height: 200,
@@ -143,7 +137,7 @@ const padX = 40;
 const padY = 80;
 const nutWidth = 30;
 const markerSize = 20;
-const sideMarkerSize = 6;
+const tagSize = 30;
 
 // computed
 const strings = computed(() => fretboard.value.strings);
@@ -155,6 +149,11 @@ const width = computed(() => (height.value / props.height) * props.width);
 const markerIndex = computed(() =>
   [3, 5, 7, 9, 12, 15, 17, 19, 21, 24].filter(
     (i) => i >= props.minFret && i <= props.maxFret
+  )
+);
+const taggedNotes = computed(() =>
+  (props.tags ?? []).map((tag) =>
+    fretboard.value.getNote(tag.string, tag.fret, tag.tag, tag.style)
   )
 );
 

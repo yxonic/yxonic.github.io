@@ -4,19 +4,41 @@ function assert(value: unknown, message: string) {
   }
 }
 
-const notesSharp = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A"];
-const notesFlat = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A"];
+const notesSharp = [
+  "C",
+  "C#",
+  "D",
+  "D#",
+  "E",
+  "F",
+  "F#",
+  "G",
+  "G#",
+  "A",
+  "A#",
+  "B",
+];
+const notesFlat = [
+  "C",
+  "Db",
+  "D",
+  "Eb",
+  "E",
+  "F",
+  "Gb",
+  "G",
+  "Ab",
+  "A",
+  "Bb",
+  "B",
+];
 
 export class Note {
   name: string;
   pitch: number;
-  x: number;
-  y: number;
-  constructor(name: string, pitch?: number, x?: number, y?: number) {
+  constructor(name: string, pitch?: number) {
     this.name = name;
     this.pitch = pitch || 0;
-    this.x = x || 0;
-    this.y = y || 0;
   }
   transpose(interval: number, useFlats?: boolean) {
     let note = this.name.slice(0, -1);
@@ -27,25 +49,34 @@ export class Note {
       index = (index + 1) % 12;
       if (index === 0) octave++;
     }
-    return notes[index] + String(octave);
+    console.log(notes[index]);
+    return new Note(notes[index] + String(octave));
   }
 }
 
-export interface FBConfig {
-  // size
-  height: number;
-  width: number;
-  // instrument
-  instrument: string;
-  minFret?: number;
-  maxFret?: number;
-  fretless?: boolean;
-  // display
-  padX?: number;
-  padY?: number;
-  nutWidth?: number;
-  evenFactor?: number;
-  stringHasWidth?: boolean;
+export class NoteTag {
+  string: number;
+  fret: number;
+  tag?: string;
+  fg: string;
+  bg: string;
+  constructor(
+    string: number,
+    fret: number,
+    tag: string,
+    fg: string,
+    bg: string
+  ) {
+    this.string = string;
+    this.fret = fret;
+    this.tag = tag;
+    this.fg = fg;
+    this.bg = bg;
+  }
+  getNote(tuning: string[], useFlats?: boolean) {
+    const openStringNote = tuning[tuning.length - this.string];
+    return new Note(openStringNote).transpose(this.fret, useFlats);
+  }
 }
 
 const standardTuning: Record<string, string[]> = {
@@ -66,6 +97,26 @@ const standardStringGauges: Record<string, number[]> = {
   ukulele: [28, 32, 40, 28],
 };
 
+export type Style = "default" | "highlight" | "inactive" | "selected";
+
+export interface FBConfig {
+  // size
+  height: number;
+  width: number;
+  // instrument
+  instrument: string;
+  minFret?: number;
+  maxFret?: number;
+  fretless?: boolean;
+  // display
+  reverseStrings?: boolean;
+  padX?: number;
+  padY?: number;
+  nutWidth?: number;
+  evenFactor?: number;
+  stringHasWidth?: boolean;
+  colorMap?: Record<Style, { fg: string; bg: string }>;
+}
 export class Fretboard {
   svgHeight: number;
   svgWidth: number;
@@ -82,6 +133,7 @@ export class Fretboard {
   stringY: number[];
   evenFactor: number;
   stringGap: number;
+  colorMap: Record<Style, { fg: string; bg: string }>;
 
   constructor(config: FBConfig) {
     this.svgHeight = config.height;
@@ -134,6 +186,16 @@ export class Fretboard {
       }
       y += this.stringGap;
     }
+    if (config.reverseStrings) {
+      this.stringY = this.stringY.reverse();
+    }
+
+    this.colorMap = config.colorMap ?? {
+      default: { fg: "black", bg: "white" },
+      highlight: { fg: "white", bg: "black" },
+      inactive: { fg: "black", bg: "#999999" },
+      selected: { fg: "white", bg: "red" },
+    };
   }
 
   getFretX(n: number, offset?: number) {
@@ -150,18 +212,23 @@ export class Fretboard {
   }
 
   getFretSpaceX(n: number) {
-    return (this.getFretX(n) + this.getFretX(n - 1)) / 2;
+    return (this.getFretX(n) + this.getFretX(n - 1) + 4) / 2;
   }
 
   getStringSpaceY(n: number) {
     return this.getStringY(n) + this.stringGap / 2;
   }
 
-  getNote(string: number, fret: number): Note {
-    const openStringNote = this.tuning[this.strings - string];
-    const x = this.fretless ? this.getFretX(fret) : this.getFretSpaceX(fret);
+  getNote(string: number, fret: number, tag?: string, style?: Style) {
+    const { fg, bg } = this.colorMap[style ?? "default"];
+    const noteTag = new NoteTag(string, fret, tag ?? "", fg, bg);
+    const note = noteTag.getNote(this.tuning, this.useFlats);
+    if (tag === undefined) noteTag.tag = note.name.slice(0, -1);
+    const x =
+      this.fretless || fret === 0
+        ? this.getFretX(fret)
+        : this.getFretSpaceX(fret);
     const y = this.getStringY(string);
-    const note = new Note(openStringNote).transpose(fret, this.useFlats);
-    return new Note(note, 0, x, y);
+    return { note, tag: noteTag, x, y };
   }
 }

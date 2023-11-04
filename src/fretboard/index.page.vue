@@ -33,13 +33,19 @@
     <div class="mt-12 mx-4 flex flex-wrap justify-center items-center">
       <ChordDiagram
         class="p-10"
-        :height="100"
+        :height="120"
         :width="200"
         :scale="1.5"
-        :min-fret="3"
-        :max-fret="5"
+        :max-fret="3"
         instrument="guitar6"
         :marker="false"
+        :tags="[
+          { string: 5, fret: 3, style: 'highlight' },
+          { string: 4, fret: 2, style: 'default' },
+          { string: 3, fret: 0, style: 'default' },
+          { string: 2, fret: 1, style: 'highlight' },
+          { string: 1, fret: 0, style: 'default' },
+        ]"
       />
       <FBDiagram
         class="p-10"
@@ -51,6 +57,19 @@
         instrument="guitar6"
         :fretless="config.fretless"
         :marker="config.marker"
+        :tags="[
+          { string: 6, fret: 5, style: 'highlight' },
+          { string: 6, fret: 8 },
+          { string: 5, fret: 7 },
+          { string: 4, fret: 5 },
+          { string: 4, fret: 7, style: 'highlight' },
+          { string: 4, fret: 10 },
+          { string: 3, fret: 9 },
+          { string: 3, fret: 12 },
+          { string: 2, fret: 10, style: 'highlight' },
+          { string: 1, fret: 8 },
+          { string: 1, fret: 12 },
+        ]"
       />
       <FB
         class="p-10"
@@ -61,6 +80,11 @@
         :max-fret="5"
         :fretless="config.fretless"
         :marker="config.marker"
+        :tags="[
+          { string: 4, fret: 3 },
+          { string: 3, fret: 5, style: 'highlight' },
+          { string: 2, fret: 5 },
+        ]"
       />
     </div>
   </article>

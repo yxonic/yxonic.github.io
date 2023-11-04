@@ -38,7 +38,7 @@ test("partial fretboard geometry", () => {
     minFret: 3,
     maxFret: 6,
   });
-  expect(fb.getFretX(fb.minFret)).toBeCloseTo(10);
+  expect(fb.getFretX(fb.minFret - 1)).toBeCloseTo(10);
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(290);
 });
 
@@ -51,7 +51,7 @@ test("even out fret spaces", () => {
     maxFret: 6,
     evenFactor: 0.5,
   });
-  expect(fb.getFretX(fb.minFret)).toBeCloseTo(10);
+  expect(fb.getFretX(fb.minFret - 1)).toBeCloseTo(10);
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(290);
 
   fb = new Fretboard({
@@ -62,7 +62,7 @@ test("even out fret spaces", () => {
     maxFret: 6,
     evenFactor: 0.8,
   });
-  expect(fb.getFretX(fb.minFret)).toBeCloseTo(10);
+  expect(fb.getFretX(fb.minFret - 1)).toBeCloseTo(10);
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(290);
 
   fb = new Fretboard({
@@ -73,7 +73,7 @@ test("even out fret spaces", () => {
     maxFret: 6,
     evenFactor: 1.0,
   });
-  expect(fb.getFretX(fb.minFret)).toBeCloseTo(10);
+  expect(fb.getFretX(fb.minFret - 1)).toBeCloseTo(10);
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(290);
   expect(fb.getFretX(4) - fb.getFretX(3)).toBeCloseTo(
     fb.getFretX(5) - fb.getFretX(4)
@@ -105,11 +105,11 @@ test("get note", () => {
     width: 300,
     instrument: "guitar6",
   });
-  expect(fb.getNote(1, 3).name).toBe("G4");
-  expect(fb.getNote(1, 3).x).toBeCloseTo(60.0649);
+  expect(fb.getNote(1, 3).note.name).toBe("G4");
+  expect(fb.getNote(1, 3).x).toBeCloseTo(62.0649);
   expect(fb.getNote(1, 3).y).toBeCloseTo(10);
-  expect(fb.getNote(6, 3).name).toBe("G2");
-  expect(fb.getNote(6, 3).x).toBeCloseTo(60.0649);
+  expect(fb.getNote(6, 3).note.name).toBe("G2");
+  expect(fb.getNote(6, 3).x).toBeCloseTo(62.0649);
   expect(fb.getNote(6, 3).y).toBeCloseTo(190);
 
   // fretless
@@ -119,10 +119,10 @@ test("get note", () => {
     instrument: "guitar6",
     fretless: true,
   });
-  expect(fb.getNote(1, 3).name).toBe("G4");
+  expect(fb.getNote(1, 3).note.name).toBe("G4");
   expect(fb.getNote(1, 3).x).toBeCloseTo(69.3987);
   expect(fb.getNote(1, 3).y).toBeCloseTo(10);
-  expect(fb.getNote(6, 3).name).toBe("G2");
+  expect(fb.getNote(6, 3).note.name).toBe("G2");
   expect(fb.getNote(6, 3).x).toBeCloseTo(69.3987);
   expect(fb.getNote(6, 3).y).toBeCloseTo(190);
 });
