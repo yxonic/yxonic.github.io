@@ -74,8 +74,8 @@
     <svg>
       <line
         v-for="i in strings"
-        :y1="fretboard.getFretX(0)"
-        :y2="fretboard.getFretX(25)"
+        :y1="fretboard.getFretX(fretboard.frets[0])"
+        :y2="fretboard.getFretX(maxFret)"
         :x1="fretboard.getStringY(i)"
         :x2="fretboard.getStringY(i)"
         stroke="black"
@@ -133,7 +133,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 // static configs
-const padX = 0;
+const padX = 20;
 const padY = 80;
 const nutWidth = 30;
 const markerSize = 20;

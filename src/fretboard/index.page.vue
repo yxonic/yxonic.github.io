@@ -33,9 +33,9 @@
     <div class="mt-12 mx-4 flex flex-wrap justify-center items-center">
       <ChordDiagram
         class="p-10"
-        :height="120"
+        :height="150"
         :width="200"
-        :scale="1.5"
+        :scale="1.2"
         :max-fret="3"
         instrument="guitar6"
         :marker="false"
