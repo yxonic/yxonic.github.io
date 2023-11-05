@@ -223,7 +223,8 @@ export class Fretboard {
       r = this.frets[this.frets.length - 1] + 1;
     while (l < r - 1) {
       let m = Math.floor((l + r) / 2);
-      if (this.getFretX(m) > x) r = m;
+      if (this.fretless ? this.getFretSpaceX(m + 1) > x : this.getFretX(m) > x)
+        r = m;
       else l = m;
     }
     const fret = r;
