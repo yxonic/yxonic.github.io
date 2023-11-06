@@ -149,8 +149,8 @@ const strings = computed(() => fretboard.value.strings);
 const frets = computed(() => fretboard.value.frets);
 const svgHeight = computed(() => props.height);
 const svgWidth = computed(() => props.width);
-const height = computed(() => 400 / props.scale);
-const width = computed(() => (height.value / props.height) * props.width);
+const height = computed(() => (2 * props.height) / props.scale);
+const width = computed(() => (2 * props.width) / props.scale);
 const markerIndex = computed(() =>
   [3, 5, 7, 9, 12, 15, 17, 19, 21, 24].filter(
     (i) => i >= props.minFret && i <= props.maxFret

@@ -277,8 +277,8 @@ const tagSize = 35;
 const strings = computed(() => fretboard.value.strings);
 const svgHeight = computed(() => props.height);
 const svgWidth = computed(() => props.width);
-const height = computed(() => 400 / props.scale);
-const width = computed(() => (height.value / props.height) * props.width);
+const height = computed(() => (2 * props.height) / props.scale);
+const width = computed(() => (2 * props.width) / props.scale);
 
 // fretboard geometry
 const fretboard = computed(
