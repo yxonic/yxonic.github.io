@@ -30,7 +30,7 @@ async function render(pageContext: PageContextServer) {
   data-strict="1"
   data-reactions-enabled="0"
   data-emit-metadata="0"
-  data-input-position="top"
+  data-input-position="bottom"
   data-theme="light"
   data-lang="en"
   crossorigin="anonymous"
