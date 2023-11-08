@@ -182,7 +182,7 @@ const noteManager = shallowRef(
     tags: props.tags,
   })
 );
-watch(props, () => {
+watch([() => props.instrument, () => props.useFlats], () => {
   noteManager.value.setInstrument(props.instrument);
   if (props.useFlats !== undefined) noteManager.value.useFlats = props.useFlats;
   triggerRef(noteManager);
