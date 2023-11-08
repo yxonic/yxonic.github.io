@@ -211,14 +211,14 @@
       <g v-for="note in taggedNotes">
         <circle
           :cx="note.x"
-          :cy="note.y + getStringWidth(note.string) / 2"
+          :cy="note.y"
           :r="tagSize"
           :fill="note.bg"
           filter="url(#shadow)"
         />
         <text
           :x="note.x"
-          :y="note.y + getStringWidth(note.string) / 2 + 12"
+          :y="note.y + 12"
           text-anchor="middle"
           :fill="note.fg"
           :stroke="note.fg"
