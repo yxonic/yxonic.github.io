@@ -4,6 +4,7 @@
       :height="svgHeight"
       :width="svgWidth"
       :viewBox="'0 0 ' + width + ' ' + height"
+      style="user-select: none"
       @click="onClick"
       @mousemove="(e: any) => onMouseMove(e.offsetX, e.offsetY)"
     >
@@ -347,3 +348,9 @@ function onMouseMove(x: number, y: number) {
   // console.log(getNoteFromPos(x, y)?.tag);
 }
 </script>
+
+<style>
+.canvas {
+  user-select: none;
+}
+</style>

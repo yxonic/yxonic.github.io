@@ -4,6 +4,7 @@
       :height="svgHeight"
       :width="svgWidth"
       :viewBox="'0 0 ' + width + ' ' + (height + 4)"
+      style="user-select: none"
       @click="onClick"
     >
       <!-- nut -->
@@ -96,7 +97,7 @@
           text-anchor="middle"
           :fill="note.fg"
           :stroke="note.fg"
-          style="font-size: 36px"
+          style="font-size: 36px; cursor: default"
         >
           {{ note.tag }}
         </text>
