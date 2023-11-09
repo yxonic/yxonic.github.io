@@ -18,16 +18,16 @@
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.2",
-    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue": "^4.4.1",
     "@vmark/vite-plugin": "^0.1.9",
-    "@vue/server-renderer": "^3.3.7",
+    "@vue/server-renderer": "^3.3.8",
     "linkedom": "^0.16.1",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
-    "unocss": "^0.57.1",
+    "unocss": "^0.57.3",
     "vike": "^0.4.144",
     "vite": "^4.5.0",
     "vitest": "^0.34.6",
-    "vue": "^3.3.7"
+    "vue": "^3.3.8"
   }
 }
