@@ -1,4 +1,4 @@
-import{t as l,_ as o}from"../chunks/chunk-c34e1006.js";import"../chunks/chunk-84160077.js";import{h as n}from"../chunks/chunk-64519141.js";const d={title:"Interview Preparation",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Interview Preparation"]),`
+import{t as l,_ as o}from"../chunks/chunk-df2143f9.js";import"../chunks/chunk-51184663.js";import{h as n}from"../chunks/chunk-23d6161b.js";import"../chunks/chunk-c27b6911.js";const h={title:"Interview Preparation",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Interview Preparation"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"Interview Preparation",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["面试问题类型"]),`
 `,n("ul",{},[`
 `,n("li",{},["深挖经历"]),`
@@ -58,4 +58,4 @@ import{t as l,_ as o}from"../chunks/chunk-c34e1006.js";import"../chunks/chunk-84
 `,n("li",{},["对于我们在做的事，你对具体哪些方面会比较感兴趣呢？"]),`
 `,n("li",{},["你的有什么业余爱好？"]),`
 `,n("li",{},["关于我们你有什么想问的吗？（传递出兴趣和积极性的机会）"]),`
-`])]),config:void 0});const e={setup(){return()=>n(o,{pages:i,theme:l})}};e.__hmrId="4d481f5b";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/interview.page.mdx";export{e as default,d as frontmatter,i as pages};
+`])]),config:void 0});const e={setup(){return()=>n(o,{pages:i,theme:l})}};e.__hmrId="4d481f5b";e.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/interview.page.mdx";export{e as default,h as frontmatter,i as pages};

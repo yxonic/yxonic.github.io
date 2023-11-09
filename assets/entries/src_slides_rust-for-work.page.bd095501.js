@@ -1,4 +1,4 @@
-import{t as r,_ as e}from"../chunks/chunk-c34e1006.js";import"../chunks/chunk-84160077.js";import{h as o}from"../chunks/chunk-64519141.js";const a={title:"Rust for Work",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>o("div",{},[o("h1",{},["Rust for Work"]),`
+import{t as r,_ as i}from"../chunks/chunk-df2143f9.js";import"../chunks/chunk-51184663.js";import{h as o}from"../chunks/chunk-23d6161b.js";import"../chunks/chunk-c27b6911.js";const h={title:"Rust for Work",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>o("div",{},[o("h1",{},["Rust for Work"]),`
 `,o("p",{},["@yxonic"])]),config:{title:"Rust for Work",theme:"./theme/basic",layout:"cover"}});t.push({component:()=>o("div",{},[o("h1",{},["参考"]),`
 `,o("p",{},["Rust language"]),`
 `,o("ul",{},[`
@@ -15,4 +15,4 @@ import{t as r,_ as e}from"../chunks/chunk-c34e1006.js";import"../chunks/chunk-84
 `,o("ul",{},[`
 `,o("li",{},["C++, Java, Python"]),`
 `,o("li",{},["结构化数据库->非结构化数据库->结构化数据库加入非结构化特性"]),`
-`])]),config:void 0});const n={setup(){return()=>o(e,{pages:t,theme:r})}};n.__hmrId="0b9bc61e";n.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/rust-for-work.page.mdx";export{n as default,a as frontmatter,t as pages};
+`])]),config:void 0});const n={setup(){return()=>o(i,{pages:t,theme:r})}};n.__hmrId="0b9bc61e";n.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/rust-for-work.page.mdx";export{n as default,h as frontmatter,t as pages};
