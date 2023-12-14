@@ -8,26 +8,28 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@unocss/reset": "^0.58.0",
     "@vslides/core": "^0.0.9",
     "@vslides/parser": "^0.0.3",
     "@vslides/vite-plugin": "^0.0.12",
-    "@vueuse/core": "^10.5.0",
+    "@vueuse/core": "^10.7.0",
     "bibtex": "^0.9.0",
     "katex": "^0.16.9",
+    "primevue": "^3.44.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.2",
-    "@vitejs/plugin-vue": "^4.4.1",
+    "@vitejs/plugin-vue": "^4.5.2",
     "@vmark/vite-plugin": "^0.1.9",
-    "@vue/server-renderer": "^3.3.8",
-    "linkedom": "^0.16.1",
-    "prettier": "^3.0.3",
+    "@vue/server-renderer": "^3.3.11",
+    "linkedom": "^0.16.4",
+    "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
-    "unocss": "^0.57.3",
-    "vike": "^0.4.144",
-    "vite": "^4.5.0",
-    "vitest": "^0.34.6",
-    "vue": "^3.3.8"
+    "unocss": "^0.58.0",
+    "vike": "^0.4.150",
+    "vite": "^5.0.8",
+    "vitest": "^1.0.4",
+    "vue": "^3.3.11"
   }
 }
