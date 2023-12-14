@@ -1,25 +1,35 @@
-export class DialogTree {
+export interface DialogTreeConfig {
+  generator: DialogGenerator;
   context: string;
   branchInstructions: string[];
-  root: TreeNode;
-  current: TreeNode;
+}
 
-  constructor() {
-    // TODO: parameters
-    this.context = "";
-    this.branchInstructions = ["", "", ""];
-    const query = generateQuery(this.context);
-    this.root = new TreeNode(
+export class DialogTree {
+  private constructor(
+    public context: string,
+    public branchInstructions: string[],
+    public root: DialogTreeNode,
+    public current: DialogTreeNode,
+    public generator: DialogGenerator
+  ) {}
+
+  static async create(config: DialogTreeConfig) {
+    const generator = config.generator;
+    const context = config.context;
+    const branchInstructions = config.branchInstructions;
+    const query = await generator.generateQuery(context);
+    const root = DialogTreeNode.create(
       query,
-      generateAnswer(query, this.context, this.branchInstructions)
+      await generator.generateAnswer(query, context, branchInstructions)
     );
-    this.current = this.root;
+    return new DialogTree(context, branchInstructions, root, root, generator);
   }
 
-  choose(ind: number) {
+  async choose(ind: number) {
     // TODO: guard index
     this.current.choice = ind;
-    this.current = this.current.branches[ind] ?? this.expand(this.current, ind);
+    this.current =
+      this.current.branches[ind] ?? (await this.expand(this.current, ind));
     return this.current;
   }
 
@@ -28,13 +38,13 @@ export class DialogTree {
     this.current.choice = undefined;
   }
 
-  getHistory(node?: TreeNode, ind?: number): Round[] {
+  getHistory(node?: DialogTreeNode, ind?: number): DialogRound[] {
     // get current dialog history
     let n = node ?? this.current.parent;
     let i = ind ?? this.current.parentIndex;
-    const history: Round[] = [];
-    while (n && i) {
-      history.push(new Round(n.query, n.answers[i]));
+    const history: DialogRound[] = [];
+    while (n !== undefined && i !== undefined) {
+      history.push(new DialogRound(n.query, n.answers[i]));
       i = n.parentIndex;
       n = n.parent;
     }
@@ -42,12 +52,17 @@ export class DialogTree {
     return history;
   }
 
-  expand(node: TreeNode, ind: number) {
+  async expand(node: DialogTreeNode, ind: number) {
     const history = this.getHistory(node, ind);
-    const query = generateQuery(this.context, history);
-    const newNode = new TreeNode(
+    const query = await this.generator.generateQuery(this.context, history);
+    const newNode = DialogTreeNode.create(
       query,
-      generateAnswer(query, this.context, this.branchInstructions, history)
+      await this.generator.generateAnswer(
+        query,
+        this.context,
+        this.branchInstructions,
+        history
+      )
     );
     newNode.parent = node;
     newNode.parentIndex = ind;
@@ -56,45 +71,62 @@ export class DialogTree {
   }
 }
 
-export class TreeNode {
-  query: string;
-  answers: string[];
+class DialogTreeNode {
+  private constructor(
+    public query: string,
+    public answers: string[],
+    // tree structure
+    public parent: DialogTreeNode | undefined,
+    public parentIndex: number | undefined,
+    public branches: (DialogTreeNode | null)[],
+    // user's choice
+    public choice: number | undefined
+  ) {}
 
-  // tree structure
-  parent?: TreeNode;
-  parentIndex?: number;
-  branches: (TreeNode | null)[];
-
-  // user's choice
-  choice?: number;
-
-  constructor(query: string, answers: string[]) {
-    this.query = query;
-    this.answers = answers;
-    this.branches = answers.map((_) => null);
+  static create(query: string, answers: string[]) {
+    return new DialogTreeNode(
+      query,
+      answers,
+      undefined,
+      undefined,
+      answers.map(() => null),
+      undefined
+    );
   }
 }
 
-export class Round {
-  query: string;
-  answer: string;
-  constructor(query: string, answer: string) {
-    this.query = query;
-    this.answer = answer;
+export class DialogRound {
+  constructor(
+    public query: string,
+    public answer: string
+  ) {}
+}
+
+export interface DialogGenerator {
+  generateQuery(context: string, history?: DialogRound[]): Promise<string>;
+  generateAnswer(
+    query: string,
+    context: string,
+    branchInstructions: string[],
+    history?: DialogRound[]
+  ): Promise<string[]>;
+}
+
+export class OpenAIGenerator implements DialogGenerator {
+  constructor(public token: string) {}
+
+  async generateQuery(context: string, history: DialogRound[] = []) {
+    // TODO
+    return "query";
   }
-}
 
-export function generateQuery(context: string, history: Round[] = []) {
-  // TODO
-  return "query";
-}
-
-export function generateAnswer(
-  query: string,
-  context: string,
-  branchInstructions: string[],
-  history: Round[] = []
-) {
-  // TODO
-  return branchInstructions.map((_, i) => `${i}`);
+  async generateAnswer(
+    query: string,
+    context: string,
+    branchInstructions: string[],
+    history: DialogRound[] = []
+  ) {
+    // TODO
+    return branchInstructions.map((_, i) => `${i}`);
+  }
 }
