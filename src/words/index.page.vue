@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card class="max-w-sm mx-auto">
     <template #title>猫</template>
     <template #content>
       <Accordion>
@@ -8,10 +8,18 @@
         </AccordionTab>
       </Accordion>
     </template>
+    <template #footer>
+      <div class="flex justify-end">
+        <span />
+        <Button label="Skip" text />
+        <Button label="Next" class="ml-4" />
+      </div>
+    </template>
   </Card>
 </template>
 
 <script setup>
+import Button from "primevue/button";
 import Card from "primevue/card";
 import Accordion from "primevue/accordion";
 import AccordionTab from 'primevue/accordiontab';

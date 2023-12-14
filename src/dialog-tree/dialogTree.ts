@@ -86,7 +86,7 @@ export class Round {
 
 export function generateQuery(context: string, history: Round[] = []) {
   // TODO
-  return "";
+  return "query";
 }
 
 export function generateAnswer(
@@ -96,5 +96,5 @@ export function generateAnswer(
   history: Round[] = []
 ) {
   // TODO
-  return branchInstructions.map(() => "");
+  return branchInstructions.map((_, i) => `${i}`);
 }
