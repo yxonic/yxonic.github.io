@@ -19,4 +19,5 @@ export default {
     vmark(),
     yaml(),
   ],
+  ssr: { noExternal: ["primevue"] },
 };

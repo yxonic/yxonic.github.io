@@ -15,6 +15,7 @@
     "@vueuse/core": "^10.7.0",
     "bibtex": "^0.9.0",
     "katex": "^0.16.9",
+    "openai": "^4.21.0",
     "primevue": "^3.44.0",
     "vue-router": "^4.2.5"
   },
@@ -23,12 +24,12 @@
     "@vitejs/plugin-vue": "^4.5.2",
     "@vmark/vite-plugin": "^0.1.9",
     "@vue/server-renderer": "^3.3.11",
-    "linkedom": "^0.16.4",
+    "linkedom": "^0.16.5",
     "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
     "unocss": "^0.58.0",
     "vike": "^0.4.150",
-    "vite": "^5.0.8",
+    "vite": "^5.0.9",
     "vitest": "^1.0.4",
     "vue": "^3.3.11"
   }

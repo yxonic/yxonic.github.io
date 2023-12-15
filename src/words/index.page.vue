@@ -22,11 +22,11 @@
 import Button from "primevue/button";
 import Card from "primevue/card";
 import Accordion from "primevue/accordion";
-import AccordionTab from 'primevue/accordiontab';
+import AccordionTab from "primevue/accordiontab";
 
 const tabs = [
-  {word: 'cat', definition: '猫'},
-  {word: 'shark', definition: '鲨鱼'},
-  {word: 'elephant', definition: '大象'},
-]
+  { word: "cat", definition: "猫" },
+  { word: "shark", definition: "鲨鱼" },
+  { word: "elephant", definition: "大象" },
+];
 </script>

@@ -111,22 +111,3 @@ export interface DialogGenerator {
     history?: DialogRound[]
   ): Promise<string[]>;
 }
-
-export class OpenAIGenerator implements DialogGenerator {
-  constructor(public token: string) {}
-
-  async generateQuery(context: string, history: DialogRound[] = []) {
-    // TODO
-    return "query";
-  }
-
-  async generateAnswer(
-    query: string,
-    context: string,
-    branchInstructions: string[],
-    history: DialogRound[] = []
-  ) {
-    // TODO
-    return branchInstructions.map((_, i) => `${i}`);
-  }
-}
