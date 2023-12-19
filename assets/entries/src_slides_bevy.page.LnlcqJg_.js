@@ -1,4 +1,4 @@
-import{t,_ as a}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as e}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const h={title:"Learn Bevy",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["Learn Bevy"]),`
+import{t,_ as a}from"../chunks/chunk-4VtuNNwy.js";import"../chunks/chunk-OO0dnDxZ.js";import{h as e}from"../chunks/chunk-zQavgIRI.js";import"../chunks/chunk-9rAokE7f.js";import"../chunks/chunk-x3n3nnut.js";const h={title:"Learn Bevy",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["Learn Bevy"]),`
 `,e("p",{},["@yxonic"])]),config:{title:"Learn Bevy",theme:"./theme/basic",layout:"cover"}});n.push({component:()=>e("div",{},[e("h1",{},["Content"]),`
 `,e("ul",{},[`
 `,e("li",{},["Introduction"]),`

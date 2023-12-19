@@ -1,4 +1,4 @@
-import{t as n,_ as i}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as o}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const c={title:"Rust for Work",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>o("div",{},[o("h1",{},["Rust for Work"]),`
+import{t as n,_ as i}from"../chunks/chunk-4VtuNNwy.js";import"../chunks/chunk-OO0dnDxZ.js";import{h as o}from"../chunks/chunk-zQavgIRI.js";import"../chunks/chunk-9rAokE7f.js";import"../chunks/chunk-x3n3nnut.js";const c={title:"Rust for Work",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>o("div",{},[o("h1",{},["Rust for Work"]),`
 `,o("p",{},["@yxonic"])]),config:{title:"Rust for Work",theme:"./theme/basic",layout:"cover"}});t.push({component:()=>o("div",{},[o("h1",{},["参考"]),`
 `,o("p",{},["Rust language"]),`
 `,o("ul",{},[`

@@ -1,4 +1,4 @@
-import{t as i,_ as s}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as e}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const o={title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["DevOps with GitLab+Kubernetes"]),`
+import{t as i,_ as s}from"../chunks/chunk-4VtuNNwy.js";import"../chunks/chunk-OO0dnDxZ.js";import{h as e}from"../chunks/chunk-zQavgIRI.js";import"../chunks/chunk-9rAokE7f.js";import"../chunks/chunk-x3n3nnut.js";const o={title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["DevOps with GitLab+Kubernetes"]),`
 `,e("p",{},["@yxonic"])]),config:{title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"}});n.push({component:()=>e("div",{},[e("h1",{},["Contents"]),`
 `,e("ul",{},[`
 `,e("li",{},["GitLab"]),`

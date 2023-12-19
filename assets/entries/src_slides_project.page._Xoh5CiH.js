@@ -1,4 +1,4 @@
-import{t as i,_ as n}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as e}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const p={theme:"./theme/basic",title:"Project Ideas",layout:"cover"},t=[];t.push({component:()=>e("div",{},[e("h1",{},["Project Ideas"]),`
+import{t as i,_ as n}from"../chunks/chunk-4VtuNNwy.js";import"../chunks/chunk-OO0dnDxZ.js";import{h as e}from"../chunks/chunk-zQavgIRI.js";import"../chunks/chunk-9rAokE7f.js";import"../chunks/chunk-x3n3nnut.js";const p={theme:"./theme/basic",title:"Project Ideas",layout:"cover"},t=[];t.push({component:()=>e("div",{},[e("h1",{},["Project Ideas"]),`
 `,e("p",{},["@yxonic & @lem0nle"])]),config:{theme:"./theme/basic",title:"Project Ideas",layout:"cover"}});t.push({component:()=>e("div",{},[e("h1",{},["Ideas"]),`
 `,e("ul",{},[`
 `,e("li",{},["高性能计算"]),`
