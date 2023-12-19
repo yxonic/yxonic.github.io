@@ -1,17 +1,24 @@
-import OpenAI from "openai";
+import OpenAI, { ClientOptions } from "openai";
 import { DialogGenerator, DialogRound } from "./dialogTree";
 
-export class OpenAIGenerator implements DialogGenerator {
+export default class OpenAIGenerator implements DialogGenerator {
   openai: OpenAI;
 
-  constructor(public apiKey: string) {
-    this.openai = new OpenAI({ apiKey });
+  constructor(clientOptions: ClientOptions) {
+    this.openai = new OpenAI(clientOptions);
   }
 
   async generateQuery(context: string, history: DialogRound[] = []) {
     const chatCompletion = await this.openai.chat.completions.create({
-      messages: [{ role: "user", content: "Say this is a test" }],
-      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "system",
+          content:
+            "Emulate a professional conversation about work between Alice and Bob.",
+        },
+      ],
+      model: "gpt-4",
+      stop: "\n\nAlice:",
     });
     return chatCompletion.choices[0].message.content || "";
   }
