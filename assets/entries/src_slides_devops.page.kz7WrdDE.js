@@ -1,4 +1,4 @@
-import{t as i,_ as s}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai8bkqzH.js";import{h as e}from"../chunks/chunk-4lfdm8I-.js";import"../chunks/chunk-x3n3nnut.js";const l={title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["DevOps with GitLab+Kubernetes"]),`
+import{t as i,_ as s}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as e}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const o={title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("h1",{},["DevOps with GitLab+Kubernetes"]),`
 `,e("p",{},["@yxonic"])]),config:{title:"DevOps with GitLab+Kubernetes",theme:"./theme/basic",layout:"cover"}});n.push({component:()=>e("div",{},[e("h1",{},["Contents"]),`
 `,e("ul",{},[`
 `,e("li",{},["GitLab"]),`
@@ -280,4 +280,4 @@ import{t as i,_ as s}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai
 `,e("li",{},[e("a",{href:"https://git.bdaa.pro/codia/platform-next/-/blob/master/.gitlab-ci.yml"},["example configuration"])]),`
 `]),`
 `]),`
-`])]),config:void 0});const r={setup(){return()=>e(s,{pages:n,theme:i})}};r.__hmrId="096f7e07";r.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/devops.page.mdx";export{r as default,l as frontmatter,n as pages};
+`])]),config:void 0});const r={setup(){return()=>e(s,{pages:n,theme:i})}};r.__hmrId="096f7e07";r.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/devops.page.mdx";export{r as default,o as frontmatter,n as pages};

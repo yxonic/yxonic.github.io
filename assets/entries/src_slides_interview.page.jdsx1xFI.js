@@ -1,4 +1,4 @@
-import{t as l,_ as e}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai8bkqzH.js";import{h as n}from"../chunks/chunk-4lfdm8I-.js";import"../chunks/chunk-x3n3nnut.js";const r={title:"Interview Preparation",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Interview Preparation"]),`
+import{t as l,_ as e}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as n}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const u={title:"Interview Preparation",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["Interview Preparation"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"Interview Preparation",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["面试问题类型"]),`
 `,n("ul",{},[`
 `,n("li",{},["深挖经历"]),`
@@ -58,4 +58,4 @@ import{t as l,_ as e}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai
 `,n("li",{},["对于我们在做的事，你对具体哪些方面会比较感兴趣呢？"]),`
 `,n("li",{},["你的有什么业余爱好？"]),`
 `,n("li",{},["关于我们你有什么想问的吗？（传递出兴趣和积极性的机会）"]),`
-`])]),config:void 0});const o={setup(){return()=>n(e,{pages:i,theme:l})}};o.__hmrId="4d481f5b";o.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/interview.page.mdx";export{o as default,r as frontmatter,i as pages};
+`])]),config:void 0});const o={setup(){return()=>n(e,{pages:i,theme:l})}};o.__hmrId="4d481f5b";o.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/interview.page.mdx";export{o as default,u as frontmatter,i as pages};

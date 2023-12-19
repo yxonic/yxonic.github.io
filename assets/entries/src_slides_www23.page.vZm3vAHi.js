@@ -1,4 +1,4 @@
-import{t as i,_ as s}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai8bkqzH.js";import{h as e}from"../chunks/chunk-4lfdm8I-.js";import"../chunks/chunk-x3n3nnut.js";const c={title:"WWW '23 Tracing Knowledge Instead of Patterns",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("div",{class:"text-left"},[`
+import{t as i,_ as s}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as e}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const d={title:"WWW '23 Tracing Knowledge Instead of Patterns",theme:"./theme/basic",layout:"cover"},n=[];n.push({component:()=>e("div",{},[e("div",{class:"text-left"},[`
 `,e("h1",{},["Tracing Knowledge Instead of Patterns: Stable Knowledge Tracing with Diagnostic Transformer"]),`
 `,e("p",{},["Yu Yin*, Le Dai*, Zhenya Huang, Shuanghong Shen, Fei Wang, Qi Liu, Enhong Chen, Xin Li"]),`
 `]),`
@@ -164,4 +164,4 @@ import{t as i,_ as s}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai
 `,e("li",{},["Source code:  ",e("a",{href:"https://github.com/yxonic/DTransformer"},[e("code",{},["github.com/yxonic/DTransformer"])])]),`
 `,e("li",{},["My website (and this slides):  ",e("a",{href:"https://yxonic.github.io"},[e("code",{},["yxonic.github.io"])])]),`
 `,e("li",{},["My Twitter / GitHub:  ",e("a",{href:"https://github.com/yxonic"},[e("code",{},["@yxonic"])])]),`
-`])]),config:void 0});const t={setup(){return()=>e(s,{pages:n,theme:i})}};t.__hmrId="377996a4";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/www23.page.mdx";export{t as default,c as frontmatter,n as pages};
+`])]),config:void 0});const t={setup(){return()=>e(s,{pages:n,theme:i})}};t.__hmrId="377996a4";t.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/www23.page.mdx";export{t as default,d as frontmatter,n as pages};

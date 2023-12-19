@@ -1,4 +1,4 @@
-import{t as a,_ as e}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai8bkqzH.js";import{h as i}from"../chunks/chunk-4lfdm8I-.js";import"../chunks/chunk-x3n3nnut.js";const s={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>i("div",{},[i("h1",{},["Open-Source LLMs"]),`
+import{t as a,_ as e}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as i}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const p={title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"},t=[];t.push({component:()=>i("div",{},[i("h1",{},["Open-Source LLMs"]),`
 `,i("p",{},["@yxonic & @lem0nle"])]),config:{title:"Open-Source LLMs",theme:"./theme/basic",layout:"cover"}});t.push({component:()=>i("div",{},[i("h1",{},["Contents"]),`
 `,i("ul",{},[`
 `,i("li",{},["What is LLM?"]),`
@@ -73,4 +73,4 @@ import{t as a,_ as e}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai
 `,i("li",{},[i("a",{href:"https://github.com/sigoden/aichat"},["https://github.com/sigoden/aichat"])]),`
 `,i("li",{},[i("a",{href:"https://github.com/zurawiki/gptcommit"},["https://github.com/zurawiki/gptcommit"])]),`
 `,i("li",{},[i("a",{href:"https://github.com/keijiro/AICommand"},["https://github.com/keijiro/AICommand"])]),`
-`])]),config:void 0});const n={setup(){return()=>i(e,{pages:t,theme:a})}};n.__hmrId="2f1e2fef";n.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/open-source-llms.page.mdx";export{n as default,s as frontmatter,t as pages};
+`])]),config:void 0});const n={setup(){return()=>i(e,{pages:t,theme:a})}};n.__hmrId="2f1e2fef";n.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/open-source-llms.page.mdx";export{n as default,p as frontmatter,t as pages};

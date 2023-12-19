@@ -1,4 +1,4 @@
-import{t as e,_ as s}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai8bkqzH.js";import{h as n}from"../chunks/chunk-4lfdm8I-.js";import"../chunks/chunk-x3n3nnut.js";const c={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
+import{t as e,_ as s}from"../chunks/chunk-ap-8DbFO.js";import"../chunks/chunk-bu_lGn7R.js";import{h as n}from"../chunks/chunk-uux5fnxe.js";import"../chunks/chunk-2j1OROJp.js";import"../chunks/chunk-x3n3nnut.js";const m={title:"resume",theme:"./theme/basic",layout:"cover"},i=[];i.push({component:()=>n("div",{},[n("h1",{},["个人经历和成果展示"]),`
 `,n("p",{},["@yxonic"])]),config:{title:"resume",theme:"./theme/basic",layout:"cover"}});i.push({component:()=>n("div",{},[n("h1",{},["简介"]),`
 `,n("ul",{},[`
 `,n("li",{},["中国科学技术大学陈恩红教授博士生"]),`
@@ -298,4 +298,4 @@ import{t as e,_ as s}from"../chunks/chunk-EXBJdCnv.js";import"../chunks/chunk-Ai
 `,n("li",{},["模糊搜索：传统模糊搜索技术，向量搜索"]),`
 `]),`
 `]),`
-`])]),config:void 0});i.push({component:()=>n("div",{},[]),config:void 0});const l={setup(){return()=>n(s,{pages:i,theme:e})}};l.__hmrId="3b5dd257";l.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{l as default,c as frontmatter,i as pages};
+`])]),config:void 0});i.push({component:()=>n("div",{},[]),config:void 0});const l={setup(){return()=>n(s,{pages:i,theme:e})}};l.__hmrId="3b5dd257";l.__file="/home/runner/work/yxonic.github.io/yxonic.github.io/src/slides/resume.page.mdx";export{l as default,m as frontmatter,i as pages};
