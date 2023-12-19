@@ -16,7 +16,7 @@ export default defineComponent({
           result.value = v.result;
         });
       },
-      { immediate: true }
+      { immediate: true },
     );
     return () => {
       return result.value;

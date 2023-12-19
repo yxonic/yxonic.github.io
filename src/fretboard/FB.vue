@@ -296,7 +296,7 @@ const fretboard = computed(
       evenFactor: props.evenFactor,
       stringHasWidth: true,
       fretless: props.fretless,
-    })
+    }),
 );
 
 // note manager
@@ -305,7 +305,7 @@ const noteManager = shallowRef(
     instrument: props.instrument,
     useFlats: props.useFlats,
     tags: props.tags,
-  })
+  }),
 );
 watch([() => props.instrument, () => props.useFlats], () => {
   noteManager.value.setInstrument(props.instrument);
@@ -317,7 +317,7 @@ const taggedNotes = computed(() =>
     ...tag,
     x: fretboard.value.getNoteX(tag.fret),
     y: fretboard.value.getNoteY(tag.string),
-  }))
+  })),
 );
 
 function getStringWidth(n: number) {

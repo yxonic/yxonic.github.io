@@ -13,7 +13,7 @@ class MockGenerator {
     query: string,
     context: string,
     branchInstructions: string[],
-    history: DialogRound[] = []
+    history: DialogRound[] = [],
   ) {
     // TODO
     return branchInstructions.map((_, i) => `${this.acc}-${i}`);

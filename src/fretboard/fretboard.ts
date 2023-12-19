@@ -64,7 +64,7 @@ export class NoteTag {
     fret: number,
     tag: string,
     fg: string,
-    bg: string
+    bg: string,
   ) {
     this.string = string;
     this.fret = fret;
@@ -285,7 +285,7 @@ export class NoteManager {
 
   setTags(tags?: { string: number; fret: number; style?: Style }[]) {
     this.tags = Object.fromEntries(
-      (tags ?? []).map((tag) => [[tag.string, tag.fret], tag])
+      (tags ?? []).map((tag) => [[tag.string, tag.fret], tag]),
     );
   }
 

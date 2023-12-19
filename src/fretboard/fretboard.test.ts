@@ -76,7 +76,7 @@ test("even out fret spaces", () => {
   expect(fb.getFretX(fb.minFret - 1)).toBeCloseTo(10);
   expect(fb.getFretX(fb.maxFret)).toBeCloseTo(290);
   expect(fb.getFretX(4) - fb.getFretX(3)).toBeCloseTo(
-    fb.getFretX(5) - fb.getFretX(4)
+    fb.getFretX(5) - fb.getFretX(4),
   );
 });
 

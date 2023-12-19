@@ -10,7 +10,7 @@ export class DialogTree {
     public branchInstructions: string[],
     public root: DialogTreeNode,
     public current: DialogTreeNode,
-    public generator: DialogGenerator
+    public generator: DialogGenerator,
   ) {}
 
   static async create(config: DialogTreeConfig) {
@@ -20,7 +20,7 @@ export class DialogTree {
     const query = await generator.generateQuery(context);
     const root = DialogTreeNode.create(
       query,
-      await generator.generateAnswer(query, context, branchInstructions)
+      await generator.generateAnswer(query, context, branchInstructions),
     );
     return new DialogTree(context, branchInstructions, root, root, generator);
   }
@@ -61,8 +61,8 @@ export class DialogTree {
         query,
         this.context,
         this.branchInstructions,
-        history
-      )
+        history,
+      ),
     );
     newNode.parent = node;
     newNode.parentIndex = ind;
@@ -80,7 +80,7 @@ class DialogTreeNode {
     public parentIndex: number | undefined,
     public branches: (DialogTreeNode | null)[],
     // user's choice
-    public choice: number | undefined
+    public choice: number | undefined,
   ) {}
 
   static create(query: string, answers: string[]) {
@@ -90,7 +90,7 @@ class DialogTreeNode {
       undefined,
       undefined,
       answers.map(() => null),
-      undefined
+      undefined,
     );
   }
 }
@@ -98,7 +98,7 @@ class DialogTreeNode {
 export class DialogRound {
   constructor(
     public query: string,
-    public answer: string
+    public answer: string,
   ) {}
 }
 
@@ -108,6 +108,6 @@ export interface DialogGenerator {
     query: string,
     context: string,
     branchInstructions: string[],
-    history?: DialogRound[]
+    history?: DialogRound[],
   ): Promise<string[]>;
 }

@@ -65,7 +65,7 @@
               :cy="fretboard.getFretSpaceX(i)"
               :cx="
                 fretboard.getStringSpaceY(
-                  strings - Math.ceil(Math.sqrt(strings - 1) - 1)
+                  strings - Math.ceil(Math.sqrt(strings - 1) - 1),
                 )
               "
               :r="markerSize"
@@ -154,8 +154,8 @@ const height = computed(() => (2 * props.height) / props.scale);
 const width = computed(() => (2 * props.width) / props.scale);
 const markerIndex = computed(() =>
   [3, 5, 7, 9, 12, 15, 17, 19, 21, 24].filter(
-    (i) => i >= props.minFret && i <= props.maxFret
-  )
+    (i) => i >= props.minFret && i <= props.maxFret,
+  ),
 );
 
 // fretboard
@@ -173,7 +173,7 @@ const fretboard = computed(
       evenFactor: props.evenFactor,
       fretless: props.fretless,
       reverseStrings: true,
-    })
+    }),
 );
 
 const noteManager = shallowRef(
@@ -181,7 +181,7 @@ const noteManager = shallowRef(
     instrument: props.instrument,
     useFlats: props.useFlats,
     tags: props.tags,
-  })
+  }),
 );
 watch([() => props.instrument, () => props.useFlats], () => {
   noteManager.value.setInstrument(props.instrument);
@@ -193,7 +193,7 @@ const taggedNotes = computed(() =>
     ...tag,
     x: fretboard.value.getNoteX(tag.fret),
     y: fretboard.value.getNoteY(tag.string),
-  }))
+  })),
 );
 
 function getNoteFromPos(x: number, y: number) {
