@@ -6,9 +6,16 @@ export { createApp };
 
 function createApp(pageContext: PageContext) {
   const { Page, pageProps } = pageContext;
+
+  // TODO: workaround for vmark plugin
+  const props = (pageProps || {}) as Record<string, any>;
+  if (((Page as any).__file || "").endsWith(".md")) {
+    props.class = "vmark-container";
+  }
+
   const App = defineComponent({
     render() {
-      return h(Page, pageProps || {});
+      return h(Page, props);
     },
   });
 

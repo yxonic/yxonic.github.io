@@ -1,9 +1,4 @@
 body {
-  margin: 40px auto;
-  max-width: 650px;
-  line-height: 1.6;
-  padding: 0 10px;
-  color: #393b3f;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
   -webkit-font-smoothing: antialiased;
@@ -14,46 +9,55 @@ body {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
+.vmark-container {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  padding: 0 10px;
+  color: #393b3f;
+}
+
+.vmark-container h1,
+.vmark-container h2,
+.vmark-container h3 {
   line-height: 1.2;
   margin-top: 1.25em;
 }
 
-a {
+.vmark-container a {
   color: #345d96;
   text-decoration: none;
 }
-a:hover {
+
+.vmark-container a:hover {
   opacity: 0.8;
 }
 
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
+.vmark-container img,
+.vmark-container svg,
+.vmark-container video,
+.vmark-container canvas,
+.vmark-container audio,
+.vmark-container iframe,
+.vmark-container embed,
+.vmark-container object {
   display: block;
   vertical-align: middle;
 }
 
-img,
-video {
+.vmark-container img,
+.vmark-container video {
   max-width: 100%;
   height: auto;
 }
 
-*,
-::before,
-::after {
+.vmark-container *,
+.vmark-container ::before,
+.vmark-container ::after {
   border-width: 0;
   border-style: solid;
 }
 
-.giscus {
+.vmark-container .giscus {
   margin-top: 4rem;
 }
